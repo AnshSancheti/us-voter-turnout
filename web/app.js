@@ -6,6 +6,21 @@
 const PRESIDENTIAL_YEARS = [1980, 1984, 1988, 1992, 1996, 2000, 2004, 2008, 2012, 2016, 2020];
 const TRANSITION_DURATION = 600;
 
+// Candidate data by year (D = Democrat, R = Republican)
+const CANDIDATES = {
+    1980: { dem: 'Carter', rep: 'Reagan', winner: 'R' },
+    1984: { dem: 'Mondale', rep: 'Reagan', winner: 'R' },
+    1988: { dem: 'Dukakis', rep: 'Bush', winner: 'R' },
+    1992: { dem: 'Clinton', rep: 'Bush', winner: 'D' },
+    1996: { dem: 'Clinton', rep: 'Dole', winner: 'D' },
+    2000: { dem: 'Gore', rep: 'Bush', winner: 'R' },
+    2004: { dem: 'Kerry', rep: 'Bush', winner: 'R' },
+    2008: { dem: 'Obama', rep: 'McCain', winner: 'D' },
+    2012: { dem: 'Obama', rep: 'Romney', winner: 'D' },
+    2016: { dem: 'Clinton', rep: 'Trump', winner: 'R' },
+    2020: { dem: 'Biden', rep: 'Trump', winner: 'D' }
+};
+
 // Manual label offset adjustments for better readability
 const LABEL_OFFSETS = {
     // States with simple offsets
@@ -248,23 +263,50 @@ function setupTimeline() {
 
     // Create year labels
     PRESIDENTIAL_YEARS.forEach((year, index) => {
-        const label = document.createElement('div');
-        label.className = 'timeline-label';
-        label.textContent = year;
-        label.dataset.index = index;
+        const labelWrapper = document.createElement('div');
+        labelWrapper.className = 'timeline-label';
+        labelWrapper.dataset.index = index;
+
+        // Year
+        const yearDiv = document.createElement('div');
+        yearDiv.className = 'timeline-year';
+        yearDiv.textContent = year;
+        labelWrapper.appendChild(yearDiv);
+
+        // Candidates
+        const candidatesDiv = document.createElement('div');
+        candidatesDiv.className = 'timeline-candidates';
+
+        const candidates = CANDIDATES[year];
+
+        // Determine winner and loser
+        const winnerName = candidates.winner === 'D' ? candidates.dem : candidates.rep;
+        const loserName = candidates.winner === 'D' ? candidates.rep : candidates.dem;
+
+        const winnerSpan = document.createElement('div');
+        winnerSpan.className = 'candidate winner';
+        winnerSpan.textContent = winnerName;
+
+        const loserSpan = document.createElement('div');
+        loserSpan.className = 'candidate';
+        loserSpan.textContent = loserName;
+
+        candidatesDiv.appendChild(winnerSpan);
+        candidatesDiv.appendChild(loserSpan);
+        labelWrapper.appendChild(candidatesDiv);
 
         if (index === currentYearIndex) {
-            label.classList.add('active');
+            labelWrapper.classList.add('active');
         }
 
-        label.addEventListener('click', () => {
+        labelWrapper.addEventListener('click', () => {
             currentYearIndex = index;
             slider.value = index;
             updateMap(year);
             updateActiveLabel();
         });
 
-        labelsContainer.appendChild(label);
+        labelsContainer.appendChild(labelWrapper);
     });
 
     // Slider event listener
