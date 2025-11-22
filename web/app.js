@@ -43,17 +43,17 @@ const LABEL_OFFSETS = {
 // States that need leader lines (moved to ocean/empty space)
 const LEADER_LINE_STATES = {
     // Northern states (moved north into Canadian space)
-    'Vermont': { x: 850, y: 80 },
-    'New Hampshire': { x: 880, y: 100 },
+    'Vermont': { x: 820, y: 95 },
+    'New Hampshire': { x: 850, y: 70 },
 
     // Eastern seaboard (moved east into Atlantic)
     'Massachusetts': { x: 880, y: 200 },
     'Connecticut': { x: 880, y: 230 },
     'Rhode Island': { x: 880, y: 260 },
-    'New Jersey': { x: 880, y: 290 },
-    'Maryland': { x: 880, y: 320 },
-    'Delaware': { x: 880, y: 350 },
-    'District of Columbia': { x: 880, y: 380 }
+    'New Jersey': { x: 880, y: 280 },
+    'Delaware': { x: 880, y: 305 },
+    'Maryland': { x: 880, y: 330 },
+    'District of Columbia': { x: 880, y: 360 }
 };
 
 // Color scale for turnout percentages
@@ -112,6 +112,7 @@ Promise.all([
     updateMap(PRESIDENTIAL_YEARS[currentYearIndex]);
     setupTimeline();
     setupShowAllToggle();
+    setupHideLegendToggle();
     setupHamburgerMenu();
 })
 .catch(error => {
@@ -260,12 +261,25 @@ function updateMap(year) {
 function setupTimeline() {
     const slider = document.getElementById('yearSlider');
     const labelsContainer = document.getElementById('timelineLabels');
+    const datalist = document.getElementById('yearMarkers');
+
+    // Create datalist options for slider tick marks
+    PRESIDENTIAL_YEARS.forEach((year, index) => {
+        const option = document.createElement('option');
+        option.value = index;
+        option.label = year.toString();
+        datalist.appendChild(option);
+    });
 
     // Create year labels
     PRESIDENTIAL_YEARS.forEach((year, index) => {
         const labelWrapper = document.createElement('div');
         labelWrapper.className = 'timeline-label';
         labelWrapper.dataset.index = index;
+
+        // Position to match slider thumb travel (thumb center goes from 14px to calc(100% - 14px))
+        // 14px = half of thumb width (24px + 4px border = 28px total)
+        labelWrapper.style.left = `calc(14px + ((100% - 28px) * ${index} / 10))`;
 
         // Year
         const yearDiv = document.createElement('div');
@@ -297,6 +311,9 @@ function setupTimeline() {
 
         if (index === currentYearIndex) {
             labelWrapper.classList.add('active');
+            candidatesDiv.style.display = 'flex';
+        } else {
+            candidatesDiv.style.display = 'none';
         }
 
         labelWrapper.addEventListener('click', () => {
@@ -334,10 +351,13 @@ function setupTimeline() {
 
 function updateActiveLabel() {
     document.querySelectorAll('.timeline-label').forEach((label, index) => {
+        const candidatesDiv = label.querySelector('.timeline-candidates');
         if (index === currentYearIndex) {
             label.classList.add('active');
+            candidatesDiv.style.display = 'flex';
         } else {
             label.classList.remove('active');
+            candidatesDiv.style.display = 'none';
         }
     });
 }
@@ -386,6 +406,23 @@ function setupShowAllToggle() {
             // Hide all labels and leader lines
             d3.selectAll('.state-label').classed('visible', false);
             d3.selectAll('.leader-line').classed('visible', false);
+        }
+    });
+}
+
+// ===================================
+// Hide Legend Toggle
+// ===================================
+
+function setupHideLegendToggle() {
+    const checkbox = document.getElementById('hideLegendCheckbox');
+    const legend = document.querySelector('.legend');
+
+    checkbox.addEventListener('change', (e) => {
+        if (e.target.checked) {
+            legend.classList.add('hidden');
+        } else {
+            legend.classList.remove('hidden');
         }
     });
 }

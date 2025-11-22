@@ -236,6 +236,9 @@ body {
     pointer-events: none;
     transform: translateX(-10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .settings-panel.open {
@@ -253,7 +256,8 @@ body {
     white-space: nowrap;
 }
 
-.show-all-checkbox {
+.show-all-checkbox,
+.hide-legend-checkbox {
     width: 16px;
     height: 16px;
     cursor: pointer;
@@ -266,11 +270,13 @@ body {
     flex-shrink: 0;
 }
 
-.show-all-checkbox:checked {
+.show-all-checkbox:checked,
+.hide-legend-checkbox:checked {
     background: var(--text-primary);
 }
 
-.show-all-checkbox:checked::after {
+.show-all-checkbox:checked::after,
+.hide-legend-checkbox:checked::after {
     content: '';
     position: absolute;
     left: 3px;
@@ -308,6 +314,13 @@ body {
     flex-direction: column;
     gap: 2px;
     z-index: 10;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.legend.hidden {
+    opacity: 0;
     pointer-events: none;
 }
 
@@ -406,8 +419,7 @@ body {
 }
 
 .timeline-slider {
-    width: calc(100% - 28px);
-    margin: 0 14px;
+    width: 100%;
     height: 8px;
     -webkit-appearance: none;
     appearance: none;
@@ -429,6 +441,7 @@ body {
     border: 2px solid var(--bg-paper);
     box-shadow: 2px 2px 0 var(--shadow);
     transition: transform 0.2s ease;
+    margin-top: -16px;
 }
 
 .timeline-slider::-webkit-slider-thumb:hover {
@@ -451,9 +464,9 @@ body {
 }
 
 .timeline-labels {
-    display: flex;
-    justify-content: space-between;
+    position: relative;
     margin-top: var(--spacing-xs);
+    height: 60px;
     font-family: var(--font-display);
     font-size: 0.75rem;
     font-weight: 600;
@@ -461,7 +474,8 @@ body {
 }
 
 .timeline-label {
-    flex: 1;
+    position: absolute;
+    transform: translateX(-50%);
     text-align: center;
     cursor: pointer;
     transition: color 0.2s ease;
@@ -530,6 +544,12 @@ body {
 /* ===================================
    Responsive Design
    =================================== */
+@media (orientation: portrait) {
+    .legend {
+        bottom: 8%;
+    }
+}
+
 @media (max-width: 640px) {
     .container {
         padding: var(--spacing-sm);

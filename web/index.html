@@ -43,6 +43,10 @@
                             <input type="checkbox" id="showAllCheckbox" class="show-all-checkbox">
                             <span class="checkbox-text">Show All</span>
                         </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="hideLegendCheckbox" class="hide-legend-checkbox">
+                            <span class="checkbox-text">Hide Legend</span>
+                        </label>
                     </div>
                 </div>
 
@@ -71,7 +75,9 @@
                         max="10"
                         value="10"
                         step="1"
+                        list="yearMarkers"
                     >
+                    <datalist id="yearMarkers"></datalist>
                     <div class="timeline-labels" id="timelineLabels"></div>
                 </div>
             </div>
