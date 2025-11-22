@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presidential Election Turnout by State</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- D3.js and TopoJSON -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="title">Presidential Election Turnout</h1>
+            <p class="subtitle">Voter participation by state, <span id="currentYear">2020</span></p>
+        </header>
+
+        <!-- Main visualization area -->
+        <main class="main-content">
+            <!-- Map container -->
+            <div class="map-container">
+                <svg id="map" viewBox="0 0 960 600" preserveAspectRatio="xMidYMid meet"></svg>
+            </div>
+
+            <!-- Legend -->
+            <div class="legend">
+                <div class="legend-title">Turnout</div>
+                <div class="legend-scale" id="legendScale">
+                    <div class="legend-labels">
+                        <span>80%</span>
+                        <span>40%</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Timeline slider -->
+        <div class="timeline-container">
+            <div class="timeline-title">Select Year</div>
+            <div class="timeline-slider-wrapper">
+                <input
+                    type="range"
+                    id="yearSlider"
+                    class="timeline-slider"
+                    min="0"
+                    max="10"
+                    value="10"
+                    step="1"
+                >
+                <div class="timeline-labels" id="timelineLabels"></div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Data source: <a href="http://www.electproject.org/" target="_blank">United States Elections Project</a></p>
+        </footer>
+    </div>
+
+    <!-- Main application script -->
+    <script src="app.js"></script>
+</body>
+</html>

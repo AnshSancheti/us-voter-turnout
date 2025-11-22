@@ -1,0 +1,437 @@
+/* ===================================
+   CSS Variables - Mid-Century Palette
+   =================================== */
+:root {
+    /* Earth tone color scale for turnout data */
+    --color-turnout-1: #E8DCC4;  /* Light clay - lowest turnout */
+    --color-turnout-2: #D4C9A8;  /* Pale sand */
+    --color-turnout-3: #C0B68A;  /* Warm beige */
+    --color-turnout-4: #A8A060;  /* Olive */
+    --color-turnout-5: #D4A356;  /* Mustard */
+    --color-turnout-6: #C89050;  /* Amber */
+    --color-turnout-7: #C87941;  /* Burnt orange */
+    --color-turnout-8: #9D5C3F;  /* Sienna - highest turnout */
+
+    /* Base colors */
+    --bg-paper: #F4EFE6;
+    --bg-darker: #E8DCC4;
+    --text-primary: #2C2416;
+    --text-secondary: #5A5044;
+    --accent-line: #9D7C54;
+    --shadow: rgba(44, 36, 22, 0.15);
+
+    /* Typography */
+    --font-display: 'Outfit', sans-serif;
+    --font-body: 'Crimson Text', serif;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 4rem;
+}
+
+/* ===================================
+   Reset & Base Styles
+   =================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-paper);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+
+    /* Subtle paper grain texture */
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(44, 36, 22, 0.01) 2px,
+            rgba(44, 36, 22, 0.01) 4px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 2px,
+            rgba(44, 36, 22, 0.01) 2px,
+            rgba(44, 36, 22, 0.01) 4px
+        );
+}
+
+/* ===================================
+   Layout
+   =================================== */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ===================================
+   Header
+   =================================== */
+.header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-md) 0;
+    border-bottom: 3px solid var(--text-primary);
+    position: relative;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background: var(--accent-line);
+}
+
+.title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.subtitle {
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-style: italic;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+.subtitle #currentYear {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-style: normal;
+    color: var(--text-primary);
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+}
+
+/* ===================================
+   Main Content
+   =================================== */
+.main-content {
+    flex: 1;
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+}
+
+/* ===================================
+   Map Container
+   =================================== */
+.map-container {
+    flex: 1;
+    background: white;
+    border: 2px solid var(--text-primary);
+    box-shadow: 6px 6px 0 var(--shadow);
+    padding: var(--spacing-md);
+    position: relative;
+}
+
+#map {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Map state styles */
+.state {
+    stroke: var(--bg-paper);
+    stroke-width: 1.5;
+    cursor: pointer;
+    transition: stroke-width 0.2s ease, opacity 0.2s ease;
+}
+
+.state:hover {
+    stroke: var(--text-primary);
+    stroke-width: 2.5;
+    opacity: 1 !important;
+}
+
+/* ===================================
+   Legend
+   =================================== */
+.legend {
+    width: 80px;
+    flex-shrink: 0;
+    background: var(--bg-darker);
+    padding: var(--spacing-sm);
+    border: 2px solid var(--accent-line);
+    box-shadow: 4px 4px 0 var(--shadow);
+    display: flex;
+    flex-direction: column;
+}
+
+.legend-title {
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.legend-scale {
+    flex: 1;
+    min-height: 300px;
+    background: linear-gradient(
+        to bottom,
+        var(--color-turnout-8),
+        var(--color-turnout-7),
+        var(--color-turnout-6),
+        var(--color-turnout-5),
+        var(--color-turnout-4),
+        var(--color-turnout-3),
+        var(--color-turnout-2),
+        var(--color-turnout-1)
+    );
+    border: 1px solid var(--text-primary);
+    position: relative;
+}
+
+.legend-labels {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: center;
+    pointer-events: none;
+    padding: 4px 0;
+}
+
+/* ===================================
+   State Labels (appear on hover)
+   =================================== */
+.state-label {
+    pointer-events: none;
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 800;
+    fill: var(--text-primary);
+    text-anchor: middle;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.state-label.visible {
+    opacity: 1;
+}
+
+/* ===================================
+   Timeline Slider
+   =================================== */
+.timeline-container {
+    margin-bottom: var(--spacing-lg);
+    background: white;
+    border: 2px solid var(--text-primary);
+    box-shadow: 6px 6px 0 var(--shadow);
+    padding: var(--spacing-lg);
+}
+
+.timeline-title {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+
+.timeline-slider-wrapper {
+    position: relative;
+    padding-bottom: var(--spacing-md);
+}
+
+.timeline-slider {
+    width: 100%;
+    height: 8px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: var(--bg-darker);
+    outline: none;
+    border-radius: 0;
+    cursor: pointer;
+    border: 1px solid var(--text-primary);
+}
+
+.timeline-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background: var(--text-primary);
+    cursor: pointer;
+    border-radius: 0;
+    border: 2px solid var(--bg-paper);
+    box-shadow: 2px 2px 0 var(--shadow);
+    transition: transform 0.2s ease;
+}
+
+.timeline-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+}
+
+.timeline-slider::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    background: var(--text-primary);
+    cursor: pointer;
+    border-radius: 0;
+    border: 2px solid var(--bg-paper);
+    box-shadow: 2px 2px 0 var(--shadow);
+    transition: transform 0.2s ease;
+}
+
+.timeline-slider::-moz-range-thumb:hover {
+    transform: scale(1.15);
+}
+
+.timeline-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--spacing-sm);
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.timeline-label {
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.timeline-label:hover {
+    color: var(--text-primary);
+}
+
+.timeline-label.active {
+    color: var(--text-primary);
+    font-weight: 800;
+}
+
+/* ===================================
+   Footer
+   =================================== */
+.footer {
+    text-align: center;
+    padding: var(--spacing-md) 0;
+    border-top: 1px solid var(--accent-line);
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.footer a {
+    color: var(--accent-line);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-line);
+    transition: color 0.2s ease;
+}
+
+.footer a:hover {
+    color: var(--text-primary);
+    border-bottom-color: var(--text-primary);
+}
+
+/* ===================================
+   Responsive Design
+   =================================== */
+@media (max-width: 1024px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .legend {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        gap: var(--spacing-sm);
+    }
+
+    .legend-scale {
+        flex: 1;
+        min-height: 60px;
+        background: linear-gradient(
+            to right,
+            var(--color-turnout-1),
+            var(--color-turnout-2),
+            var(--color-turnout-3),
+            var(--color-turnout-4),
+            var(--color-turnout-5),
+            var(--color-turnout-6),
+            var(--color-turnout-7),
+            var(--color-turnout-8)
+        );
+    }
+
+    .legend-labels {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: var(--spacing-sm);
+    }
+
+    .timeline-labels {
+        font-size: 0.75rem;
+    }
+}
+
+/* ===================================
+   Animations
+   =================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.state {
+    animation: fadeIn 0.6s ease backwards;
+}
+
+/* Stagger state animations slightly */
+.state:nth-child(n) {
+    animation-delay: calc(0.01s * var(--state-index, 0));
+}
