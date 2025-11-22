@@ -2,15 +2,15 @@
    CSS Variables - Mid-Century Palette
    =================================== */
 :root {
-    /* Earth tone color scale for turnout data */
-    --color-turnout-1: #E8DCC4;  /* Light clay - lowest turnout */
-    --color-turnout-2: #D4C9A8;  /* Pale sand */
-    --color-turnout-3: #C0B68A;  /* Warm beige */
-    --color-turnout-4: #A8A060;  /* Olive */
-    --color-turnout-5: #D4A356;  /* Mustard */
-    --color-turnout-6: #C89050;  /* Amber */
-    --color-turnout-7: #C87941;  /* Burnt orange */
-    --color-turnout-8: #9D5C3F;  /* Sienna - highest turnout */
+    /* Green to red color scale for turnout data */
+    --color-turnout-1: #C85450;  /* Red - lowest turnout */
+    --color-turnout-2: #D4745C;  /* Light red */
+    --color-turnout-3: #D89468;  /* Orange-red */
+    --color-turnout-4: #D4B074;  /* Tan */
+    --color-turnout-5: #C4C080;  /* Olive */
+    --color-turnout-6: #A4B87C;  /* Yellow-green */
+    --color-turnout-7: #84A878;  /* Medium green */
+    --color-turnout-8: #649874;  /* Green - highest turnout */
 
     /* Base colors */
     --bg-paper: #F4EFE6;
@@ -131,8 +131,6 @@ body {
    =================================== */
 .main-content {
     flex: 1;
-    display: flex;
-    gap: var(--spacing-md);
     margin-bottom: var(--spacing-sm);
     position: relative;
 }
@@ -141,17 +139,21 @@ body {
    Map Container
    =================================== */
 .map-container {
-    flex: 1;
     background: white;
     border: 2px solid var(--text-primary);
     box-shadow: 6px 6px 0 var(--shadow);
     padding: var(--spacing-md);
     position: relative;
+    max-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #map {
     width: 100%;
     height: auto;
+    max-height: calc(80vh - 4rem);
     display: block;
 }
 
@@ -173,33 +175,27 @@ body {
    Legend
    =================================== */
 .legend {
-    width: 80px;
-    flex-shrink: 0;
-    background: var(--bg-darker);
-    padding: var(--spacing-sm);
-    border: 2px solid var(--accent-line);
-    box-shadow: 4px 4px 0 var(--shadow);
+    position: absolute;
+    bottom: 2%;
+    right: 3%;
+    width: clamp(10px, 1.2vw, 12px);
+    max-height: 40%;
+    background: transparent;
+    padding: 0;
+    border: none;
+    box-shadow: none;
     display: flex;
     flex-direction: column;
+    gap: 2px;
 }
 
 .legend-title {
-    font-family: var(--font-display);
-    font-size: 0.7rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: var(--spacing-sm);
-    margin-left: calc(-1 * var(--spacing-sm));
-    margin-right: calc(-1 * var(--spacing-sm));
-    color: var(--text-primary);
-    text-align: center;
-    display: block;
+    display: none;
 }
 
 .legend-scale {
     flex: 1;
-    min-height: 300px;
+    min-height: 64px;
     background: linear-gradient(
         to bottom,
         var(--color-turnout-8),
@@ -216,39 +212,49 @@ body {
 }
 
 .legend-labels {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     font-family: var(--font-display);
-    font-size: 0.7rem;
+    font-size: clamp(0.6rem, 1.2vw, 0.75rem);
     font-weight: 600;
     color: var(--text-primary);
     text-align: center;
     pointer-events: none;
-    padding: 4px 0;
+    transform: translateX(-3px);
 }
 
 /* ===================================
-   State Labels (appear on hover)
+   State Labels and Leader Lines
    =================================== */
 .state-label {
     pointer-events: none;
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 800;
     fill: var(--text-primary);
     text-anchor: middle;
     opacity: 0;
     transition: opacity 0.2s ease;
+    paint-order: stroke fill;
+    stroke: var(--bg-paper);
+    stroke-width: 3px;
+    stroke-linejoin: round;
 }
 
 .state-label.visible {
     opacity: 1;
+}
+
+.leader-line {
+    stroke: var(--text-primary);
+    stroke-width: 1;
+    stroke-dasharray: 2, 2;
+    opacity: 0;
+    fill: none;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.leader-line.visible {
+    opacity: 0.4;
 }
 
 /* ===================================
@@ -372,39 +378,6 @@ body {
 /* ===================================
    Responsive Design
    =================================== */
-@media (max-width: 1024px) {
-    .main-content {
-        flex-direction: column;
-    }
-
-    .legend {
-        width: 100%;
-        flex-direction: row;
-        align-items: center;
-        gap: var(--spacing-sm);
-    }
-
-    .legend-scale {
-        flex: 1;
-        min-height: 60px;
-        background: linear-gradient(
-            to right,
-            var(--color-turnout-1),
-            var(--color-turnout-2),
-            var(--color-turnout-3),
-            var(--color-turnout-4),
-            var(--color-turnout-5),
-            var(--color-turnout-6),
-            var(--color-turnout-7),
-            var(--color-turnout-8)
-        );
-    }
-
-    .legend-labels {
-        flex-direction: row;
-    }
-}
-
 @media (max-width: 640px) {
     .container {
         padding: var(--spacing-sm);

@@ -6,18 +6,53 @@
 const PRESIDENTIAL_YEARS = [1980, 1984, 1988, 1992, 1996, 2000, 2004, 2008, 2012, 2016, 2020];
 const TRANSITION_DURATION = 600;
 
+// Manual label offset adjustments for better readability
+const LABEL_OFFSETS = {
+    // States with simple offsets
+    'New York': { x: 10, y: 8 },
+    'Michigan': { x: 10, y: 20 },
+    'Pennsylvania': { x: 5, y: 4 },
+    'West Virginia': { x: -5, y: 10 },
+    'Virginia': { x: 0, y: 8 },
+    'Kentucky': { x: 0, y: 10 },
+    'Tennessee': { x: 0, y: 10 },
+    'Louisiana': { x: -8, y: 16 },
+    'Mississippi': { x: 2, y: 0 },
+    'California': { x: -15, y: -10 },
+    'Florida': { x: 20, y: 8 },
+    'Texas': { x: 10, y: -10 },
+    'Idaho': { x: 0, y: 10 },
+    'Hawaii': { x: 15, y: -10 }
+};
+
+// States that need leader lines (moved to ocean/empty space)
+const LEADER_LINE_STATES = {
+    // Northern states (moved north into Canadian space)
+    'Vermont': { x: 850, y: 80 },
+    'New Hampshire': { x: 880, y: 100 },
+
+    // Eastern seaboard (moved east into Atlantic)
+    'Massachusetts': { x: 880, y: 200 },
+    'Connecticut': { x: 880, y: 230 },
+    'Rhode Island': { x: 880, y: 260 },
+    'New Jersey': { x: 880, y: 290 },
+    'Maryland': { x: 880, y: 320 },
+    'Delaware': { x: 880, y: 350 },
+    'District of Columbia': { x: 880, y: 380 }
+};
+
 // Color scale for turnout percentages
 const colorScale = d3.scaleQuantize()
     .domain([40, 80])  // Typical turnout range
     .range([
-        '#E8DCC4',  // Lightest - lowest turnout
-        '#D4C9A8',
-        '#C0B68A',
-        '#A8A060',
-        '#D4A356',
-        '#C89050',
-        '#C87941',
-        '#9D5C3F'   // Darkest - highest turnout
+        '#C85450',  // Red - lowest turnout
+        '#D4745C',
+        '#D89468',
+        '#D4B074',
+        '#C4C080',
+        '#A4B87C',
+        '#84A878',
+        '#649874'   // Green - highest turnout
     ]);
 
 // State
@@ -79,7 +114,11 @@ function initVisualization() {
         .on('mouseenter', handleStateHover)
         .on('mouseleave', handleStateLeave);
 
-    // Create text label group (will be populated on hover)
+    // Create groups for labels and leader lines
+    // Leader lines should render before labels so they appear behind
+    svg.append('g')
+        .attr('class', 'leader-lines');
+
     svg.append('g')
         .attr('class', 'state-labels');
 }
@@ -115,6 +154,63 @@ function updateMap(year) {
             const turnout = turnoutByState.get(stateName);
             return turnout ? 1 : 0.3;
         });
+
+    // Prepare label data for all states
+    const labelData = usStates.features.map(feature => {
+        const stateName = getStateName(feature.id);
+        const turnout = turnoutByState.get(stateName);
+        const centroid = path.centroid(feature);
+
+        // Check if state needs a leader line
+        const leaderLinePos = LEADER_LINE_STATES[stateName];
+
+        let labelX, labelY;
+        if (leaderLinePos) {
+            // Use absolute positioning for leader line states
+            labelX = leaderLinePos.x;
+            labelY = leaderLinePos.y;
+        } else {
+            // Apply manual offsets if defined for this state
+            const offset = LABEL_OFFSETS[stateName] || { x: 0, y: 0 };
+            labelX = centroid[0] + offset.x;
+            labelY = centroid[1] + offset.y;
+        }
+
+        return {
+            name: stateName,
+            turnout: turnout,
+            centroidX: centroid[0],
+            centroidY: centroid[1],
+            labelX: labelX,
+            labelY: labelY,
+            hasLeaderLine: !!leaderLinePos
+        };
+    }).filter(d => d.turnout); // Only show labels for states with data
+
+    // Draw leader lines (in separate group so they appear behind labels)
+    const leaderLineData = labelData.filter(d => d.hasLeaderLine);
+
+    d3.select('.leader-lines')
+        .selectAll('.leader-line')
+        .data(leaderLineData, d => d.name)
+        .join('line')
+        .attr('class', 'leader-line')
+        .attr('data-state', d => d.name)
+        .attr('x1', d => d.centroidX)
+        .attr('y1', d => d.centroidY)
+        .attr('x2', d => d.labelX)
+        .attr('y2', d => d.labelY);
+
+    // Draw labels
+    d3.select('.state-labels')
+        .selectAll('.state-label')
+        .data(labelData, d => d.name)
+        .join('text')
+        .attr('class', 'state-label')
+        .attr('data-state', d => d.name)
+        .attr('x', d => d.labelX)
+        .attr('y', d => d.labelY)
+        .text(d => `${d.turnout.toFixed(1)}%`);
 }
 
 // ===================================
@@ -185,25 +281,17 @@ function updateActiveLabel() {
 
 function handleStateHover(event, d) {
     const stateName = getStateName(d.id);
-    const year = PRESIDENTIAL_YEARS[currentYearIndex];
 
-    // Find turnout data for this state and year
-    const stateData = turnoutData.find(
-        item => item.state === stateName && item.year === year
-    );
+    // Show label and leader line for this state
+    d3.selectAll('.state-label')
+        .classed('visible', function() {
+            return this.getAttribute('data-state') === stateName;
+        });
 
-    if (stateData) {
-        // Get the centroid of the state for label positioning
-        const centroid = path.centroid(d);
-
-        // Add text label on the state
-        d3.select('.state-labels')
-            .append('text')
-            .attr('class', 'state-label visible')
-            .attr('x', centroid[0])
-            .attr('y', centroid[1])
-            .text(`${stateData.turnout.toFixed(1)}%`);
-    }
+    d3.selectAll('.leader-line')
+        .classed('visible', function() {
+            return this.getAttribute('data-state') === stateName;
+        });
 
     // Dim other states
     d3.selectAll('.state')
@@ -211,8 +299,9 @@ function handleStateHover(event, d) {
 }
 
 function handleStateLeave() {
-    // Remove text label
-    d3.selectAll('.state-label').remove();
+    // Hide all labels and leader lines
+    d3.selectAll('.state-label').classed('visible', false);
+    d3.selectAll('.leader-line').classed('visible', false);
 
     // Restore all states opacity
     d3.selectAll('.state')
