@@ -59,6 +59,7 @@ const colorScale = d3.scaleQuantize()
 let currentYearIndex = PRESIDENTIAL_YEARS.length - 1;  // Start with 2020
 let turnoutData = [];
 let usStates = null;
+let showAllLabels = false;
 
 // SVG dimensions
 const width = 960;
@@ -95,6 +96,8 @@ Promise.all([
     initVisualization();
     updateMap(PRESIDENTIAL_YEARS[currentYearIndex]);
     setupTimeline();
+    setupShowAllToggle();
+    setupHamburgerMenu();
 })
 .catch(error => {
     console.error('Error loading data:', error);
@@ -206,23 +209,33 @@ function updateMap(year) {
         .selectAll('.leader-line')
         .data(leaderLineData, d => d.name)
         .join('line')
-        .attr('class', 'leader-line')
+        .attr('class', d => showAllLabels ? 'leader-line visible' : 'leader-line')
         .attr('data-state', d => d.name)
         .attr('x1', d => d.centroidX)
         .attr('y1', d => d.centroidY)
         .attr('x2', d => d.labelX)
         .attr('y2', d => d.labelY);
 
-    // Draw labels
+    // Draw labels with transition
     d3.select('.state-labels')
         .selectAll('.state-label')
         .data(labelData, d => d.name)
         .join('text')
-        .attr('class', 'state-label')
+        .attr('class', d => showAllLabels ? 'state-label visible' : 'state-label')
         .attr('data-state', d => d.name)
         .attr('x', d => d.labelX)
         .attr('y', d => d.labelY)
-        .text(d => `${d.turnout.toFixed(1)}%`);
+        .transition()
+        .duration(TRANSITION_DURATION)
+        .textTween(function(d) {
+            const currentText = this.textContent;
+            const currentValue = parseFloat(currentText) || 0;
+            const targetValue = d.turnout;
+            const interpolator = d3.interpolateNumber(currentValue, targetValue);
+            return function(t) {
+                return `${interpolator(t).toFixed(1)}%`;
+            };
+        });
 }
 
 // ===================================
@@ -288,32 +301,88 @@ function updateActiveLabel() {
 }
 
 // ===================================
+// Hamburger Menu Toggle
+// ===================================
+
+function setupHamburgerMenu() {
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const settingsPanel = document.getElementById('settingsPanel');
+
+    hamburgerBtn.addEventListener('click', () => {
+        hamburgerBtn.classList.toggle('active');
+        settingsPanel.classList.toggle('open');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        const settingsMenu = document.querySelector('.settings-menu');
+        if (!settingsMenu.contains(e.target)) {
+            hamburgerBtn.classList.remove('active');
+            settingsPanel.classList.remove('open');
+        }
+    });
+}
+
+// ===================================
+// Show All Labels Toggle
+// ===================================
+
+function setupShowAllToggle() {
+    const checkbox = document.getElementById('showAllCheckbox');
+
+    checkbox.addEventListener('change', (e) => {
+        showAllLabels = e.target.checked;
+
+        if (showAllLabels) {
+            // Show all labels and leader lines
+            d3.selectAll('.state-label').classed('visible', true);
+            d3.selectAll('.leader-line').classed('visible', true);
+
+            // Don't dim any states
+            d3.selectAll('.state').style('opacity', 1);
+        } else {
+            // Hide all labels and leader lines
+            d3.selectAll('.state-label').classed('visible', false);
+            d3.selectAll('.leader-line').classed('visible', false);
+        }
+    });
+}
+
+// ===================================
 // State Hover Interactions
 // ===================================
 
 function handleStateHover(event, d) {
     const stateName = getStateName(d.id);
 
-    // Show label and leader line for this state
-    d3.selectAll('.state-label')
-        .classed('visible', function() {
-            return this.getAttribute('data-state') === stateName;
-        });
+    if (!showAllLabels) {
+        // Show label and leader line for this state only when not showing all
+        d3.selectAll('.state-label')
+            .classed('visible', function() {
+                return this.getAttribute('data-state') === stateName;
+            });
 
-    d3.selectAll('.leader-line')
-        .classed('visible', function() {
-            return this.getAttribute('data-state') === stateName;
-        });
+        d3.selectAll('.leader-line')
+            .classed('visible', function() {
+                return this.getAttribute('data-state') === stateName;
+            });
 
-    // Dim other states
-    d3.selectAll('.state')
-        .style('opacity', state => state === d ? 1 : 0.3);
+        // Dim other states
+        d3.selectAll('.state')
+            .style('opacity', state => state === d ? 1 : 0.3);
+    } else {
+        // When showing all, just highlight the hovered state
+        d3.selectAll('.state')
+            .style('opacity', state => state === d ? 1 : 0.6);
+    }
 }
 
 function handleStateLeave() {
-    // Hide all labels and leader lines
-    d3.selectAll('.state-label').classed('visible', false);
-    d3.selectAll('.leader-line').classed('visible', false);
+    if (!showAllLabels) {
+        // Hide all labels and leader lines when not showing all
+        d3.selectAll('.state-label').classed('visible', false);
+        d3.selectAll('.leader-line').classed('visible', false);
+    }
 
     // Restore all states opacity
     d3.selectAll('.state')

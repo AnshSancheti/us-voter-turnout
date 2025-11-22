@@ -31,6 +31,21 @@
             <div class="map-container">
                 <svg id="map" viewBox="0 0 960 600" preserveAspectRatio="xMidYMid meet"></svg>
 
+                <!-- Settings menu -->
+                <div class="settings-menu">
+                    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Settings">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                    <div class="settings-panel" id="settingsPanel">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="showAllCheckbox" class="show-all-checkbox">
+                            <span class="checkbox-text">Show All</span>
+                        </label>
+                    </div>
+                </div>
+
                 <!-- Legend (inside map) -->
                 <div class="legend">
                     <div class="legend-title">Turnout</div>
