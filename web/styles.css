@@ -131,7 +131,6 @@ body {
    =================================== */
 .main-content {
     flex: 1;
-    margin-bottom: var(--spacing-sm);
     position: relative;
 }
 
@@ -142,7 +141,7 @@ body {
     background: white;
     border: 2px solid var(--text-primary);
     box-shadow: 6px 6px 0 var(--shadow);
-    padding: var(--spacing-md);
+    padding: 0;
     position: relative;
     max-height: 80vh;
     display: flex;
@@ -153,7 +152,7 @@ body {
 #map {
     width: 100%;
     height: auto;
-    max-height: calc(80vh - 4rem);
+    max-height: 80vh;
     display: block;
 }
 
@@ -187,6 +186,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2px;
+    z-index: 10;
+    pointer-events: none;
 }
 
 .legend-title {
@@ -261,6 +262,7 @@ body {
    Timeline Slider
    =================================== */
 .timeline-container {
+    margin-top: var(--spacing-sm);
     margin-bottom: var(--spacing-md);
     padding: 0;
 }

@@ -71,6 +71,11 @@ const projection = d3.geoAlbersUsa()
 
 const path = d3.geoPath().projection(projection);
 
+// Zoom behavior
+const zoom = d3.zoom()
+    .scaleExtent([1, 8])  // Allow zoom from 1x to 8x
+    .on('zoom', handleZoom);
+
 // ===================================
 // Data Loading
 // ===================================
@@ -104,8 +109,15 @@ Promise.all([
 function initVisualization() {
     const svg = d3.select('#map');
 
-    // Draw states
-    svg.selectAll('.state')
+    // Attach zoom behavior to the SVG
+    svg.call(zoom);
+
+    // Create a group for all zoomable content
+    const g = svg.append('g')
+        .attr('class', 'zoomable-group');
+
+    // Draw states inside the zoomable group
+    g.selectAll('.state')
         .data(usStates.features)
         .join('path')
         .attr('class', 'state')
@@ -114,12 +126,12 @@ function initVisualization() {
         .on('mouseenter', handleStateHover)
         .on('mouseleave', handleStateLeave);
 
-    // Create groups for labels and leader lines
+    // Create groups for labels and leader lines inside the zoomable group
     // Leader lines should render before labels so they appear behind
-    svg.append('g')
+    g.append('g')
         .attr('class', 'leader-lines');
 
-    svg.append('g')
+    g.append('g')
         .attr('class', 'state-labels');
 }
 
@@ -306,6 +318,16 @@ function handleStateLeave() {
     // Restore all states opacity
     d3.selectAll('.state')
         .style('opacity', 1);
+}
+
+// ===================================
+// Zoom Interaction
+// ===================================
+
+function handleZoom(event) {
+    // Apply the zoom transform to all zoomable content
+    d3.select('.zoomable-group')
+        .attr('transform', event.transform);
 }
 
 // ===================================
