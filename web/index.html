@@ -32,15 +32,15 @@
                 <svg id="map" viewBox="0 0 960 600" preserveAspectRatio="xMidYMid meet"></svg>
 
                 <!-- Settings menu -->
-                <div class="settings-menu">
-                    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Settings">
+                <div class="settings-menu" data-map-target="primary">
+                    <button class="hamburger-btn" aria-label="Settings">
                         <span class="hamburger-line"></span>
                         <span class="hamburger-line"></span>
                         <span class="hamburger-line"></span>
                     </button>
-                    <div class="settings-panel" id="settingsPanel">
+                    <div class="settings-panel">
                         <label class="checkbox-label">
-                            <input type="checkbox" id="showAllCheckbox" class="show-all-checkbox">
+                            <input type="checkbox" class="show-all-checkbox" data-map-target="primary">
                             <span class="checkbox-text">Show All</span>
                         </label>
                         <label class="checkbox-label">
@@ -81,6 +81,54 @@
                     <div class="timeline-labels" id="timelineLabels"></div>
                 </div>
             </div>
+
+            <!-- Additional views -->
+            <section class="summary-section">
+                <div class="summary-grid">
+                    <article class="summary-card">
+                        <header class="summary-card-header">
+                            <h3>Highest Turnout Year</h3>
+                        </header>
+                        <div class="map-container secondary">
+                            <div class="settings-menu" data-map-target="highest">
+                                <button class="hamburger-btn" aria-label="Settings">
+                                    <span class="hamburger-line"></span>
+                                    <span class="hamburger-line"></span>
+                                    <span class="hamburger-line"></span>
+                                </button>
+                                <div class="settings-panel">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" class="show-all-checkbox" data-map-target="highest">
+                                        <span class="checkbox-text">Show All</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <svg id="highestTurnoutMap" class="summary-map" viewBox="0 0 960 600" preserveAspectRatio="xMidYMid meet"></svg>
+                        </div>
+                    </article>
+                    <article class="summary-card">
+                        <header class="summary-card-header">
+                            <h3>Lowest Turnout Year</h3>
+                        </header>
+                        <div class="map-container secondary">
+                            <div class="settings-menu" data-map-target="lowest">
+                                <button class="hamburger-btn" aria-label="Settings">
+                                    <span class="hamburger-line"></span>
+                                    <span class="hamburger-line"></span>
+                                    <span class="hamburger-line"></span>
+                                </button>
+                                <div class="settings-panel">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" class="show-all-checkbox" data-map-target="lowest">
+                                        <span class="checkbox-text">Show All</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <svg id="lowestTurnoutMap" class="summary-map" viewBox="0 0 960 600" preserveAspectRatio="xMidYMid meet"></svg>
+                        </div>
+                    </article>
+                </div>
+            </section>
         </main>
 
         <!-- Footer -->

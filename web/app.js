@@ -4,6 +4,7 @@
 
 // Configuration
 const PRESIDENTIAL_YEARS = [1980, 1984, 1988, 1992, 1996, 2000, 2004, 2008, 2012, 2016, 2020];
+const PRESIDENTIAL_YEAR_SET = new Set(PRESIDENTIAL_YEARS);
 const TRANSITION_DURATION = 600;
 
 // Candidate data by year (D = Democrat, R = Republican)
@@ -24,20 +25,21 @@ const CANDIDATES = {
 // Manual label offset adjustments for better readability
 const LABEL_OFFSETS = {
     // States with simple offsets
-    'New York': { x: 10, y: 8 },
-    'Michigan': { x: 10, y: 20 },
+    'New York': { x: 6, y: 8 },
+    'Michigan': { x: 12, y: 26 },
     'Pennsylvania': { x: 5, y: 4 },
     'West Virginia': { x: -5, y: 10 },
-    'Virginia': { x: 0, y: 8 },
+    'Virginia': { x: 2, y: 8 },
     'Kentucky': { x: 0, y: 10 },
-    'Tennessee': { x: 0, y: 10 },
+    'Tennessee': { x: 0, y: 6 },
     'Louisiana': { x: -8, y: 16 },
     'Mississippi': { x: 2, y: 0 },
     'California': { x: -15, y: -10 },
-    'Florida': { x: 20, y: 8 },
+    'Florida': { x: 18, y: 8 },
     'Texas': { x: 10, y: -10 },
     'Idaho': { x: 0, y: 10 },
-    'Hawaii': { x: 15, y: -10 }
+    'Hawaii': { x: 15, y: -10 },
+    'North Carolina': { x: 0, y: 5 }
 };
 
 // States that need leader lines (moved to ocean/empty space)
@@ -70,11 +72,33 @@ const colorScale = d3.scaleQuantize()
         '#649874'   // Green - highest turnout
     ]);
 
+// Color scale for years (1980-2020)
+const yearColorScale = d3.scaleOrdinal()
+    .domain(PRESIDENTIAL_YEARS)
+    .range([
+        '#8B5A3C',  // 1980 - Brown
+        '#A67C52',  // 1984 - Tan
+        '#C19A6B',  // 1988 - Camel
+        '#D4B896',  // 1992 - Wheat
+        '#9B8B7E',  // 1996 - Warm gray
+        '#7A9B8E',  // 2000 - Sage green
+        '#6B8E9B',  // 2004 - Steel blue
+        '#5A7B9B',  // 2008 - Slate blue
+        '#4A6B8B',  // 2012 - Ocean blue
+        '#6B5A7B',  // 2016 - Muted purple
+        '#8B6B7A'   // 2020 - Dusty rose
+    ]);
+
 // State
 let currentYearIndex = PRESIDENTIAL_YEARS.length - 1;  // Start with 2020
 let turnoutData = [];
+let turnoutIndex = null;
 let usStates = null;
-let showAllLabels = false;
+let primaryMapView = null;
+let highestTurnoutMapView = null;
+let lowestTurnoutMapView = null;
+let highestTurnoutDataset = null;
+let lowestTurnoutDataset = null;
 
 // SVG dimensions
 const width = 960;
@@ -87,10 +111,288 @@ const projection = d3.geoAlbersUsa()
 
 const path = d3.geoPath().projection(projection);
 
-// Zoom behavior
-const zoom = d3.zoom()
-    .scaleExtent([1, 8])  // Allow zoom from 1x to 8x
-    .on('zoom', handleZoom);
+class MapView {
+    constructor({
+        svgSelector,
+        statesGeoJson,
+        pathGenerator,
+        colorScale,
+        labelOffsets = {},
+        leaderLinePositions = {}
+    }) {
+        this.svg = d3.select(svgSelector);
+        this.statesGeoJson = statesGeoJson;
+        this.path = pathGenerator;
+        this.colorScale = colorScale;
+        this.labelOffsets = labelOffsets;
+        this.leaderLinePositions = leaderLinePositions;
+        this.showAllLabels = false;
+
+        this.zoomableGroup = this.svg.append('g')
+            .attr('class', 'zoomable-group');
+
+        this.statesGroup = this.zoomableGroup.append('g')
+            .attr('class', 'states');
+
+        this.leaderLinesGroup = this.zoomableGroup.append('g')
+            .attr('class', 'leader-lines');
+
+        this.labelsGroup = this.zoomableGroup.append('g')
+            .attr('class', 'state-labels');
+
+        this.statePaths = this.statesGroup.selectAll('.state')
+            .data(this.statesGeoJson)
+            .join('path')
+            .attr('class', 'state')
+            .attr('d', this.path)
+            .style('--state-index', (d, i) => i)
+            .on('mouseenter', (event, d) => this.handleStateHover(event, d))
+            .on('mouseleave', () => this.handleStateLeave());
+
+        const zoomBehavior = d3.zoom()
+            .scaleExtent([0.85, 8])
+            .on('zoom', (event) => {
+                this.zoomableGroup.attr('transform', event.transform);
+            });
+
+        this.svg.call(zoomBehavior);
+    }
+
+    update({
+        dataByState,
+        labelFormatter,
+        numericLabelFormatter,
+        getFillColor
+    } = {}) {
+        const dataset = dataByState || new Map();
+        const fillAccessor = getFillColor || ((stateName, entry) => entry ? this.colorScale(entry.value) : '#E0E0E0');
+        const formatLabel = labelFormatter || ((entry) => {
+            if (!entry || typeof entry.value !== 'number') {
+                return '';
+            }
+            return `${entry.value.toFixed(1)}%`;
+        });
+        const formatNumeric = numericLabelFormatter || ((value) => `${value.toFixed(1)}%`);
+
+        this.statePaths
+            .transition()
+            .duration(TRANSITION_DURATION)
+            .style('fill', d => {
+                const stateName = getStateName(d.id);
+                const entry = dataset.get(stateName);
+                return fillAccessor(stateName, entry);
+            })
+            .style('opacity', d => {
+                const stateName = getStateName(d.id);
+                return dataset.has(stateName) ? 1 : 0.3;
+            });
+
+        const labelData = this.statesGeoJson
+            .map(feature => {
+                const stateName = getStateName(feature.id);
+                const entry = dataset.get(stateName);
+
+                if (!entry) {
+                    return null;
+                }
+
+                const centroid = this.path.centroid(feature);
+                const leaderLinePos = this.leaderLinePositions[stateName];
+                const offset = this.labelOffsets[stateName] || { x: 0, y: 0 };
+                const labelX = leaderLinePos ? leaderLinePos.x : centroid[0] + offset.x;
+                const labelY = leaderLinePos ? leaderLinePos.y : centroid[1] + offset.y;
+
+                return {
+                    name: stateName,
+                    value: entry.value,
+                    displayValue: formatLabel(entry, stateName),
+                    numericValue: typeof entry.value === 'number' ? entry.value : null,
+                    centroidX: centroid[0],
+                    centroidY: centroid[1],
+                    labelX,
+                    labelY,
+                    hasLeaderLine: !!leaderLinePos
+                };
+            })
+            .filter(Boolean);
+
+        this.leaderLinesGroup
+            .selectAll('.leader-line')
+            .data(labelData.filter(d => d.hasLeaderLine), d => d.name)
+            .join(
+                enter => enter.append('line')
+                    .attr('class', 'leader-line')
+                    .attr('data-state', d => d.name),
+                update => update,
+                exit => exit.remove()
+            )
+            .attr('x1', d => d.centroidX)
+            .attr('y1', d => d.centroidY)
+            .attr('x2', d => d.labelX)
+            .attr('y2', d => d.labelY);
+
+        this.labelsGroup
+            .selectAll('.state-label')
+            .data(labelData, d => d.name)
+            .join(
+                enter => enter.append('text')
+                    .attr('class', 'state-label')
+                    .attr('data-state', d => d.name)
+                    .attr('x', d => d.labelX)
+                    .attr('y', d => d.labelY),
+                update => update,
+                exit => exit.remove()
+            )
+            .attr('x', d => d.labelX)
+            .attr('y', d => d.labelY)
+            .transition()
+            .duration(TRANSITION_DURATION)
+            .tween('text', function(d) {
+                if (typeof d.numericValue !== 'number') {
+                    const node = this;
+                    return function() {
+                        node.textContent = d.displayValue || '';
+                    };
+                }
+
+                const currentValue = parseFloat(this.textContent) || 0;
+                const interpolator = d3.interpolateNumber(currentValue, d.numericValue);
+                return function(t) {
+                    const interpolated = interpolator(t);
+                    this.textContent = formatNumeric(interpolated, d);
+                };
+            });
+
+        this.applyLabelVisibility();
+    }
+
+    setShowAllLabels(show) {
+        this.showAllLabels = show;
+        this.applyLabelVisibility();
+    }
+
+    applyLabelVisibility() {
+        if (this.showAllLabels) {
+            this.labelsGroup.selectAll('.state-label').classed('visible', true);
+            this.leaderLinesGroup.selectAll('.leader-line').classed('visible', true);
+            this.statePaths.style('opacity', 1);
+        } else {
+            this.labelsGroup.selectAll('.state-label').classed('visible', false);
+            this.leaderLinesGroup.selectAll('.leader-line').classed('visible', false);
+            this.statePaths.style('opacity', 1);
+        }
+    }
+
+    handleStateHover(event, feature) {
+        const stateName = getStateName(feature.id);
+
+        if (!this.showAllLabels) {
+            this.labelsGroup.selectAll('.state-label')
+                .classed('visible', d => d && d.name === stateName);
+
+            this.leaderLinesGroup.selectAll('.leader-line')
+                .classed('visible', d => d && d.name === stateName);
+
+            this.statePaths
+                .style('opacity', d => getStateName(d.id) === stateName ? 1 : 0.3);
+        } else {
+            this.statePaths
+                .style('opacity', d => getStateName(d.id) === stateName ? 1 : 0.6);
+        }
+    }
+
+    handleStateLeave() {
+        if (!this.showAllLabels) {
+            this.labelsGroup.selectAll('.state-label').classed('visible', false);
+            this.leaderLinesGroup.selectAll('.leader-line').classed('visible', false);
+        }
+
+        this.statePaths
+            .style('opacity', 1);
+    }
+}
+
+function buildTurnoutIndex(records) {
+    const byYear = new Map();
+    const byState = new Map();
+
+    records.forEach(record => {
+        const year = record.year;
+        const state = record.state;
+        const turnout = record.turnout;
+
+        if (!PRESIDENTIAL_YEAR_SET.has(year)) {
+            return;
+        }
+
+        if (!byYear.has(year)) {
+            byYear.set(year, new Map());
+        }
+        byYear.get(year).set(state, turnout);
+
+        if (!byState.has(state)) {
+            byState.set(state, []);
+        }
+        byState.get(state).push({ year, turnout });
+    });
+
+    byState.forEach(entries => {
+        entries.sort((a, b) => a.year - b.year);
+    });
+
+    return { byYear, byState };
+}
+
+function getStateDatasetForYear(year) {
+    if (!turnoutIndex || !turnoutIndex.byYear.has(year)) {
+        return new Map();
+    }
+
+    const yearData = turnoutIndex.byYear.get(year);
+    const dataset = new Map();
+
+    yearData.forEach((turnout, state) => {
+        dataset.set(state, { value: turnout });
+    });
+
+    return dataset;
+}
+
+function buildExtremaDatasets() {
+    const highest = new Map();
+    const lowest = new Map();
+
+    if (!turnoutIndex) {
+        return { highest, lowest };
+    }
+
+    turnoutIndex.byState.forEach((entries, state) => {
+        let maxEntry = null;
+        let minEntry = null;
+
+        entries.forEach(entry => {
+            if (!maxEntry || entry.turnout > maxEntry.turnout ||
+                (entry.turnout === maxEntry.turnout && entry.year > maxEntry.year)) {
+                maxEntry = entry;
+            }
+
+            if (!minEntry || entry.turnout < minEntry.turnout ||
+                (entry.turnout === minEntry.turnout && entry.year > minEntry.year)) {
+                minEntry = entry;
+            }
+        });
+
+        if (maxEntry) {
+            highest.set(state, { value: maxEntry.turnout, year: maxEntry.year });
+        }
+
+        if (minEntry) {
+            lowest.set(state, { value: minEntry.turnout, year: minEntry.year });
+        }
+    });
+
+    return { highest, lowest };
+}
 
 // ===================================
 // Data Loading
@@ -103,17 +405,26 @@ Promise.all([
 .then(([turnoutJson, usTopoJson]) => {
     // Store turnout data
     turnoutData = turnoutJson;
+    turnoutIndex = buildTurnoutIndex(turnoutData);
 
     // Convert TopoJSON to GeoJSON
     usStates = topojson.feature(usTopoJson, usTopoJson.objects.states);
 
-    // Initialize visualization
-    initVisualization();
-    updateMap(PRESIDENTIAL_YEARS[currentYearIndex]);
+    primaryMapView = new MapView({
+        svgSelector: '#map',
+        statesGeoJson: usStates.features,
+        pathGenerator: path,
+        colorScale,
+        labelOffsets: LABEL_OFFSETS,
+        leaderLinePositions: LEADER_LINE_STATES
+    });
+
+    updatePrimaryMap();
+    initializeSummaryMaps();
     setupTimeline();
-    setupShowAllToggle();
+    setupSettingsMenus();
+    setupShowAllControls();
     setupHideLegendToggle();
-    setupHamburgerMenu();
 })
 .catch(error => {
     console.error('Error loading data:', error);
@@ -122,136 +433,81 @@ Promise.all([
 });
 
 // ===================================
-// Visualization Initialization
+// Primary Map Updates
 // ===================================
 
-function initVisualization() {
-    const svg = d3.select('#map');
+function updatePrimaryMap() {
+    if (!primaryMapView) {
+        return;
+    }
 
-    // Attach zoom behavior to the SVG
-    svg.call(zoom);
-
-    // Create a group for all zoomable content
-    const g = svg.append('g')
-        .attr('class', 'zoomable-group');
-
-    // Draw states inside the zoomable group
-    g.selectAll('.state')
-        .data(usStates.features)
-        .join('path')
-        .attr('class', 'state')
-        .attr('d', path)
-        .style('--state-index', (d, i) => i)
-        .on('mouseenter', handleStateHover)
-        .on('mouseleave', handleStateLeave);
-
-    // Create groups for labels and leader lines inside the zoomable group
-    // Leader lines should render before labels so they appear behind
-    g.append('g')
-        .attr('class', 'leader-lines');
-
-    g.append('g')
-        .attr('class', 'state-labels');
-}
-
-// ===================================
-// Map Updates
-// ===================================
-
-function updateMap(year) {
-    // Update year display
+    const year = PRESIDENTIAL_YEARS[currentYearIndex];
     d3.select('#currentYear').text(year);
 
-    // Create lookup map for turnout by state name
-    const turnoutByState = new Map();
+    const dataByState = getStateDatasetForYear(year);
 
-    turnoutData
-        .filter(d => d.year === year)
-        .forEach(d => {
-            turnoutByState.set(d.state, d.turnout);
+    primaryMapView.update({
+        dataByState,
+        labelFormatter: (entry) => {
+            if (!entry || typeof entry.value !== 'number') {
+                return '';
+            }
+            return `${entry.value.toFixed(1)}%`;
+        },
+        numericLabelFormatter: (value) => `${value.toFixed(1)}%`
+    });
+}
+
+function initializeSummaryMaps() {
+    const { highest, lowest } = buildExtremaDatasets();
+    highestTurnoutDataset = highest;
+    lowestTurnoutDataset = lowest;
+
+    if (document.querySelector('#highestTurnoutMap')) {
+        highestTurnoutMapView = new MapView({
+            svgSelector: '#highestTurnoutMap',
+            statesGeoJson: usStates.features,
+            pathGenerator: path,
+            colorScale,
+            labelOffsets: LABEL_OFFSETS,
+            leaderLinePositions: LEADER_LINE_STATES
         });
 
-    // Update state colors with transition
-    d3.selectAll('.state')
-        .transition()
-        .duration(TRANSITION_DURATION)
-        .style('fill', d => {
-            const stateName = getStateName(d.id);
-            const turnout = turnoutByState.get(stateName);
-            return turnout ? colorScale(turnout) : '#E0E0E0';
-        })
-        .style('opacity', d => {
-            const stateName = getStateName(d.id);
-            const turnout = turnoutByState.get(stateName);
-            return turnout ? 1 : 0.3;
+        highestTurnoutMapView.update({
+            dataByState: highestTurnoutDataset,
+            labelFormatter: (entry) => {
+                if (!entry) {
+                    return '';
+                }
+                return `${entry.year} · ${entry.value.toFixed(0)}%`;
+            },
+            numericLabelFormatter: (value, d) => d.displayValue,
+            getFillColor: (stateName, entry) => entry ? yearColorScale(entry.year) : '#E0E0E0'
+        });
+    }
+
+    if (document.querySelector('#lowestTurnoutMap')) {
+        lowestTurnoutMapView = new MapView({
+            svgSelector: '#lowestTurnoutMap',
+            statesGeoJson: usStates.features,
+            pathGenerator: path,
+            colorScale,
+            labelOffsets: LABEL_OFFSETS,
+            leaderLinePositions: LEADER_LINE_STATES
         });
 
-    // Prepare label data for all states
-    const labelData = usStates.features.map(feature => {
-        const stateName = getStateName(feature.id);
-        const turnout = turnoutByState.get(stateName);
-        const centroid = path.centroid(feature);
-
-        // Check if state needs a leader line
-        const leaderLinePos = LEADER_LINE_STATES[stateName];
-
-        let labelX, labelY;
-        if (leaderLinePos) {
-            // Use absolute positioning for leader line states
-            labelX = leaderLinePos.x;
-            labelY = leaderLinePos.y;
-        } else {
-            // Apply manual offsets if defined for this state
-            const offset = LABEL_OFFSETS[stateName] || { x: 0, y: 0 };
-            labelX = centroid[0] + offset.x;
-            labelY = centroid[1] + offset.y;
-        }
-
-        return {
-            name: stateName,
-            turnout: turnout,
-            centroidX: centroid[0],
-            centroidY: centroid[1],
-            labelX: labelX,
-            labelY: labelY,
-            hasLeaderLine: !!leaderLinePos
-        };
-    }).filter(d => d.turnout); // Only show labels for states with data
-
-    // Draw leader lines (in separate group so they appear behind labels)
-    const leaderLineData = labelData.filter(d => d.hasLeaderLine);
-
-    d3.select('.leader-lines')
-        .selectAll('.leader-line')
-        .data(leaderLineData, d => d.name)
-        .join('line')
-        .attr('class', d => showAllLabels ? 'leader-line visible' : 'leader-line')
-        .attr('data-state', d => d.name)
-        .attr('x1', d => d.centroidX)
-        .attr('y1', d => d.centroidY)
-        .attr('x2', d => d.labelX)
-        .attr('y2', d => d.labelY);
-
-    // Draw labels with transition
-    d3.select('.state-labels')
-        .selectAll('.state-label')
-        .data(labelData, d => d.name)
-        .join('text')
-        .attr('class', d => showAllLabels ? 'state-label visible' : 'state-label')
-        .attr('data-state', d => d.name)
-        .attr('x', d => d.labelX)
-        .attr('y', d => d.labelY)
-        .transition()
-        .duration(TRANSITION_DURATION)
-        .textTween(function(d) {
-            const currentText = this.textContent;
-            const currentValue = parseFloat(currentText) || 0;
-            const targetValue = d.turnout;
-            const interpolator = d3.interpolateNumber(currentValue, targetValue);
-            return function(t) {
-                return `${interpolator(t).toFixed(1)}%`;
-            };
+        lowestTurnoutMapView.update({
+            dataByState: lowestTurnoutDataset,
+            labelFormatter: (entry) => {
+                if (!entry) {
+                    return '';
+                }
+                return `${entry.year} · ${entry.value.toFixed(0)}%`;
+            },
+            numericLabelFormatter: (value, d) => d.displayValue,
+            getFillColor: (stateName, entry) => entry ? yearColorScale(entry.year) : '#E0E0E0'
         });
+    }
 }
 
 // ===================================
@@ -311,15 +567,17 @@ function setupTimeline() {
 
         if (index === currentYearIndex) {
             labelWrapper.classList.add('active');
+            yearDiv.style.display = 'block';
             candidatesDiv.style.display = 'flex';
         } else {
+            yearDiv.style.display = 'none';
             candidatesDiv.style.display = 'none';
         }
 
         labelWrapper.addEventListener('click', () => {
             currentYearIndex = index;
             slider.value = index;
-            updateMap(year);
+            updatePrimaryMap();
             updateActiveLabel();
         });
 
@@ -329,7 +587,7 @@ function setupTimeline() {
     // Slider event listener
     slider.addEventListener('input', (e) => {
         currentYearIndex = parseInt(e.target.value);
-        updateMap(PRESIDENTIAL_YEARS[currentYearIndex]);
+        updatePrimaryMap();
         updateActiveLabel();
     });
 
@@ -338,12 +596,12 @@ function setupTimeline() {
         if (e.key === 'ArrowLeft' && currentYearIndex > 0) {
             currentYearIndex--;
             slider.value = currentYearIndex;
-            updateMap(PRESIDENTIAL_YEARS[currentYearIndex]);
+            updatePrimaryMap();
             updateActiveLabel();
         } else if (e.key === 'ArrowRight' && currentYearIndex < PRESIDENTIAL_YEARS.length - 1) {
             currentYearIndex++;
             slider.value = currentYearIndex;
-            updateMap(PRESIDENTIAL_YEARS[currentYearIndex]);
+            updatePrimaryMap();
             updateActiveLabel();
         }
     });
@@ -352,61 +610,66 @@ function setupTimeline() {
 function updateActiveLabel() {
     document.querySelectorAll('.timeline-label').forEach((label, index) => {
         const candidatesDiv = label.querySelector('.timeline-candidates');
+        const yearDiv = label.querySelector('.timeline-year');
         if (index === currentYearIndex) {
             label.classList.add('active');
+            yearDiv.style.display = 'block';
             candidatesDiv.style.display = 'flex';
         } else {
             label.classList.remove('active');
+            yearDiv.style.display = 'none';
             candidatesDiv.style.display = 'none';
         }
     });
 }
 
 // ===================================
-// Hamburger Menu Toggle
+// Settings Menus & Show-All Controls
 // ===================================
 
-function setupHamburgerMenu() {
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const settingsPanel = document.getElementById('settingsPanel');
+function setupSettingsMenus() {
+    document.querySelectorAll('.settings-menu').forEach(menu => {
+        const hamburgerBtn = menu.querySelector('.hamburger-btn');
+        const settingsPanel = menu.querySelector('.settings-panel');
 
-    hamburgerBtn.addEventListener('click', () => {
-        hamburgerBtn.classList.toggle('active');
-        settingsPanel.classList.toggle('open');
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        const settingsMenu = document.querySelector('.settings-menu');
-        if (!settingsMenu.contains(e.target)) {
-            hamburgerBtn.classList.remove('active');
-            settingsPanel.classList.remove('open');
+        if (!hamburgerBtn || !settingsPanel) {
+            return;
         }
+
+        hamburgerBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            hamburgerBtn.classList.toggle('active');
+            settingsPanel.classList.toggle('open');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!menu.contains(e.target)) {
+                hamburgerBtn.classList.remove('active');
+                settingsPanel.classList.remove('open');
+            }
+        });
     });
 }
 
-// ===================================
-// Show All Labels Toggle
-// ===================================
+function setupShowAllControls() {
+    const mapLookup = {
+        primary: primaryMapView,
+        highest: highestTurnoutMapView,
+        lowest: lowestTurnoutMapView
+    };
 
-function setupShowAllToggle() {
-    const checkbox = document.getElementById('showAllCheckbox');
+    document.querySelectorAll('.show-all-checkbox').forEach(checkbox => {
+        const targetKey = checkbox.dataset.mapTarget;
+        const mapView = mapLookup[targetKey];
 
-    checkbox.addEventListener('change', (e) => {
-        showAllLabels = e.target.checked;
-
-        if (showAllLabels) {
-            // Show all labels and leader lines
-            d3.selectAll('.state-label').classed('visible', true);
-            d3.selectAll('.leader-line').classed('visible', true);
-
-            // Don't dim any states
-            d3.selectAll('.state').style('opacity', 1);
-        } else {
-            // Hide all labels and leader lines
-            d3.selectAll('.state-label').classed('visible', false);
-            d3.selectAll('.leader-line').classed('visible', false);
+        if (!mapView) {
+            checkbox.disabled = true;
+            return;
         }
+
+        checkbox.addEventListener('change', (e) => {
+            mapView.setShowAllLabels(e.target.checked);
+        });
     });
 }
 
@@ -425,57 +688,6 @@ function setupHideLegendToggle() {
             legend.classList.remove('hidden');
         }
     });
-}
-
-// ===================================
-// State Hover Interactions
-// ===================================
-
-function handleStateHover(event, d) {
-    const stateName = getStateName(d.id);
-
-    if (!showAllLabels) {
-        // Show label and leader line for this state only when not showing all
-        d3.selectAll('.state-label')
-            .classed('visible', function() {
-                return this.getAttribute('data-state') === stateName;
-            });
-
-        d3.selectAll('.leader-line')
-            .classed('visible', function() {
-                return this.getAttribute('data-state') === stateName;
-            });
-
-        // Dim other states
-        d3.selectAll('.state')
-            .style('opacity', state => state === d ? 1 : 0.3);
-    } else {
-        // When showing all, just highlight the hovered state
-        d3.selectAll('.state')
-            .style('opacity', state => state === d ? 1 : 0.6);
-    }
-}
-
-function handleStateLeave() {
-    if (!showAllLabels) {
-        // Hide all labels and leader lines when not showing all
-        d3.selectAll('.state-label').classed('visible', false);
-        d3.selectAll('.leader-line').classed('visible', false);
-    }
-
-    // Restore all states opacity
-    d3.selectAll('.state')
-        .style('opacity', 1);
-}
-
-// ===================================
-// Zoom Interaction
-// ===================================
-
-function handleZoom(event) {
-    // Apply the zoom transform to all zoomable content
-    d3.select('.zoomable-group')
-        .attr('transform', event.transform);
 }
 
 // ===================================
