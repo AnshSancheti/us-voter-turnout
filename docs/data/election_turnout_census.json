@@ -2,3211 +2,3006 @@
   {
     "year": 1972,
     "state": "California",
-    "turnout": 71.0
-  },
-  {
-    "year": 1972,
-    "state": "Florida",
-    "turnout": 68.7
-  },
-  {
-    "year": 1972,
-    "state": "Georgia",
-    "turnout": 64.2
-  },
-  {
-    "year": 1972,
-    "state": "Illinois",
-    "turnout": 78.7
-  },
-  {
-    "year": 1972,
-    "state": "Indiana",
-    "turnout": 80.9
-  },
-  {
-    "year": 1972,
-    "state": "Massachusetts",
-    "turnout": 77.8
-  },
-  {
-    "year": 1972,
-    "state": "Michigan",
-    "turnout": 73.2
-  },
-  {
-    "year": 1972,
-    "state": "Missouri",
-    "turnout": 76.2
-  },
-  {
-    "year": 1972,
-    "state": "New Jersey",
-    "turnout": 73.2
-  },
-  {
-    "year": 1972,
-    "state": "New York",
-    "turnout": 69.1
-  },
-  {
-    "year": 1972,
-    "state": "North Carolina",
-    "turnout": 63.5
-  },
-  {
-    "year": 1972,
-    "state": "Ohio",
-    "turnout": 73.2
-  },
-  {
-    "year": 1972,
-    "state": "Pennsylvania",
-    "turnout": 68.9
-  },
-  {
-    "year": 1972,
-    "state": "Texas",
-    "turnout": 68.9
-  },
-  {
-    "year": 1972,
-    "state": "Virginia",
-    "turnout": 61.5
-  },
-  {
-    "year": 1976,
-    "state": "California",
-    "turnout": 71.0
-  },
-  {
-    "year": 1976,
-    "state": "Florida",
-    "turnout": 68.7
-  },
-  {
-    "year": 1976,
-    "state": "Georgia",
-    "turnout": 64.2
-  },
-  {
-    "year": 1976,
-    "state": "Illinois",
-    "turnout": 78.7
-  },
-  {
-    "year": 1976,
-    "state": "Indiana",
-    "turnout": 80.9
-  },
-  {
-    "year": 1976,
-    "state": "Massachusetts",
-    "turnout": 77.8
-  },
-  {
-    "year": 1976,
-    "state": "Michigan",
-    "turnout": 73.2
-  },
-  {
-    "year": 1976,
-    "state": "Missouri",
-    "turnout": 76.2
-  },
-  {
-    "year": 1976,
-    "state": "New Jersey",
-    "turnout": 73.2
-  },
-  {
-    "year": 1976,
-    "state": "New York",
-    "turnout": 69.1
-  },
-  {
-    "year": 1976,
-    "state": "North Carolina",
-    "turnout": 63.5
-  },
-  {
-    "year": 1976,
-    "state": "Ohio",
-    "turnout": 73.2
-  },
-  {
-    "year": 1976,
-    "state": "Pennsylvania",
-    "turnout": 68.9
-  },
-  {
-    "year": 1976,
-    "state": "Texas",
-    "turnout": 68.9
-  },
-  {
-    "year": 1976,
-    "state": "Virginia",
-    "turnout": 61.5
-  },
-  {
-    "year": 1980,
-    "state": "Alabama",
-    "turnout": 70.2
-  },
-  {
-    "year": 1980,
-    "state": "Alaska",
-    "turnout": 66.6
-  },
-  {
-    "year": 1980,
-    "state": "Arizona",
-    "turnout": 58.7
-  },
-  {
-    "year": 1980,
-    "state": "Arkansas",
-    "turnout": 66.4
-  },
-  {
-    "year": 1980,
-    "state": "California",
-    "turnout": 60.0
-  },
-  {
-    "year": 1980,
-    "state": "Colorado",
-    "turnout": 69.5
-  },
-  {
-    "year": 1980,
-    "state": "Connecticut",
-    "turnout": 72.9
-  },
-  {
-    "year": 1980,
-    "state": "Delaware",
-    "turnout": 65.8
-  },
-  {
-    "year": 1980,
-    "state": "District of Columbia",
-    "turnout": 56.9
-  },
-  {
-    "year": 1980,
-    "state": "Florida",
-    "turnout": 63.1
-  },
-  {
-    "year": 1980,
-    "state": "Georgia",
-    "turnout": 65.6
-  },
-  {
-    "year": 1980,
-    "state": "Hawaii",
-    "turnout": 61.9
-  },
-  {
-    "year": 1980,
-    "state": "Idaho",
-    "turnout": 73.5
-  },
-  {
-    "year": 1980,
-    "state": "Illinois",
-    "turnout": 72.8
-  },
-  {
-    "year": 1980,
-    "state": "Indiana",
-    "turnout": 69.3
-  },
-  {
-    "year": 1980,
-    "state": "Iowa",
-    "turnout": 75.7
-  },
-  {
-    "year": 1980,
-    "state": "Kansas",
-    "turnout": 69.5
-  },
-  {
-    "year": 1980,
-    "state": "Kentucky",
-    "turnout": 66.3
-  },
-  {
-    "year": 1980,
-    "state": "Louisiana",
-    "turnout": 72.7
-  },
-  {
-    "year": 1980,
-    "state": "Maine",
-    "turnout": 81.3
-  },
-  {
-    "year": 1980,
-    "state": "Maryland",
-    "turnout": 66.4
-  },
-  {
-    "year": 1980,
-    "state": "Massachusetts",
-    "turnout": 72.5
-  },
-  {
-    "year": 1980,
-    "state": "Michigan",
-    "turnout": 73.0
-  },
-  {
-    "year": 1980,
-    "state": "Minnesota",
-    "turnout": 83.7
-  },
-  {
-    "year": 1980,
-    "state": "Mississippi",
-    "turnout": 81.1
-  },
-  {
-    "year": 1980,
-    "state": "Missouri",
-    "turnout": 75.4
-  },
-  {
-    "year": 1980,
-    "state": "Montana",
-    "turnout": 74.0
-  },
-  {
-    "year": 1980,
-    "state": "Nebraska",
-    "turnout": 71.6
-  },
-  {
-    "year": 1980,
-    "state": "Nevada",
-    "turnout": 53.8
-  },
-  {
-    "year": 1980,
-    "state": "New Hampshire",
-    "turnout": 74.1
-  },
-  {
-    "year": 1980,
-    "state": "New Jersey",
-    "turnout": 66.8
-  },
-  {
-    "year": 1980,
-    "state": "New Mexico",
-    "turnout": 66.9
-  },
-  {
-    "year": 1980,
-    "state": "New York",
-    "turnout": 59.5
-  },
-  {
-    "year": 1980,
-    "state": "North Carolina",
-    "turnout": 60.6
-  },
-  {
-    "year": 1980,
-    "state": "North Dakota",
-    "turnout": 91.9
-  },
-  {
-    "year": 1980,
-    "state": "Ohio",
-    "turnout": 66.4
-  },
-  {
-    "year": 1980,
-    "state": "Oklahoma",
-    "turnout": 66.2
-  },
-  {
-    "year": 1980,
-    "state": "Oregon",
-    "turnout": 72.5
-  },
-  {
-    "year": 1980,
-    "state": "Pennsylvania",
-    "turnout": 62.0
-  },
-  {
-    "year": 1980,
-    "state": "Rhode Island",
-    "turnout": 73.0
-  },
-  {
-    "year": 1980,
-    "state": "South Carolina",
-    "turnout": 58.2
-  },
-  {
-    "year": 1980,
-    "state": "South Dakota",
-    "turnout": 80.7
-  },
-  {
-    "year": 1980,
-    "state": "Tennessee",
-    "turnout": 67.2
-  },
-  {
-    "year": 1980,
-    "state": "Texas",
-    "turnout": 60.4
-  },
-  {
-    "year": 1980,
-    "state": "Utah",
-    "turnout": 76.8
-  },
-  {
-    "year": 1980,
-    "state": "Vermont",
-    "turnout": 73.5
-  },
-  {
-    "year": 1980,
-    "state": "Virginia",
-    "turnout": 62.2
-  },
-  {
-    "year": 1980,
-    "state": "Washington",
-    "turnout": 66.7
-  },
-  {
-    "year": 1980,
-    "state": "West Virginia",
-    "turnout": 69.3
-  },
-  {
-    "year": 1980,
-    "state": "Wisconsin",
-    "turnout": 87.1
-  },
-  {
-    "year": 1980,
-    "state": "Wyoming",
-    "turnout": 63.8
-  },
-  {
-    "year": 1984,
-    "state": "Alabama",
-    "turnout": 75.6
-  },
-  {
-    "year": 1984,
-    "state": "Alaska",
-    "turnout": 70.4
-  },
-  {
-    "year": 1984,
-    "state": "Arizona",
-    "turnout": 63.0
-  },
-  {
-    "year": 1984,
-    "state": "Arkansas",
-    "turnout": 70.4
-  },
-  {
-    "year": 1984,
-    "state": "California",
-    "turnout": 61.5
-  },
-  {
-    "year": 1984,
-    "state": "Colorado",
-    "turnout": 66.9
-  },
-  {
-    "year": 1984,
-    "state": "Connecticut",
-    "turnout": 72.1
-  },
-  {
-    "year": 1984,
-    "state": "Delaware",
-    "turnout": 63.5
-  },
-  {
-    "year": 1984,
-    "state": "District of Columbia",
-    "turnout": 60.4
-  },
-  {
-    "year": 1984,
-    "state": "Florida",
-    "turnout": 62.6
-  },
-  {
-    "year": 1984,
-    "state": "Georgia",
-    "turnout": 63.1
-  },
-  {
-    "year": 1984,
-    "state": "Hawaii",
-    "turnout": 59.2
-  },
-  {
-    "year": 1984,
-    "state": "Idaho",
-    "turnout": 73.9
-  },
-  {
-    "year": 1984,
-    "state": "Illinois",
-    "turnout": 74.7
-  },
-  {
-    "year": 1984,
-    "state": "Indiana",
-    "turnout": 69.7
-  },
-  {
-    "year": 1984,
-    "state": "Iowa",
-    "turnout": 75.7
-  },
-  {
-    "year": 1984,
-    "state": "Kansas",
-    "turnout": 69.9
-  },
-  {
-    "year": 1984,
-    "state": "Kentucky",
-    "turnout": 70.0
-  },
-  {
-    "year": 1984,
-    "state": "Louisiana",
-    "turnout": 73.2
-  },
-  {
-    "year": 1984,
-    "state": "Maine",
-    "turnout": 83.5
-  },
-  {
-    "year": 1984,
-    "state": "Maryland",
-    "turnout": 68.3
-  },
-  {
-    "year": 1984,
-    "state": "Massachusetts",
-    "turnout": 69.6
-  },
-  {
-    "year": 1984,
-    "state": "Michigan",
-    "turnout": 73.8
-  },
-  {
-    "year": 1984,
-    "state": "Minnesota",
-    "turnout": 85.8
-  },
-  {
-    "year": 1984,
-    "state": "Mississippi",
-    "turnout": 82.6
-  },
-  {
-    "year": 1984,
-    "state": "Missouri",
-    "turnout": 74.9
-  },
-  {
-    "year": 1984,
-    "state": "Montana",
-    "turnout": 77.3
-  },
-  {
-    "year": 1984,
-    "state": "Nebraska",
-    "turnout": 71.3
-  },
-  {
-    "year": 1984,
-    "state": "Nevada",
-    "turnout": 50.8
-  },
-  {
-    "year": 1984,
-    "state": "New Hampshire",
-    "turnout": 69.0
-  },
-  {
-    "year": 1984,
-    "state": "New Jersey",
-    "turnout": 67.9
-  },
-  {
-    "year": 1984,
-    "state": "New Mexico",
-    "turnout": 69.6
-  },
-  {
-    "year": 1984,
-    "state": "New York",
-    "turnout": 63.5
-  },
-  {
-    "year": 1984,
-    "state": "North Carolina",
-    "turnout": 65.4
-  },
-  {
-    "year": 1984,
-    "state": "North Dakota",
-    "turnout": 91.8
-  },
-  {
-    "year": 1984,
-    "state": "Ohio",
-    "turnout": 69.6
-  },
-  {
-    "year": 1984,
-    "state": "Oklahoma",
-    "turnout": 70.5
-  },
-  {
-    "year": 1984,
-    "state": "Oregon",
-    "turnout": 74.3
-  },
-  {
-    "year": 1984,
-    "state": "Pennsylvania",
-    "turnout": 65.1
-  },
-  {
-    "year": 1984,
-    "state": "Rhode Island",
-    "turnout": 68.6
-  },
-  {
-    "year": 1984,
-    "state": "South Carolina",
-    "turnout": 58.4
-  },
-  {
-    "year": 1984,
-    "state": "South Dakota",
-    "turnout": 77.5
-  },
-  {
-    "year": 1984,
-    "state": "Tennessee",
-    "turnout": 71.5
-  },
-  {
-    "year": 1984,
-    "state": "Texas",
-    "turnout": 65.1
-  },
-  {
-    "year": 1984,
-    "state": "Utah",
-    "turnout": 76.6
-  },
-  {
-    "year": 1984,
-    "state": "Vermont",
-    "turnout": 74.5
-  },
-  {
-    "year": 1984,
-    "state": "Virginia",
-    "turnout": 62.6
-  },
-  {
-    "year": 1984,
-    "state": "Washington",
-    "turnout": 70.6
-  },
-  {
-    "year": 1984,
-    "state": "West Virginia",
-    "turnout": 69.4
-  },
-  {
-    "year": 1984,
-    "state": "Wisconsin",
-    "turnout": 82.9
-  },
-  {
-    "year": 1984,
-    "state": "Wyoming",
-    "turnout": 71.7
-  },
-  {
-    "year": 1988,
-    "state": "Alabama",
-    "turnout": 73.3
-  },
-  {
-    "year": 1988,
-    "state": "Alaska",
-    "turnout": 70.0
-  },
-  {
-    "year": 1988,
-    "state": "Arizona",
-    "turnout": 62.5
-  },
-  {
-    "year": 1988,
-    "state": "Arkansas",
-    "turnout": 67.4
-  },
-  {
-    "year": 1988,
-    "state": "California",
-    "turnout": 59.1
-  },
-  {
-    "year": 1988,
-    "state": "Colorado",
-    "turnout": 73.0
-  },
-  {
-    "year": 1988,
-    "state": "Connecticut",
-    "turnout": 73.5
-  },
-  {
-    "year": 1988,
-    "state": "Delaware",
-    "turnout": 64.0
-  },
-  {
-    "year": 1988,
-    "state": "District of Columbia",
-    "turnout": 64.7
-  },
-  {
-    "year": 1988,
-    "state": "Florida",
-    "turnout": 63.0
-  },
-  {
-    "year": 1988,
-    "state": "Georgia",
-    "turnout": 61.4
-  },
-  {
-    "year": 1988,
-    "state": "Hawaii",
-    "turnout": 61.0
-  },
-  {
-    "year": 1988,
-    "state": "Idaho",
-    "turnout": 69.6
-  },
-  {
-    "year": 1988,
-    "state": "Illinois",
-    "turnout": 69.3
-  },
-  {
-    "year": 1988,
-    "state": "Indiana",
-    "turnout": 68.4
-  },
-  {
-    "year": 1988,
-    "state": "Iowa",
-    "turnout": 71.9
-  },
-  {
-    "year": 1988,
-    "state": "Kansas",
-    "turnout": 67.6
-  },
-  {
-    "year": 1988,
-    "state": "Kentucky",
-    "turnout": 62.2
-  },
-  {
-    "year": 1988,
-    "state": "Louisiana",
-    "turnout": 75.1
-  },
-  {
-    "year": 1988,
-    "state": "Maine",
-    "turnout": 80.7
-  },
-  {
-    "year": 1988,
-    "state": "Maryland",
-    "turnout": 64.1
-  },
-  {
-    "year": 1988,
-    "state": "Massachusetts",
-    "turnout": 71.1
-  },
-  {
-    "year": 1988,
-    "state": "Michigan",
-    "turnout": 72.3
-  },
-  {
-    "year": 1988,
-    "state": "Minnesota",
-    "turnout": 77.6
-  },
-  {
-    "year": 1988,
-    "state": "Mississippi",
-    "turnout": 78.2
-  },
-  {
-    "year": 1988,
-    "state": "Missouri",
-    "turnout": 74.8
-  },
-  {
-    "year": 1988,
-    "state": "Montana",
-    "turnout": 75.1
-  },
-  {
-    "year": 1988,
-    "state": "Nebraska",
-    "turnout": 70.8
-  },
-  {
-    "year": 1988,
-    "state": "Nevada",
-    "turnout": 54.5
-  },
-  {
-    "year": 1988,
-    "state": "New Hampshire",
     "turnout": 66.0
   },
   {
-    "year": 1988,
-    "state": "New Jersey",
-    "turnout": 66.5
+    "year": 1972,
+    "state": "Florida",
+    "turnout": 59.0
   },
   {
-    "year": 1988,
-    "state": "New Mexico",
+    "year": 1972,
+    "state": "Georgia",
+    "turnout": 49.2
+  },
+  {
+    "year": 1972,
+    "state": "Illinois",
+    "turnout": 71.1
+  },
+  {
+    "year": 1972,
+    "state": "Indiana",
+    "turnout": 68.9
+  },
+  {
+    "year": 1972,
+    "state": "Massachusetts",
+    "turnout": 68.7
+  },
+  {
+    "year": 1972,
+    "state": "Michigan",
+    "turnout": 65.1
+  },
+  {
+    "year": 1972,
+    "state": "Missouri",
+    "turnout": 65.4
+  },
+  {
+    "year": 1972,
+    "state": "New Jersey",
+    "turnout": 66.7
+  },
+  {
+    "year": 1972,
+    "state": "New York",
+    "turnout": 63.5
+  },
+  {
+    "year": 1972,
+    "state": "North Carolina",
+    "turnout": 49.0
+  },
+  {
+    "year": 1972,
+    "state": "Ohio",
+    "turnout": 65.6
+  },
+  {
+    "year": 1972,
+    "state": "Pennsylvania",
+    "turnout": 61.0
+  },
+  {
+    "year": 1972,
+    "state": "Texas",
+    "turnout": 55.0
+  },
+  {
+    "year": 1972,
+    "state": "Virginia",
+    "turnout": 49.3
+  },
+  {
+    "year": 1976,
+    "state": "Alabama",
+    "turnout": 54.6
+  },
+  {
+    "year": 1976,
+    "state": "California",
+    "turnout": 54.8
+  },
+  {
+    "year": 1976,
+    "state": "Connecticut",
     "turnout": 64.4
   },
   {
-    "year": 1988,
-    "state": "New York",
-    "turnout": 60.4
+    "year": 1976,
+    "state": "Florida",
+    "turnout": 54.7
   },
   {
-    "year": 1988,
-    "state": "North Carolina",
-    "turnout": 63.6
+    "year": 1976,
+    "state": "Georgia",
+    "turnout": 54.1
   },
   {
-    "year": 1988,
-    "state": "North Dakota",
-    "turnout": 94.0
+    "year": 1976,
+    "state": "Illinois",
+    "turnout": 65.6
   },
   {
-    "year": 1988,
-    "state": "Ohio",
-    "turnout": 69.4
-  },
-  {
-    "year": 1988,
-    "state": "Oklahoma",
-    "turnout": 64.6
-  },
-  {
-    "year": 1988,
-    "state": "Oregon",
-    "turnout": 71.2
-  },
-  {
-    "year": 1988,
-    "state": "Pennsylvania",
-    "turnout": 62.2
-  },
-  {
-    "year": 1988,
-    "state": "Rhode Island",
-    "turnout": 69.1
-  },
-  {
-    "year": 1988,
-    "state": "South Carolina",
-    "turnout": 60.3
-  },
-  {
-    "year": 1988,
-    "state": "South Dakota",
-    "turnout": 79.9
-  },
-  {
-    "year": 1988,
-    "state": "Tennessee",
-    "turnout": 65.3
-  },
-  {
-    "year": 1988,
-    "state": "Texas",
-    "turnout": 65.8
-  },
-  {
-    "year": 1988,
-    "state": "Utah",
-    "turnout": 75.6
-  },
-  {
-    "year": 1988,
-    "state": "Vermont",
-    "turnout": 77.7
-  },
-  {
-    "year": 1988,
-    "state": "Virginia",
-    "turnout": 66.9
-  },
-  {
-    "year": 1988,
-    "state": "Washington",
-    "turnout": 68.6
-  },
-  {
-    "year": 1988,
-    "state": "West Virginia",
+    "year": 1976,
+    "state": "Indiana",
     "turnout": 64.8
   },
   {
-    "year": 1988,
-    "state": "Wisconsin",
-    "turnout": 85.3
-  },
-  {
-    "year": 1988,
-    "state": "Wyoming",
-    "turnout": 67.7
-  },
-  {
-    "year": 1992,
-    "state": "Alabama",
-    "turnout": 77.1
-  },
-  {
-    "year": 1992,
-    "state": "Alaska",
-    "turnout": 75.1
-  },
-  {
-    "year": 1992,
-    "state": "Arizona",
-    "turnout": 70.5
-  },
-  {
-    "year": 1992,
-    "state": "Arkansas",
-    "turnout": 66.5
-  },
-  {
-    "year": 1992,
-    "state": "California",
-    "turnout": 57.6
-  },
-  {
-    "year": 1992,
-    "state": "Colorado",
-    "turnout": 74.7
-  },
-  {
-    "year": 1992,
-    "state": "Connecticut",
-    "turnout": 76.8
-  },
-  {
-    "year": 1992,
-    "state": "Delaware",
-    "turnout": 70.7
-  },
-  {
-    "year": 1992,
-    "state": "District of Columbia",
-    "turnout": 73.9
-  },
-  {
-    "year": 1992,
-    "state": "Florida",
-    "turnout": 62.7
-  },
-  {
-    "year": 1992,
-    "state": "Georgia",
-    "turnout": 62.0
-  },
-  {
-    "year": 1992,
-    "state": "Hawaii",
-    "turnout": 60.6
-  },
-  {
-    "year": 1992,
-    "state": "Idaho",
-    "turnout": 71.8
-  },
-  {
-    "year": 1992,
-    "state": "Illinois",
-    "turnout": 72.1
-  },
-  {
-    "year": 1992,
-    "state": "Indiana",
-    "turnout": 68.0
-  },
-  {
-    "year": 1992,
+    "year": 1976,
     "state": "Iowa",
-    "turnout": 77.9
+    "turnout": 67.6
   },
   {
-    "year": 1992,
-    "state": "Kansas",
-    "turnout": 77.1
-  },
-  {
-    "year": 1992,
+    "year": 1976,
     "state": "Kentucky",
-    "turnout": 64.9
+    "turnout": 55.6
   },
   {
-    "year": 1992,
+    "year": 1976,
     "state": "Louisiana",
-    "turnout": 77.0
+    "turnout": 59.9
   },
   {
-    "year": 1992,
-    "state": "Maine",
-    "turnout": 85.4
-  },
-  {
-    "year": 1992,
+    "year": 1976,
     "state": "Maryland",
-    "turnout": 71.7
+    "turnout": 58.7
   },
   {
-    "year": 1992,
+    "year": 1976,
     "state": "Massachusetts",
-    "turnout": 72.5
-  },
-  {
-    "year": 1992,
-    "state": "Michigan",
-    "turnout": 74.6
-  },
-  {
-    "year": 1992,
-    "state": "Minnesota",
-    "turnout": 86.1
-  },
-  {
-    "year": 1992,
-    "state": "Mississippi",
-    "turnout": 79.3
-  },
-  {
-    "year": 1992,
-    "state": "Missouri",
-    "turnout": 74.2
-  },
-  {
-    "year": 1992,
-    "state": "Montana",
-    "turnout": 77.3
-  },
-  {
-    "year": 1992,
-    "state": "Nebraska",
-    "turnout": 73.1
-  },
-  {
-    "year": 1992,
-    "state": "Nevada",
-    "turnout": 63.4
-  },
-  {
-    "year": 1992,
-    "state": "New Hampshire",
-    "turnout": 69.9
-  },
-  {
-    "year": 1992,
-    "state": "New Jersey",
-    "turnout": 68.0
-  },
-  {
-    "year": 1992,
-    "state": "New Mexico",
-    "turnout": 67.1
-  },
-  {
-    "year": 1992,
-    "state": "New York",
-    "turnout": 62.0
-  },
-  {
-    "year": 1992,
-    "state": "North Carolina",
-    "turnout": 68.7
-  },
-  {
-    "year": 1992,
-    "state": "North Dakota",
-    "turnout": 90.8
-  },
-  {
-    "year": 1992,
-    "state": "Ohio",
-    "turnout": 69.6
-  },
-  {
-    "year": 1992,
-    "state": "Oklahoma",
-    "turnout": 74.3
-  },
-  {
-    "year": 1992,
-    "state": "Oregon",
-    "turnout": 74.7
-  },
-  {
-    "year": 1992,
-    "state": "Pennsylvania",
-    "turnout": 65.1
-  },
-  {
-    "year": 1992,
-    "state": "Rhode Island",
-    "turnout": 74.0
-  },
-  {
-    "year": 1992,
-    "state": "South Carolina",
-    "turnout": 67.0
-  },
-  {
-    "year": 1992,
-    "state": "South Dakota",
-    "turnout": 80.1
-  },
-  {
-    "year": 1992,
-    "state": "Tennessee",
-    "turnout": 65.0
-  },
-  {
-    "year": 1992,
-    "state": "Texas",
-    "turnout": 64.9
-  },
-  {
-    "year": 1992,
-    "state": "Utah",
-    "turnout": 78.8
-  },
-  {
-    "year": 1992,
-    "state": "Vermont",
-    "turnout": 76.1
-  },
-  {
-    "year": 1992,
-    "state": "Virginia",
-    "turnout": 65.4
-  },
-  {
-    "year": 1992,
-    "state": "Washington",
-    "turnout": 71.5
-  },
-  {
-    "year": 1992,
-    "state": "West Virginia",
-    "turnout": 64.9
-  },
-  {
-    "year": 1992,
-    "state": "Wisconsin",
-    "turnout": 84.4
-  },
-  {
-    "year": 1992,
-    "state": "Wyoming",
-    "turnout": 68.1
-  },
-  {
-    "year": 1996,
-    "state": "Alabama",
-    "turnout": 73.8
-  },
-  {
-    "year": 1996,
-    "state": "Alaska",
-    "turnout": 75.5
-  },
-  {
-    "year": 1996,
-    "state": "Arizona",
-    "turnout": 58.5
-  },
-  {
-    "year": 1996,
-    "state": "Arkansas",
-    "turnout": 64.4
-  },
-  {
-    "year": 1996,
-    "state": "California",
-    "turnout": 56.1
-  },
-  {
-    "year": 1996,
-    "state": "Colorado",
-    "turnout": 70.0
-  },
-  {
-    "year": 1996,
-    "state": "Connecticut",
-    "turnout": 69.9
-  },
-  {
-    "year": 1996,
-    "state": "Delaware",
-    "turnout": 64.0
-  },
-  {
-    "year": 1996,
-    "state": "District of Columbia",
-    "turnout": 73.0
-  },
-  {
-    "year": 1996,
-    "state": "Florida",
-    "turnout": 61.8
-  },
-  {
-    "year": 1996,
-    "state": "Georgia",
-    "turnout": 66.1
-  },
-  {
-    "year": 1996,
-    "state": "Hawaii",
-    "turnout": 55.1
-  },
-  {
-    "year": 1996,
-    "state": "Idaho",
-    "turnout": 68.4
-  },
-  {
-    "year": 1996,
-    "state": "Illinois",
-    "turnout": 67.7
-  },
-  {
-    "year": 1996,
-    "state": "Indiana",
-    "turnout": 68.5
-  },
-  {
-    "year": 1996,
-    "state": "Iowa",
-    "turnout": 73.0
-  },
-  {
-    "year": 1996,
-    "state": "Kansas",
     "turnout": 68.9
   },
   {
-    "year": 1996,
-    "state": "Kentucky",
-    "turnout": 69.4
-  },
-  {
-    "year": 1996,
-    "state": "Louisiana",
-    "turnout": 73.4
-  },
-  {
-    "year": 1996,
-    "state": "Maine",
-    "turnout": 81.5
-  },
-  {
-    "year": 1996,
-    "state": "Maryland",
-    "turnout": 65.9
-  },
-  {
-    "year": 1996,
-    "state": "Massachusetts",
-    "turnout": 66.7
-  },
-  {
-    "year": 1996,
+    "year": 1976,
     "state": "Michigan",
-    "turnout": 72.0
+    "turnout": 64.0
   },
   {
-    "year": 1996,
+    "year": 1976,
     "state": "Minnesota",
-    "turnout": 78.3
-  },
-  {
-    "year": 1996,
-    "state": "Mississippi",
-    "turnout": 71.6
-  },
-  {
-    "year": 1996,
-    "state": "Missouri",
-    "turnout": 75.5
-  },
-  {
-    "year": 1996,
-    "state": "Montana",
-    "turnout": 75.1
-  },
-  {
-    "year": 1996,
-    "state": "Nebraska",
-    "turnout": 74.1
-  },
-  {
-    "year": 1996,
-    "state": "Nevada",
-    "turnout": 59.0
-  },
-  {
-    "year": 1996,
-    "state": "New Hampshire",
-    "turnout": 71.7
-  },
-  {
-    "year": 1996,
-    "state": "New Jersey",
-    "turnout": 63.3
-  },
-  {
-    "year": 1996,
-    "state": "New Mexico",
-    "turnout": 61.7
-  },
-  {
-    "year": 1996,
-    "state": "New York",
-    "turnout": 61.0
-  },
-  {
-    "year": 1996,
-    "state": "North Carolina",
-    "turnout": 68.5
-  },
-  {
-    "year": 1996,
-    "state": "North Dakota",
-    "turnout": 90.5
-  },
-  {
-    "year": 1996,
-    "state": "Ohio",
-    "turnout": 68.4
-  },
-  {
-    "year": 1996,
-    "state": "Oklahoma",
-    "turnout": 70.1
-  },
-  {
-    "year": 1996,
-    "state": "Oregon",
-    "turnout": 72.9
-  },
-  {
-    "year": 1996,
-    "state": "Pennsylvania",
-    "turnout": 65.6
-  },
-  {
-    "year": 1996,
-    "state": "Rhode Island",
-    "turnout": 71.7
-  },
-  {
-    "year": 1996,
-    "state": "South Carolina",
-    "turnout": 68.2
-  },
-  {
-    "year": 1996,
-    "state": "South Dakota",
-    "turnout": 74.8
-  },
-  {
-    "year": 1996,
-    "state": "Tennessee",
-    "turnout": 65.9
-  },
-  {
-    "year": 1996,
-    "state": "Texas",
-    "turnout": 61.9
-  },
-  {
-    "year": 1996,
-    "state": "Utah",
-    "turnout": 64.5
-  },
-  {
-    "year": 1996,
-    "state": "Vermont",
-    "turnout": 72.0
-  },
-  {
-    "year": 1996,
-    "state": "Virginia",
-    "turnout": 66.5
-  },
-  {
-    "year": 1996,
-    "state": "Washington",
-    "turnout": 70.0
-  },
-  {
-    "year": 1996,
-    "state": "West Virginia",
-    "turnout": 64.7
-  },
-  {
-    "year": 1996,
-    "state": "Wisconsin",
-    "turnout": 77.6
-  },
-  {
-    "year": 1996,
-    "state": "Wyoming",
-    "turnout": 71.2
-  },
-  {
-    "year": 2000,
-    "state": "Alabama",
-    "turnout": 73.6
-  },
-  {
-    "year": 2000,
-    "state": "Alaska",
-    "turnout": 72.5
-  },
-  {
-    "year": 2000,
-    "state": "Arizona",
-    "turnout": 53.3
-  },
-  {
-    "year": 2000,
-    "state": "Arkansas",
-    "turnout": 59.4
-  },
-  {
-    "year": 2000,
-    "state": "California",
-    "turnout": 52.8
-  },
-  {
-    "year": 2000,
-    "state": "Colorado",
-    "turnout": 64.1
-  },
-  {
-    "year": 2000,
-    "state": "Connecticut",
-    "turnout": 62.5
-  },
-  {
-    "year": 2000,
-    "state": "Delaware",
-    "turnout": 67.9
-  },
-  {
-    "year": 2000,
-    "state": "District of Columbia",
-    "turnout": 72.4
-  },
-  {
-    "year": 2000,
-    "state": "Florida",
-    "turnout": 60.5
-  },
-  {
-    "year": 2000,
-    "state": "Georgia",
-    "turnout": 61.1
-  },
-  {
-    "year": 2000,
-    "state": "Hawaii",
-    "turnout": 47.0
-  },
-  {
-    "year": 2000,
-    "state": "Idaho",
-    "turnout": 61.4
-  },
-  {
-    "year": 2000,
-    "state": "Illinois",
-    "turnout": 66.7
-  },
-  {
-    "year": 2000,
-    "state": "Indiana",
-    "turnout": 68.5
-  },
-  {
-    "year": 2000,
-    "state": "Iowa",
-    "turnout": 72.2
-  },
-  {
-    "year": 2000,
-    "state": "Kansas",
-    "turnout": 67.7
-  },
-  {
-    "year": 2000,
-    "state": "Kentucky",
-    "turnout": 69.7
-  },
-  {
-    "year": 2000,
-    "state": "Louisiana",
     "turnout": 75.4
   },
   {
-    "year": 2000,
-    "state": "Maine",
-    "turnout": 80.3
-  },
-  {
-    "year": 2000,
-    "state": "Maryland",
-    "turnout": 65.6
-  },
-  {
-    "year": 2000,
-    "state": "Massachusetts",
-    "turnout": 70.3
-  },
-  {
-    "year": 2000,
-    "state": "Michigan",
-    "turnout": 69.1
-  },
-  {
-    "year": 2000,
-    "state": "Minnesota",
-    "turnout": 76.7
-  },
-  {
-    "year": 2000,
-    "state": "Mississippi",
-    "turnout": 72.2
-  },
-  {
-    "year": 2000,
+    "year": 1976,
     "state": "Missouri",
-    "turnout": 74.3
-  },
-  {
-    "year": 2000,
-    "state": "Montana",
-    "turnout": 70.0
-  },
-  {
-    "year": 2000,
-    "state": "Nebraska",
-    "turnout": 71.8
-  },
-  {
-    "year": 2000,
-    "state": "Nevada",
-    "turnout": 52.3
-  },
-  {
-    "year": 2000,
-    "state": "New Hampshire",
-    "turnout": 69.6
-  },
-  {
-    "year": 2000,
-    "state": "New Jersey",
-    "turnout": 63.2
-  },
-  {
-    "year": 2000,
-    "state": "New Mexico",
-    "turnout": 59.5
-  },
-  {
-    "year": 2000,
-    "state": "New York",
-    "turnout": 58.6
-  },
-  {
-    "year": 2000,
-    "state": "North Carolina",
-    "turnout": 66.1
-  },
-  {
-    "year": 2000,
-    "state": "North Dakota",
-    "turnout": 91.1
-  },
-  {
-    "year": 2000,
-    "state": "Ohio",
-    "turnout": 67.0
-  },
-  {
-    "year": 2000,
-    "state": "Oklahoma",
-    "turnout": 68.3
-  },
-  {
-    "year": 2000,
-    "state": "Oregon",
-    "turnout": 68.2
-  },
-  {
-    "year": 2000,
-    "state": "Pennsylvania",
-    "turnout": 65.3
-  },
-  {
-    "year": 2000,
-    "state": "Rhode Island",
-    "turnout": 69.7
-  },
-  {
-    "year": 2000,
-    "state": "South Carolina",
-    "turnout": 68.0
-  },
-  {
-    "year": 2000,
-    "state": "South Dakota",
-    "turnout": 70.9
-  },
-  {
-    "year": 2000,
-    "state": "Tennessee",
-    "turnout": 62.1
-  },
-  {
-    "year": 2000,
-    "state": "Texas",
-    "turnout": 61.4
-  },
-  {
-    "year": 2000,
-    "state": "Utah",
-    "turnout": 64.7
-  },
-  {
-    "year": 2000,
-    "state": "Vermont",
-    "turnout": 72.0
-  },
-  {
-    "year": 2000,
-    "state": "Virginia",
-    "turnout": 64.1
-  },
-  {
-    "year": 2000,
-    "state": "Washington",
-    "turnout": 66.1
-  },
-  {
-    "year": 2000,
-    "state": "West Virginia",
     "turnout": 63.1
   },
   {
-    "year": 2000,
-    "state": "Wisconsin",
-    "turnout": 76.5
-  },
-  {
-    "year": 2000,
-    "state": "Wyoming",
-    "turnout": 68.6
-  },
-  {
-    "year": 2004,
-    "state": "Alabama",
-    "turnout": 72.6
-  },
-  {
-    "year": 2004,
-    "state": "Alaska",
-    "turnout": 74.0
-  },
-  {
-    "year": 2004,
-    "state": "Arizona",
-    "turnout": 60.3
-  },
-  {
-    "year": 2004,
-    "state": "Arkansas",
-    "turnout": 66.1
-  },
-  {
-    "year": 2004,
-    "state": "California",
-    "turnout": 54.4
-  },
-  {
-    "year": 2004,
-    "state": "Colorado",
-    "turnout": 67.9
-  },
-  {
-    "year": 2004,
-    "state": "Connecticut",
-    "turnout": 65.0
-  },
-  {
-    "year": 2004,
-    "state": "Delaware",
-    "turnout": 67.7
-  },
-  {
-    "year": 2004,
-    "state": "District of Columbia",
-    "turnout": 67.4
-  },
-  {
-    "year": 2004,
-    "state": "Florida",
-    "turnout": 62.6
-  },
-  {
-    "year": 2004,
-    "state": "Georgia",
-    "turnout": 62.3
-  },
-  {
-    "year": 2004,
-    "state": "Hawaii",
-    "turnout": 53.0
-  },
-  {
-    "year": 2004,
-    "state": "Idaho",
-    "turnout": 66.5
-  },
-  {
-    "year": 2004,
-    "state": "Illinois",
-    "turnout": 69.2
-  },
-  {
-    "year": 2004,
-    "state": "Indiana",
-    "turnout": 66.8
-  },
-  {
-    "year": 2004,
-    "state": "Iowa",
-    "turnout": 75.7
-  },
-  {
-    "year": 2004,
-    "state": "Kansas",
-    "turnout": 67.2
-  },
-  {
-    "year": 2004,
-    "state": "Kentucky",
-    "turnout": 73.3
-  },
-  {
-    "year": 2004,
-    "state": "Louisiana",
-    "turnout": 73.6
-  },
-  {
-    "year": 2004,
-    "state": "Maine",
-    "turnout": 80.6
-  },
-  {
-    "year": 2004,
-    "state": "Maryland",
-    "turnout": 66.2
-  },
-  {
-    "year": 2004,
-    "state": "Massachusetts",
-    "turnout": 72.0
-  },
-  {
-    "year": 2004,
-    "state": "Michigan",
-    "turnout": 72.0
-  },
-  {
-    "year": 2004,
-    "state": "Minnesota",
-    "turnout": 81.8
-  },
-  {
-    "year": 2004,
-    "state": "Mississippi",
-    "turnout": 72.5
-  },
-  {
-    "year": 2004,
-    "state": "Missouri",
-    "turnout": 78.6
-  },
-  {
-    "year": 2004,
-    "state": "Montana",
-    "turnout": 75.1
-  },
-  {
-    "year": 2004,
-    "state": "Nebraska",
-    "turnout": 70.9
-  },
-  {
-    "year": 2004,
-    "state": "Nevada",
-    "turnout": 56.8
-  },
-  {
-    "year": 2004,
-    "state": "New Hampshire",
-    "turnout": 72.9
-  },
-  {
-    "year": 2004,
+    "year": 1976,
     "state": "New Jersey",
-    "turnout": 63.7
+    "turnout": 59.1
   },
   {
-    "year": 2004,
-    "state": "New Mexico",
-    "turnout": 68.1
-  },
-  {
-    "year": 2004,
+    "year": 1976,
     "state": "New York",
+    "turnout": 56.4
+  },
+  {
+    "year": 1976,
+    "state": "North Carolina",
+    "turnout": 48.7
+  },
+  {
+    "year": 1976,
+    "state": "Ohio",
     "turnout": 59.5
   },
   {
-    "year": 2004,
-    "state": "North Carolina",
-    "turnout": 68.7
-  },
-  {
-    "year": 2004,
-    "state": "North Dakota",
-    "turnout": 88.5
-  },
-  {
-    "year": 2004,
-    "state": "Ohio",
-    "turnout": 70.9
-  },
-  {
-    "year": 2004,
-    "state": "Oklahoma",
-    "turnout": 68.4
-  },
-  {
-    "year": 2004,
-    "state": "Oregon",
-    "turnout": 75.2
-  },
-  {
-    "year": 2004,
+    "year": 1976,
     "state": "Pennsylvania",
-    "turnout": 69.3
+    "turnout": 57.3
   },
   {
-    "year": 2004,
-    "state": "Rhode Island",
-    "turnout": 64.2
-  },
-  {
-    "year": 2004,
-    "state": "South Carolina",
-    "turnout": 73.1
-  },
-  {
-    "year": 2004,
-    "state": "South Dakota",
-    "turnout": 75.5
-  },
-  {
-    "year": 2004,
+    "year": 1976,
     "state": "Tennessee",
-    "turnout": 62.2
+    "turnout": 55.2
   },
   {
-    "year": 2004,
+    "year": 1976,
     "state": "Texas",
-    "turnout": 61.2
+    "turnout": 53.2
   },
   {
-    "year": 2004,
-    "state": "Utah",
-    "turnout": 70.1
-  },
-  {
-    "year": 2004,
-    "state": "Vermont",
-    "turnout": 73.5
-  },
-  {
-    "year": 2004,
+    "year": 1976,
     "state": "Virginia",
-    "turnout": 64.1
+    "turnout": 55.2
   },
   {
-    "year": 2004,
+    "year": 1976,
     "state": "Washington",
-    "turnout": 68.2
+    "turnout": 64.4
   },
   {
-    "year": 2004,
-    "state": "West Virginia",
-    "turnout": 67.0
-  },
-  {
-    "year": 2004,
+    "year": 1976,
     "state": "Wisconsin",
-    "turnout": 78.2
+    "turnout": 72.4
   },
   {
-    "year": 2004,
-    "state": "Wyoming",
-    "turnout": 71.0
-  },
-  {
-    "year": 2008,
+    "year": 1980,
     "state": "Alabama",
-    "turnout": 69.7
+    "turnout": 57.3
   },
   {
-    "year": 2008,
+    "year": 1980,
     "state": "Alaska",
-    "turnout": 70.8
+    "turnout": 62.6
   },
   {
-    "year": 2008,
-    "state": "Arizona",
-    "turnout": 61.3
-  },
-  {
-    "year": 2008,
-    "state": "Arkansas",
-    "turnout": 62.5
-  },
-  {
-    "year": 2008,
-    "state": "California",
-    "turnout": 55.1
-  },
-  {
-    "year": 2008,
-    "state": "Colorado",
-    "turnout": 66.0
-  },
-  {
-    "year": 2008,
-    "state": "Connecticut",
-    "turnout": 66.4
-  },
-  {
-    "year": 2008,
-    "state": "Delaware",
-    "turnout": 69.1
-  },
-  {
-    "year": 2008,
-    "state": "District of Columbia",
-    "turnout": 69.0
-  },
-  {
-    "year": 2008,
-    "state": "Florida",
-    "turnout": 62.4
-  },
-  {
-    "year": 2008,
-    "state": "Georgia",
-    "turnout": 65.9
-  },
-  {
-    "year": 2008,
-    "state": "Hawaii",
-    "turnout": 53.5
-  },
-  {
-    "year": 2008,
-    "state": "Idaho",
-    "turnout": 66.0
-  },
-  {
-    "year": 2008,
-    "state": "Illinois",
-    "turnout": 64.6
-  },
-  {
-    "year": 2008,
-    "state": "Indiana",
-    "turnout": 66.3
-  },
-  {
-    "year": 2008,
-    "state": "Iowa",
-    "turnout": 72.6
-  },
-  {
-    "year": 2008,
-    "state": "Kansas",
-    "turnout": 65.9
-  },
-  {
-    "year": 2008,
-    "state": "Kentucky",
-    "turnout": 71.1
-  },
-  {
-    "year": 2008,
-    "state": "Louisiana",
-    "turnout": 75.7
-  },
-  {
-    "year": 2008,
-    "state": "Maine",
-    "turnout": 78.5
-  },
-  {
-    "year": 2008,
-    "state": "Maryland",
-    "turnout": 67.0
-  },
-  {
-    "year": 2008,
-    "state": "Massachusetts",
-    "turnout": 66.4
-  },
-  {
-    "year": 2008,
-    "state": "Michigan",
-    "turnout": 73.9
-  },
-  {
-    "year": 2008,
-    "state": "Minnesota",
-    "turnout": 75.2
-  },
-  {
-    "year": 2008,
-    "state": "Mississippi",
-    "turnout": 75.3
-  },
-  {
-    "year": 2008,
-    "state": "Missouri",
-    "turnout": 72.8
-  },
-  {
-    "year": 2008,
-    "state": "Montana",
-    "turnout": 70.6
-  },
-  {
-    "year": 2008,
-    "state": "Nebraska",
-    "turnout": 71.8
-  },
-  {
-    "year": 2008,
-    "state": "Nevada",
-    "turnout": 59.0
-  },
-  {
-    "year": 2008,
-    "state": "New Hampshire",
-    "turnout": 74.5
-  },
-  {
-    "year": 2008,
-    "state": "New Jersey",
-    "turnout": 62.0
-  },
-  {
-    "year": 2008,
-    "state": "New Mexico",
-    "turnout": 63.6
-  },
-  {
-    "year": 2008,
-    "state": "New York",
-    "turnout": 57.7
-  },
-  {
-    "year": 2008,
-    "state": "North Carolina",
-    "turnout": 71.6
-  },
-  {
-    "year": 2008,
-    "state": "North Dakota",
-    "turnout": 82.3
-  },
-  {
-    "year": 2008,
-    "state": "Ohio",
-    "turnout": 71.9
-  },
-  {
-    "year": 2008,
-    "state": "Oklahoma",
-    "turnout": 67.4
-  },
-  {
-    "year": 2008,
-    "state": "Oregon",
-    "turnout": 67.5
-  },
-  {
-    "year": 2008,
-    "state": "Pennsylvania",
-    "turnout": 68.3
-  },
-  {
-    "year": 2008,
-    "state": "Rhode Island",
-    "turnout": 70.6
-  },
-  {
-    "year": 2008,
-    "state": "South Carolina",
-    "turnout": 72.0
-  },
-  {
-    "year": 2008,
-    "state": "South Dakota",
-    "turnout": 74.9
-  },
-  {
-    "year": 2008,
-    "state": "Tennessee",
-    "turnout": 62.3
-  },
-  {
-    "year": 2008,
-    "state": "Texas",
-    "turnout": 58.5
-  },
-  {
-    "year": 2008,
-    "state": "Utah",
-    "turnout": 56.8
-  },
-  {
-    "year": 2008,
-    "state": "Vermont",
-    "turnout": 70.9
-  },
-  {
-    "year": 2008,
-    "state": "Virginia",
-    "turnout": 69.1
-  },
-  {
-    "year": 2008,
-    "state": "Washington",
-    "turnout": 67.2
-  },
-  {
-    "year": 2008,
-    "state": "West Virginia",
-    "turnout": 65.7
-  },
-  {
-    "year": 2008,
-    "state": "Wisconsin",
-    "turnout": 73.5
-  },
-  {
-    "year": 2008,
-    "state": "Wyoming",
-    "turnout": 67.9
-  },
-  {
-    "year": 2012,
-    "state": "Alabama",
-    "turnout": 71.1
-  },
-  {
-    "year": 2012,
-    "state": "Alaska",
-    "turnout": 69.9
-  },
-  {
-    "year": 2012,
+    "year": 1980,
     "state": "Arizona",
     "turnout": 57.8
   },
   {
-    "year": 2012,
+    "year": 1980,
     "state": "Arkansas",
-    "turnout": 62.6
+    "turnout": 58.6
   },
   {
-    "year": 2012,
+    "year": 1980,
     "state": "California",
-    "turnout": 54.2
-  },
-  {
-    "year": 2012,
-    "state": "Colorado",
-    "turnout": 69.0
-  },
-  {
-    "year": 2012,
-    "state": "Connecticut",
-    "turnout": 64.6
-  },
-  {
-    "year": 2012,
-    "state": "Delaware",
-    "turnout": 67.8
-  },
-  {
-    "year": 2012,
-    "state": "District of Columbia",
-    "turnout": 74.4
-  },
-  {
-    "year": 2012,
-    "state": "Florida",
-    "turnout": 60.5
-  },
-  {
-    "year": 2012,
-    "state": "Georgia",
-    "turnout": 66.4
-  },
-  {
-    "year": 2012,
-    "state": "Hawaii",
-    "turnout": 54.1
-  },
-  {
-    "year": 2012,
-    "state": "Idaho",
-    "turnout": 65.9
-  },
-  {
-    "year": 2012,
-    "state": "Illinois",
-    "turnout": 66.6
-  },
-  {
-    "year": 2012,
-    "state": "Indiana",
-    "turnout": 67.4
-  },
-  {
-    "year": 2012,
-    "state": "Iowa",
-    "turnout": 75.2
-  },
-  {
-    "year": 2012,
-    "state": "Kansas",
-    "turnout": 69.2
-  },
-  {
-    "year": 2012,
-    "state": "Kentucky",
-    "turnout": 70.0
-  },
-  {
-    "year": 2012,
-    "state": "Louisiana",
-    "turnout": 75.2
-  },
-  {
-    "year": 2012,
-    "state": "Maine",
-    "turnout": 75.5
-  },
-  {
-    "year": 2012,
-    "state": "Maryland",
     "turnout": 64.9
   },
   {
-    "year": 2012,
-    "state": "Massachusetts",
-    "turnout": 72.7
+    "year": 1980,
+    "state": "Colorado",
+    "turnout": 67.0
   },
   {
-    "year": 2012,
-    "state": "Michigan",
-    "turnout": 75.0
+    "year": 1980,
+    "state": "Connecticut",
+    "turnout": 72.9
   },
   {
-    "year": 2012,
-    "state": "Minnesota",
-    "turnout": 76.1
+    "year": 1980,
+    "state": "Delaware",
+    "turnout": 62.9
   },
   {
-    "year": 2012,
-    "state": "Mississippi",
-    "turnout": 82.8
+    "year": 1980,
+    "state": "District of Columbia",
+    "turnout": 53.5
   },
   {
-    "year": 2012,
-    "state": "Missouri",
+    "year": 1980,
+    "state": "Florida",
+    "turnout": 61.2
+  },
+  {
+    "year": 1980,
+    "state": "Georgia",
+    "turnout": 55.0
+  },
+  {
+    "year": 1980,
+    "state": "Hawaii",
+    "turnout": 63.5
+  },
+  {
+    "year": 1980,
+    "state": "Idaho",
     "turnout": 74.8
   },
   {
-    "year": 2012,
-    "state": "Montana",
+    "year": 1980,
+    "state": "Illinois",
     "turnout": 72.0
   },
   {
-    "year": 2012,
-    "state": "Nebraska",
-    "turnout": 65.7
-  },
-  {
-    "year": 2012,
-    "state": "Nevada",
-    "turnout": 57.7
-  },
-  {
-    "year": 2012,
-    "state": "New Hampshire",
-    "turnout": 73.1
-  },
-  {
-    "year": 2012,
-    "state": "New Jersey",
-    "turnout": 64.3
-  },
-  {
-    "year": 2012,
-    "state": "New Mexico",
-    "turnout": 63.0
-  },
-  {
-    "year": 2012,
-    "state": "New York",
-    "turnout": 59.0
-  },
-  {
-    "year": 2012,
-    "state": "North Carolina",
-    "turnout": 72.9
-  },
-  {
-    "year": 2012,
-    "state": "North Dakota",
-    "turnout": 72.5
-  },
-  {
-    "year": 2012,
-    "state": "Ohio",
-    "turnout": 69.4
-  },
-  {
-    "year": 2012,
-    "state": "Oklahoma",
-    "turnout": 64.3
-  },
-  {
-    "year": 2012,
-    "state": "Oregon",
-    "turnout": 69.6
-  },
-  {
-    "year": 2012,
-    "state": "Pennsylvania",
-    "turnout": 69.0
-  },
-  {
-    "year": 2012,
-    "state": "Rhode Island",
-    "turnout": 67.5
-  },
-  {
-    "year": 2012,
-    "state": "South Carolina",
-    "turnout": 70.5
-  },
-  {
-    "year": 2012,
-    "state": "South Dakota",
-    "turnout": 73.7
-  },
-  {
-    "year": 2012,
-    "state": "Tennessee",
-    "turnout": 66.2
-  },
-  {
-    "year": 2012,
-    "state": "Texas",
-    "turnout": 57.7
-  },
-  {
-    "year": 2012,
-    "state": "Utah",
-    "turnout": 59.4
-  },
-  {
-    "year": 2012,
-    "state": "Vermont",
-    "turnout": 72.0
-  },
-  {
-    "year": 2012,
-    "state": "Virginia",
-    "turnout": 69.1
-  },
-  {
-    "year": 2012,
-    "state": "Washington",
-    "turnout": 67.6
-  },
-  {
-    "year": 2012,
-    "state": "West Virginia",
-    "turnout": 67.6
-  },
-  {
-    "year": 2012,
-    "state": "Wisconsin",
-    "turnout": 76.3
-  },
-  {
-    "year": 2012,
-    "state": "Wyoming",
-    "turnout": 62.8
-  },
-  {
-    "year": 2016,
-    "state": "Alabama",
-    "turnout": 68.0
-  },
-  {
-    "year": 2016,
-    "state": "Alaska",
-    "turnout": 69.1
-  },
-  {
-    "year": 2016,
-    "state": "Arizona",
-    "turnout": 60.5
-  },
-  {
-    "year": 2016,
-    "state": "Arkansas",
-    "turnout": 65.7
-  },
-  {
-    "year": 2016,
-    "state": "California",
-    "turnout": 53.8
-  },
-  {
-    "year": 2016,
-    "state": "Colorado",
-    "turnout": 68.2
-  },
-  {
-    "year": 2016,
-    "state": "Connecticut",
+    "year": 1980,
+    "state": "Indiana",
     "turnout": 63.9
   },
   {
-    "year": 2016,
-    "state": "Delaware",
-    "turnout": 66.8
+    "year": 1980,
+    "state": "Iowa",
+    "turnout": 69.9
   },
   {
-    "year": 2016,
-    "state": "District of Columbia",
-    "turnout": 75.9
+    "year": 1980,
+    "state": "Kansas",
+    "turnout": 65.8
   },
   {
-    "year": 2016,
-    "state": "Florida",
-    "turnout": 59.3
+    "year": 1980,
+    "state": "Kentucky",
+    "turnout": 58.3
   },
   {
-    "year": 2016,
-    "state": "Georgia",
-    "turnout": 64.1
-  },
-  {
-    "year": 2016,
-    "state": "Hawaii",
-    "turnout": 49.8
-  },
-  {
-    "year": 2016,
-    "state": "Idaho",
-    "turnout": 64.5
-  },
-  {
-    "year": 2016,
-    "state": "Illinois",
-    "turnout": 68.5
-  },
-  {
-    "year": 2016,
-    "state": "Indiana",
+    "year": 1980,
+    "state": "Louisiana",
     "turnout": 66.1
   },
   {
-    "year": 2016,
-    "state": "Iowa",
-    "turnout": 69.2
-  },
-  {
-    "year": 2016,
-    "state": "Kansas",
-    "turnout": 67.1
-  },
-  {
-    "year": 2016,
-    "state": "Kentucky",
-    "turnout": 67.3
-  },
-  {
-    "year": 2016,
-    "state": "Louisiana",
-    "turnout": 70.6
-  },
-  {
-    "year": 2016,
+    "year": 1980,
     "state": "Maine",
-    "turnout": 78.5
+    "turnout": 71.8
   },
   {
-    "year": 2016,
+    "year": 1980,
     "state": "Maryland",
-    "turnout": 67.3
+    "turnout": 62.6
   },
   {
-    "year": 2016,
+    "year": 1980,
     "state": "Massachusetts",
-    "turnout": 68.1
+    "turnout": 71.4
   },
   {
-    "year": 2016,
+    "year": 1980,
     "state": "Michigan",
-    "turnout": 71.3
+    "turnout": 69.5
   },
   {
-    "year": 2016,
+    "year": 1980,
     "state": "Minnesota",
-    "turnout": 72.9
+    "turnout": 76.3
   },
   {
-    "year": 2016,
+    "year": 1980,
     "state": "Mississippi",
-    "turnout": 78.3
+    "turnout": 68.5
   },
   {
-    "year": 2016,
+    "year": 1980,
     "state": "Missouri",
-    "turnout": 72.1
+    "turnout": 70.0
   },
   {
-    "year": 2016,
+    "year": 1980,
     "state": "Montana",
-    "turnout": 72.8
+    "turnout": 71.0
   },
   {
-    "year": 2016,
+    "year": 1980,
     "state": "Nebraska",
-    "turnout": 71.7
+    "turnout": 66.1
   },
   {
-    "year": 2016,
+    "year": 1980,
     "state": "Nevada",
-    "turnout": 61.4
+    "turnout": 54.8
   },
   {
-    "year": 2016,
+    "year": 1980,
     "state": "New Hampshire",
-    "turnout": 73.1
+    "turnout": 70.5
   },
   {
-    "year": 2016,
+    "year": 1980,
     "state": "New Jersey",
-    "turnout": 60.7
+    "turnout": 65.7
   },
   {
-    "year": 2016,
+    "year": 1980,
     "state": "New Mexico",
+    "turnout": 61.9
+  },
+  {
+    "year": 1980,
+    "state": "New York",
+    "turnout": 62.5
+  },
+  {
+    "year": 1980,
+    "state": "North Carolina",
+    "turnout": 54.3
+  },
+  {
+    "year": 1980,
+    "state": "North Dakota",
+    "turnout": 74.1
+  },
+  {
+    "year": 1980,
+    "state": "Ohio",
+    "turnout": 63.8
+  },
+  {
+    "year": 1980,
+    "state": "Oklahoma",
+    "turnout": 62.9
+  },
+  {
+    "year": 1980,
+    "state": "Oregon",
+    "turnout": 71.9
+  },
+  {
+    "year": 1980,
+    "state": "Pennsylvania",
+    "turnout": 57.9
+  },
+  {
+    "year": 1980,
+    "state": "Rhode Island",
+    "turnout": 71.1
+  },
+  {
+    "year": 1980,
+    "state": "South Carolina",
+    "turnout": 52.6
+  },
+  {
+    "year": 1980,
+    "state": "South Dakota",
+    "turnout": 77.0
+  },
+  {
+    "year": 1980,
+    "state": "Tennessee",
+    "turnout": 58.2
+  },
+  {
+    "year": 1980,
+    "state": "Texas",
+    "turnout": 55.9
+  },
+  {
+    "year": 1980,
+    "state": "Utah",
+    "turnout": 74.5
+  },
+  {
+    "year": 1980,
+    "state": "Vermont",
+    "turnout": 63.9
+  },
+  {
+    "year": 1980,
+    "state": "Virginia",
+    "turnout": 57.6
+  },
+  {
+    "year": 1980,
+    "state": "Washington",
+    "turnout": 67.9
+  },
+  {
+    "year": 1980,
+    "state": "West Virginia",
+    "turnout": 59.9
+  },
+  {
+    "year": 1980,
+    "state": "Wisconsin",
+    "turnout": 77.3
+  },
+  {
+    "year": 1980,
+    "state": "Wyoming",
+    "turnout": 62.1
+  },
+  {
+    "year": 1984,
+    "state": "Alabama",
+    "turnout": 62.3
+  },
+  {
+    "year": 1984,
+    "state": "Alaska",
+    "turnout": 63.4
+  },
+  {
+    "year": 1984,
+    "state": "Arizona",
+    "turnout": 58.1
+  },
+  {
+    "year": 1984,
+    "state": "Arkansas",
+    "turnout": 61.2
+  },
+  {
+    "year": 1984,
+    "state": "California",
+    "turnout": 68.0
+  },
+  {
+    "year": 1984,
+    "state": "Colorado",
+    "turnout": 64.4
+  },
+  {
+    "year": 1984,
+    "state": "Connecticut",
+    "turnout": 68.6
+  },
+  {
+    "year": 1984,
+    "state": "Delaware",
+    "turnout": 64.9
+  },
+  {
+    "year": 1984,
+    "state": "District of Columbia",
+    "turnout": 63.2
+  },
+  {
+    "year": 1984,
+    "state": "Florida",
     "turnout": 59.2
   },
   {
-    "year": 2016,
+    "year": 1984,
+    "state": "Georgia",
+    "turnout": 55.7
+  },
+  {
+    "year": 1984,
+    "state": "Hawaii",
+    "turnout": 61.5
+  },
+  {
+    "year": 1984,
+    "state": "Idaho",
+    "turnout": 71.2
+  },
+  {
+    "year": 1984,
+    "state": "Illinois",
+    "turnout": 73.6
+  },
+  {
+    "year": 1984,
+    "state": "Indiana",
+    "turnout": 64.0
+  },
+  {
+    "year": 1984,
+    "state": "Iowa",
+    "turnout": 70.1
+  },
+  {
+    "year": 1984,
+    "state": "Kansas",
+    "turnout": 66.2
+  },
+  {
+    "year": 1984,
+    "state": "Kentucky",
+    "turnout": 60.6
+  },
+  {
+    "year": 1984,
+    "state": "Louisiana",
+    "turnout": 68.3
+  },
+  {
+    "year": 1984,
+    "state": "Maine",
+    "turnout": 71.9
+  },
+  {
+    "year": 1984,
+    "state": "Maryland",
+    "turnout": 64.7
+  },
+  {
+    "year": 1984,
+    "state": "Massachusetts",
+    "turnout": 67.3
+  },
+  {
+    "year": 1984,
+    "state": "Michigan",
+    "turnout": 66.6
+  },
+  {
+    "year": 1984,
+    "state": "Minnesota",
+    "turnout": 78.0
+  },
+  {
+    "year": 1984,
+    "state": "Mississippi",
+    "turnout": 71.2
+  },
+  {
+    "year": 1984,
+    "state": "Missouri",
+    "turnout": 67.7
+  },
+  {
+    "year": 1984,
+    "state": "Montana",
+    "turnout": 74.0
+  },
+  {
+    "year": 1984,
+    "state": "Nebraska",
+    "turnout": 65.4
+  },
+  {
+    "year": 1984,
+    "state": "Nevada",
+    "turnout": 51.7
+  },
+  {
+    "year": 1984,
+    "state": "New Hampshire",
+    "turnout": 61.7
+  },
+  {
+    "year": 1984,
+    "state": "New Jersey",
+    "turnout": 67.1
+  },
+  {
+    "year": 1984,
+    "state": "New Mexico",
+    "turnout": 64.8
+  },
+  {
+    "year": 1984,
     "state": "New York",
-    "turnout": 59.0
+    "turnout": 65.9
   },
   {
-    "year": 2016,
+    "year": 1984,
     "state": "North Carolina",
-    "turnout": 68.1
+    "turnout": 57.9
   },
   {
-    "year": 2016,
+    "year": 1984,
+    "state": "North Dakota",
+    "turnout": 72.9
+  },
+  {
+    "year": 1984,
+    "state": "Ohio",
+    "turnout": 64.7
+  },
+  {
+    "year": 1984,
+    "state": "Oklahoma",
+    "turnout": 62.6
+  },
+  {
+    "year": 1984,
+    "state": "Oregon",
+    "turnout": 71.1
+  },
+  {
+    "year": 1984,
+    "state": "Pennsylvania",
+    "turnout": 61.4
+  },
+  {
+    "year": 1984,
+    "state": "Rhode Island",
+    "turnout": 69.5
+  },
+  {
+    "year": 1984,
+    "state": "South Carolina",
+    "turnout": 50.4
+  },
+  {
+    "year": 1984,
+    "state": "South Dakota",
+    "turnout": 70.1
+  },
+  {
+    "year": 1984,
+    "state": "Tennessee",
+    "turnout": 59.3
+  },
+  {
+    "year": 1984,
+    "state": "Texas",
+    "turnout": 59.4
+  },
+  {
+    "year": 1984,
+    "state": "Utah",
+    "turnout": 74.1
+  },
+  {
+    "year": 1984,
+    "state": "Vermont",
+    "turnout": 64.5
+  },
+  {
+    "year": 1984,
+    "state": "Virginia",
+    "turnout": 59.7
+  },
+  {
+    "year": 1984,
+    "state": "Washington",
+    "turnout": 69.5
+  },
+  {
+    "year": 1984,
+    "state": "West Virginia",
+    "turnout": 60.5
+  },
+  {
+    "year": 1984,
+    "state": "Wisconsin",
+    "turnout": 73.6
+  },
+  {
+    "year": 1984,
+    "state": "Wyoming",
+    "turnout": 68.8
+  },
+  {
+    "year": 1988,
+    "state": "Alabama",
+    "turnout": 57.6
+  },
+  {
+    "year": 1988,
+    "state": "Alaska",
+    "turnout": 63.9
+  },
+  {
+    "year": 1988,
+    "state": "Arizona",
+    "turnout": 57.8
+  },
+  {
+    "year": 1988,
+    "state": "Arkansas",
+    "turnout": 57.2
+  },
+  {
+    "year": 1988,
+    "state": "California",
+    "turnout": 64.8
+  },
+  {
+    "year": 1988,
+    "state": "Colorado",
+    "turnout": 69.1
+  },
+  {
+    "year": 1988,
+    "state": "Connecticut",
+    "turnout": 69.2
+  },
+  {
+    "year": 1988,
+    "state": "Delaware",
+    "turnout": 61.4
+  },
+  {
+    "year": 1988,
+    "state": "District of Columbia",
+    "turnout": 57.9
+  },
+  {
+    "year": 1988,
+    "state": "Florida",
+    "turnout": 60.8
+  },
+  {
+    "year": 1988,
+    "state": "Georgia",
+    "turnout": 51.7
+  },
+  {
+    "year": 1988,
+    "state": "Hawaii",
+    "turnout": 60.3
+  },
+  {
+    "year": 1988,
+    "state": "Idaho",
+    "turnout": 67.1
+  },
+  {
+    "year": 1988,
+    "state": "Illinois",
+    "turnout": 65.8
+  },
+  {
+    "year": 1988,
+    "state": "Indiana",
+    "turnout": 62.5
+  },
+  {
+    "year": 1988,
+    "state": "Iowa",
+    "turnout": 64.9
+  },
+  {
+    "year": 1988,
+    "state": "Kansas",
+    "turnout": 62.8
+  },
+  {
+    "year": 1988,
+    "state": "Kentucky",
+    "turnout": 50.9
+  },
+  {
+    "year": 1988,
+    "state": "Louisiana",
+    "turnout": 67.2
+  },
+  {
+    "year": 1988,
+    "state": "Maine",
+    "turnout": 68.5
+  },
+  {
+    "year": 1988,
+    "state": "Maryland",
+    "turnout": 59.7
+  },
+  {
+    "year": 1988,
+    "state": "Massachusetts",
+    "turnout": 68.3
+  },
+  {
+    "year": 1988,
+    "state": "Michigan",
+    "turnout": 64.8
+  },
+  {
+    "year": 1988,
+    "state": "Minnesota",
+    "turnout": 74.4
+  },
+  {
+    "year": 1988,
+    "state": "Mississippi",
+    "turnout": 64.1
+  },
+  {
+    "year": 1988,
+    "state": "Missouri",
+    "turnout": 66.2
+  },
+  {
+    "year": 1988,
+    "state": "Montana",
+    "turnout": 69.7
+  },
+  {
+    "year": 1988,
+    "state": "Nebraska",
+    "turnout": 65.7
+  },
+  {
+    "year": 1988,
+    "state": "Nevada",
+    "turnout": 50.7
+  },
+  {
+    "year": 1988,
+    "state": "New Hampshire",
+    "turnout": 59.8
+  },
+  {
+    "year": 1988,
+    "state": "New Jersey",
+    "turnout": 65.1
+  },
+  {
+    "year": 1988,
+    "state": "New Mexico",
+    "turnout": 59.3
+  },
+  {
+    "year": 1988,
+    "state": "New York",
+    "turnout": 61.9
+  },
+  {
+    "year": 1988,
+    "state": "North Carolina",
+    "turnout": 54.9
+  },
+  {
+    "year": 1988,
+    "state": "North Dakota",
+    "turnout": 74.6
+  },
+  {
+    "year": 1988,
+    "state": "Ohio",
+    "turnout": 64.3
+  },
+  {
+    "year": 1988,
+    "state": "Oklahoma",
+    "turnout": 57.5
+  },
+  {
+    "year": 1988,
+    "state": "Oregon",
+    "turnout": 66.1
+  },
+  {
+    "year": 1988,
+    "state": "Pennsylvania",
+    "turnout": 56.9
+  },
+  {
+    "year": 1988,
+    "state": "Rhode Island",
+    "turnout": 68.2
+  },
+  {
+    "year": 1988,
+    "state": "South Carolina",
+    "turnout": 50.5
+  },
+  {
+    "year": 1988,
+    "state": "South Dakota",
+    "turnout": 73.3
+  },
+  {
+    "year": 1988,
+    "state": "Tennessee",
+    "turnout": 52.4
+  },
+  {
+    "year": 1988,
+    "state": "Texas",
+    "turnout": 59.2
+  },
+  {
+    "year": 1988,
+    "state": "Utah",
+    "turnout": 72.9
+  },
+  {
+    "year": 1988,
+    "state": "Vermont",
+    "turnout": 66.3
+  },
+  {
+    "year": 1988,
+    "state": "Virginia",
+    "turnout": 60.5
+  },
+  {
+    "year": 1988,
+    "state": "Washington",
+    "turnout": 64.6
+  },
+  {
+    "year": 1988,
+    "state": "West Virginia",
+    "turnout": 53.8
+  },
+  {
+    "year": 1988,
+    "state": "Wisconsin",
+    "turnout": 71.3
+  },
+  {
+    "year": 1988,
+    "state": "Wyoming",
+    "turnout": 63.8
+  },
+  {
+    "year": 1992,
+    "state": "Alabama",
+    "turnout": 64.4
+  },
+  {
+    "year": 1992,
+    "state": "Alaska",
+    "turnout": 74.0
+  },
+  {
+    "year": 1992,
+    "state": "Arizona",
+    "turnout": 69.7
+  },
+  {
+    "year": 1992,
+    "state": "Arkansas",
+    "turnout": 60.5
+  },
+  {
+    "year": 1992,
+    "state": "California",
+    "turnout": 70.1
+  },
+  {
+    "year": 1992,
+    "state": "Colorado",
+    "turnout": 72.7
+  },
+  {
+    "year": 1992,
+    "state": "Connecticut",
+    "turnout": 78.8
+  },
+  {
+    "year": 1992,
+    "state": "Delaware",
+    "turnout": 71.1
+  },
+  {
+    "year": 1992,
+    "state": "District of Columbia",
+    "turnout": 72.5
+  },
+  {
+    "year": 1992,
+    "state": "Florida",
+    "turnout": 63.5
+  },
+  {
+    "year": 1992,
+    "state": "Georgia",
+    "turnout": 57.3
+  },
+  {
+    "year": 1992,
+    "state": "Hawaii",
+    "turnout": 61.8
+  },
+  {
+    "year": 1992,
+    "state": "Idaho",
+    "turnout": 70.8
+  },
+  {
+    "year": 1992,
+    "state": "Illinois",
+    "turnout": 72.3
+  },
+  {
+    "year": 1992,
+    "state": "Indiana",
+    "turnout": 64.4
+  },
+  {
+    "year": 1992,
+    "state": "Iowa",
+    "turnout": 72.8
+  },
+  {
+    "year": 1992,
+    "state": "Kansas",
+    "turnout": 73.8
+  },
+  {
+    "year": 1992,
+    "state": "Kentucky",
+    "turnout": 61.4
+  },
+  {
+    "year": 1992,
+    "state": "Louisiana",
+    "turnout": 71.0
+  },
+  {
+    "year": 1992,
+    "state": "Maine",
+    "turnout": 76.7
+  },
+  {
+    "year": 1992,
+    "state": "Maryland",
+    "turnout": 71.7
+  },
+  {
+    "year": 1992,
+    "state": "Massachusetts",
+    "turnout": 73.8
+  },
+  {
+    "year": 1992,
+    "state": "Michigan",
+    "turnout": 71.0
+  },
+  {
+    "year": 1992,
+    "state": "Minnesota",
+    "turnout": 78.3
+  },
+  {
+    "year": 1992,
+    "state": "Mississippi",
+    "turnout": 68.0
+  },
+  {
+    "year": 1992,
+    "state": "Missouri",
+    "turnout": 68.3
+  },
+  {
+    "year": 1992,
+    "state": "Montana",
+    "turnout": 73.4
+  },
+  {
+    "year": 1992,
+    "state": "Nebraska",
+    "turnout": 67.6
+  },
+  {
+    "year": 1992,
+    "state": "Nevada",
+    "turnout": 64.5
+  },
+  {
+    "year": 1992,
+    "state": "New Hampshire",
+    "turnout": 67.6
+  },
+  {
+    "year": 1992,
+    "state": "New Jersey",
+    "turnout": 69.9
+  },
+  {
+    "year": 1992,
+    "state": "New Mexico",
+    "turnout": 66.6
+  },
+  {
+    "year": 1992,
+    "state": "New York",
+    "turnout": 67.7
+  },
+  {
+    "year": 1992,
+    "state": "North Carolina",
+    "turnout": 62.6
+  },
+  {
+    "year": 1992,
     "state": "North Dakota",
     "turnout": 72.8
   },
   {
-    "year": 2016,
+    "year": 1992,
     "state": "Ohio",
-    "turnout": 69.5
-  },
-  {
-    "year": 2016,
-    "state": "Oklahoma",
-    "turnout": 63.7
-  },
-  {
-    "year": 2016,
-    "state": "Oregon",
-    "turnout": 67.4
-  },
-  {
-    "year": 2016,
-    "state": "Pennsylvania",
-    "turnout": 69.2
-  },
-  {
-    "year": 2016,
-    "state": "Rhode Island",
-    "turnout": 64.4
-  },
-  {
-    "year": 2016,
-    "state": "South Carolina",
     "turnout": 69.0
   },
   {
-    "year": 2016,
-    "state": "South Dakota",
-    "turnout": 69.3
+    "year": 1992,
+    "state": "Oklahoma",
+    "turnout": 70.5
   },
   {
-    "year": 2016,
-    "state": "Tennessee",
-    "turnout": 64.3
+    "year": 1992,
+    "state": "Oregon",
+    "turnout": 73.9
   },
   {
-    "year": 2016,
-    "state": "Texas",
-    "turnout": 58.1
+    "year": 1992,
+    "state": "Pennsylvania",
+    "turnout": 62.1
   },
   {
-    "year": 2016,
-    "state": "Utah",
-    "turnout": 66.7
+    "year": 1992,
+    "state": "Rhode Island",
+    "turnout": 75.1
   },
   {
-    "year": 2016,
-    "state": "Vermont",
-    "turnout": 70.2
-  },
-  {
-    "year": 2016,
-    "state": "Virginia",
-    "turnout": 69.4
-  },
-  {
-    "year": 2016,
-    "state": "Washington",
-    "turnout": 69.9
-  },
-  {
-    "year": 2016,
-    "state": "West Virginia",
-    "turnout": 63.6
-  },
-  {
-    "year": 2016,
-    "state": "Wisconsin",
-    "turnout": 74.4
-  },
-  {
-    "year": 2016,
-    "state": "Wyoming",
-    "turnout": 69.7
-  },
-  {
-    "year": 2020,
-    "state": "Alabama",
-    "turnout": 67.0
-  },
-  {
-    "year": 2020,
-    "state": "Alaska",
-    "turnout": 72.6
-  },
-  {
-    "year": 2020,
-    "state": "Arizona",
-    "turnout": 68.8
-  },
-  {
-    "year": 2020,
-    "state": "Arkansas",
-    "turnout": 59.6
-  },
-  {
-    "year": 2020,
-    "state": "California",
+    "year": 1992,
+    "state": "South Carolina",
     "turnout": 59.3
   },
   {
-    "year": 2020,
-    "state": "Colorado",
-    "turnout": 66.2
+    "year": 1992,
+    "state": "South Dakota",
+    "turnout": 71.8
   },
   {
-    "year": 2020,
-    "state": "Connecticut",
-    "turnout": 66.6
+    "year": 1992,
+    "state": "Tennessee",
+    "turnout": 56.8
   },
   {
-    "year": 2020,
-    "state": "Delaware",
-    "turnout": 70.8
+    "year": 1992,
+    "state": "Texas",
+    "turnout": 62.3
   },
   {
-    "year": 2020,
-    "state": "District of Columbia",
-    "turnout": 80.5
+    "year": 1992,
+    "state": "Utah",
+    "turnout": 75.8
   },
   {
-    "year": 2020,
-    "state": "Florida",
-    "turnout": 60.9
-  },
-  {
-    "year": 2020,
-    "state": "Georgia",
-    "turnout": 65.2
-  },
-  {
-    "year": 2020,
-    "state": "Hawaii",
-    "turnout": 63.8
-  },
-  {
-    "year": 2020,
-    "state": "Idaho",
-    "turnout": 65.7
-  },
-  {
-    "year": 2020,
-    "state": "Illinois",
-    "turnout": 68.2
-  },
-  {
-    "year": 2020,
-    "state": "Indiana",
-    "turnout": 67.0
-  },
-  {
-    "year": 2020,
-    "state": "Iowa",
-    "turnout": 73.8
-  },
-  {
-    "year": 2020,
-    "state": "Kansas",
-    "turnout": 64.8
-  },
-  {
-    "year": 2020,
-    "state": "Kentucky",
-    "turnout": 72.4
-  },
-  {
-    "year": 2020,
-    "state": "Louisiana",
-    "turnout": 66.5
-  },
-  {
-    "year": 2020,
-    "state": "Maine",
-    "turnout": 76.5
-  },
-  {
-    "year": 2020,
-    "state": "Maryland",
+    "year": 1992,
+    "state": "Vermont",
     "turnout": 73.4
   },
   {
-    "year": 2020,
-    "state": "Massachusetts",
+    "year": 1992,
+    "state": "Virginia",
     "turnout": 64.3
   },
   {
-    "year": 2020,
-    "state": "Michigan",
-    "turnout": 70.8
+    "year": 1992,
+    "state": "Washington",
+    "turnout": 70.3
   },
   {
-    "year": 2020,
+    "year": 1992,
+    "state": "West Virginia",
+    "turnout": 58.5
+  },
+  {
+    "year": 1992,
+    "state": "Wisconsin",
+    "turnout": 77.0
+  },
+  {
+    "year": 1992,
+    "state": "Wyoming",
+    "turnout": 66.5
+  },
+  {
+    "year": 1996,
+    "state": "Alabama",
+    "turnout": 56.3
+  },
+  {
+    "year": 1996,
+    "state": "Alaska",
+    "turnout": 60.5
+  },
+  {
+    "year": 1996,
+    "state": "Arizona",
+    "turnout": 54.3
+  },
+  {
+    "year": 1996,
+    "state": "Arkansas",
+    "turnout": 51.9
+  },
+  {
+    "year": 1996,
+    "state": "California",
+    "turnout": 61.3
+  },
+  {
+    "year": 1996,
+    "state": "Colorado",
+    "turnout": 61.1
+  },
+  {
+    "year": 1996,
+    "state": "Connecticut",
+    "turnout": 62.3
+  },
+  {
+    "year": 1996,
+    "state": "Delaware",
+    "turnout": 56.1
+  },
+  {
+    "year": 1996,
+    "state": "District of Columbia",
+    "turnout": 63.5
+  },
+  {
+    "year": 1996,
+    "state": "Florida",
+    "turnout": 56.4
+  },
+  {
+    "year": 1996,
+    "state": "Georgia",
+    "turnout": 50.9
+  },
+  {
+    "year": 1996,
+    "state": "Hawaii",
+    "turnout": 47.4
+  },
+  {
+    "year": 1996,
+    "state": "Idaho",
+    "turnout": 62.0
+  },
+  {
+    "year": 1996,
+    "state": "Illinois",
+    "turnout": 59.1
+  },
+  {
+    "year": 1996,
+    "state": "Indiana",
+    "turnout": 56.5
+  },
+  {
+    "year": 1996,
+    "state": "Iowa",
+    "turnout": 63.0
+  },
+  {
+    "year": 1996,
+    "state": "Kansas",
+    "turnout": 63.4
+  },
+  {
+    "year": 1996,
+    "state": "Kentucky",
+    "turnout": 53.0
+  },
+  {
+    "year": 1996,
+    "state": "Louisiana",
+    "turnout": 62.7
+  },
+  {
+    "year": 1996,
+    "state": "Maine",
+    "turnout": 69.4
+  },
+  {
+    "year": 1996,
+    "state": "Maryland",
+    "turnout": 57.1
+  },
+  {
+    "year": 1996,
+    "state": "Massachusetts",
+    "turnout": 60.7
+  },
+  {
+    "year": 1996,
+    "state": "Michigan",
+    "turnout": 59.9
+  },
+  {
+    "year": 1996,
+    "state": "Minnesota",
+    "turnout": 68.9
+  },
+  {
+    "year": 1996,
+    "state": "Mississippi",
+    "turnout": 55.5
+  },
+  {
+    "year": 1996,
+    "state": "Missouri",
+    "turnout": 61.6
+  },
+  {
+    "year": 1996,
+    "state": "Montana",
+    "turnout": 68.1
+  },
+  {
+    "year": 1996,
+    "state": "Nebraska",
+    "turnout": 62.7
+  },
+  {
+    "year": 1996,
+    "state": "Nevada",
+    "turnout": 53.3
+  },
+  {
+    "year": 1996,
+    "state": "New Hampshire",
+    "turnout": 61.0
+  },
+  {
+    "year": 1996,
+    "state": "New Jersey",
+    "turnout": 60.5
+  },
+  {
+    "year": 1996,
+    "state": "New Mexico",
+    "turnout": 55.5
+  },
+  {
+    "year": 1996,
+    "state": "New York",
+    "turnout": 58.7
+  },
+  {
+    "year": 1996,
+    "state": "North Carolina",
+    "turnout": 55.5
+  },
+  {
+    "year": 1996,
+    "state": "North Dakota",
+    "turnout": 66.1
+  },
+  {
+    "year": 1996,
+    "state": "Ohio",
+    "turnout": 59.6
+  },
+  {
+    "year": 1996,
+    "state": "Oklahoma",
+    "turnout": 59.2
+  },
+  {
+    "year": 1996,
+    "state": "Oregon",
+    "turnout": 63.6
+  },
+  {
+    "year": 1996,
+    "state": "Pennsylvania",
+    "turnout": 56.4
+  },
+  {
+    "year": 1996,
+    "state": "Rhode Island",
+    "turnout": 64.3
+  },
+  {
+    "year": 1996,
+    "state": "South Carolina",
+    "turnout": 54.7
+  },
+  {
+    "year": 1996,
+    "state": "South Dakota",
+    "turnout": 64.8
+  },
+  {
+    "year": 1996,
+    "state": "Tennessee",
+    "turnout": 53.6
+  },
+  {
+    "year": 1996,
+    "state": "Texas",
+    "turnout": 51.5
+  },
+  {
+    "year": 1996,
+    "state": "Utah",
+    "turnout": 55.5
+  },
+  {
+    "year": 1996,
+    "state": "Vermont",
+    "turnout": 60.4
+  },
+  {
+    "year": 1996,
+    "state": "Virginia",
+    "turnout": 58.4
+  },
+  {
+    "year": 1996,
+    "state": "Washington",
+    "turnout": 62.3
+  },
+  {
+    "year": 1996,
+    "state": "West Virginia",
+    "turnout": 50.6
+  },
+  {
+    "year": 1996,
+    "state": "Wisconsin",
+    "turnout": 64.8
+  },
+  {
+    "year": 1996,
+    "state": "Wyoming",
+    "turnout": 66.7
+  },
+  {
+    "year": 2000,
+    "state": "Alabama",
+    "turnout": 60.4
+  },
+  {
+    "year": 2000,
+    "state": "Alaska",
+    "turnout": 67.7
+  },
+  {
+    "year": 2000,
+    "state": "Arizona",
+    "turnout": 52.5
+  },
+  {
+    "year": 2000,
+    "state": "Arkansas",
+    "turnout": 50.5
+  },
+  {
+    "year": 2000,
+    "state": "California",
+    "turnout": 57.9
+  },
+  {
+    "year": 2000,
+    "state": "Colorado",
+    "turnout": 57.2
+  },
+  {
+    "year": 2000,
+    "state": "Connecticut",
+    "turnout": 59.5
+  },
+  {
+    "year": 2000,
+    "state": "Delaware",
+    "turnout": 64.8
+  },
+  {
+    "year": 2000,
+    "state": "District of Columbia",
+    "turnout": 71.7
+  },
+  {
+    "year": 2000,
+    "state": "Florida",
+    "turnout": 59.6
+  },
+  {
+    "year": 2000,
+    "state": "Georgia",
+    "turnout": 50.9
+  },
+  {
+    "year": 2000,
+    "state": "Hawaii",
+    "turnout": 44.1
+  },
+  {
+    "year": 2000,
+    "state": "Idaho",
+    "turnout": 56.1
+  },
+  {
+    "year": 2000,
+    "state": "Illinois",
+    "turnout": 62.0
+  },
+  {
+    "year": 2000,
+    "state": "Indiana",
+    "turnout": 59.6
+  },
+  {
+    "year": 2000,
+    "state": "Iowa",
+    "turnout": 67.4
+  },
+  {
+    "year": 2000,
+    "state": "Kansas",
+    "turnout": 61.7
+  },
+  {
+    "year": 2000,
+    "state": "Kentucky",
+    "turnout": 56.4
+  },
+  {
+    "year": 2000,
+    "state": "Louisiana",
+    "turnout": 65.7
+  },
+  {
+    "year": 2000,
+    "state": "Maine",
+    "turnout": 70.1
+  },
+  {
+    "year": 2000,
+    "state": "Maryland",
+    "turnout": 61.1
+  },
+  {
+    "year": 2000,
+    "state": "Massachusetts",
+    "turnout": 65.3
+  },
+  {
+    "year": 2000,
+    "state": "Michigan",
+    "turnout": 62.4
+  },
+  {
+    "year": 2000,
+    "state": "Minnesota",
+    "turnout": 69.8
+  },
+  {
+    "year": 2000,
+    "state": "Mississippi",
+    "turnout": 60.6
+  },
+  {
+    "year": 2000,
+    "state": "Missouri",
+    "turnout": 66.7
+  },
+  {
+    "year": 2000,
+    "state": "Montana",
+    "turnout": 62.9
+  },
+  {
+    "year": 2000,
+    "state": "Nebraska",
+    "turnout": 60.3
+  },
+  {
+    "year": 2000,
+    "state": "Nevada",
+    "turnout": 52.1
+  },
+  {
+    "year": 2000,
+    "state": "New Hampshire",
+    "turnout": 66.6
+  },
+  {
+    "year": 2000,
+    "state": "New Jersey",
+    "turnout": 61.8
+  },
+  {
+    "year": 2000,
+    "state": "New Mexico",
+    "turnout": 54.4
+  },
+  {
+    "year": 2000,
+    "state": "New York",
+    "turnout": 59.0
+  },
+  {
+    "year": 2000,
+    "state": "North Carolina",
+    "turnout": 56.1
+  },
+  {
+    "year": 2000,
+    "state": "North Dakota",
+    "turnout": 70.4
+  },
+  {
+    "year": 2000,
+    "state": "Ohio",
+    "turnout": 59.2
+  },
+  {
+    "year": 2000,
+    "state": "Oklahoma",
+    "turnout": 59.6
+  },
+  {
+    "year": 2000,
+    "state": "Oregon",
+    "turnout": 66.6
+  },
+  {
+    "year": 2000,
+    "state": "Pennsylvania",
+    "turnout": 57.4
+  },
+  {
+    "year": 2000,
+    "state": "Rhode Island",
+    "turnout": 63.5
+  },
+  {
+    "year": 2000,
+    "state": "South Carolina",
+    "turnout": 59.5
+  },
+  {
+    "year": 2000,
+    "state": "South Dakota",
+    "turnout": 59.2
+  },
+  {
+    "year": 2000,
+    "state": "Tennessee",
+    "turnout": 53.7
+  },
+  {
+    "year": 2000,
+    "state": "Texas",
+    "turnout": 54.1
+  },
+  {
+    "year": 2000,
+    "state": "Utah",
+    "turnout": 60.2
+  },
+  {
+    "year": 2000,
+    "state": "Vermont",
+    "turnout": 64.2
+  },
+  {
+    "year": 2000,
+    "state": "Virginia",
+    "turnout": 60.3
+  },
+  {
+    "year": 2000,
+    "state": "Washington",
+    "turnout": 62.0
+  },
+  {
+    "year": 2000,
+    "state": "West Virginia",
+    "turnout": 52.4
+  },
+  {
+    "year": 2000,
+    "state": "Wisconsin",
+    "turnout": 70.1
+  },
+  {
+    "year": 2000,
+    "state": "Wyoming",
+    "turnout": 62.9
+  },
+  {
+    "year": 2004,
+    "state": "Alabama",
+    "turnout": 63.2
+  },
+  {
+    "year": 2004,
+    "state": "Alaska",
+    "turnout": 67.6
+  },
+  {
+    "year": 2004,
+    "state": "Arizona",
+    "turnout": 63.8
+  },
+  {
+    "year": 2004,
+    "state": "Arkansas",
+    "turnout": 58.7
+  },
+  {
+    "year": 2004,
+    "state": "California",
+    "turnout": 61.9
+  },
+  {
+    "year": 2004,
+    "state": "Colorado",
+    "turnout": 67.5
+  },
+  {
+    "year": 2004,
+    "state": "Connecticut",
+    "turnout": 63.2
+  },
+  {
+    "year": 2004,
+    "state": "Delaware",
+    "turnout": 66.4
+  },
+  {
+    "year": 2004,
+    "state": "District of Columbia",
+    "turnout": 69.2
+  },
+  {
+    "year": 2004,
+    "state": "Florida",
+    "turnout": 64.3
+  },
+  {
+    "year": 2004,
+    "state": "Georgia",
+    "turnout": 56.8
+  },
+  {
+    "year": 2004,
+    "state": "Hawaii",
+    "turnout": 50.8
+  },
+  {
+    "year": 2004,
+    "state": "Idaho",
+    "turnout": 61.6
+  },
+  {
+    "year": 2004,
+    "state": "Illinois",
+    "turnout": 65.6
+  },
+  {
+    "year": 2004,
+    "state": "Indiana",
+    "turnout": 58.6
+  },
+  {
+    "year": 2004,
+    "state": "Iowa",
+    "turnout": 71.3
+  },
+  {
+    "year": 2004,
+    "state": "Kansas",
+    "turnout": 64.2
+  },
+  {
+    "year": 2004,
+    "state": "Kentucky",
+    "turnout": 65.0
+  },
+  {
+    "year": 2004,
+    "state": "Louisiana",
+    "turnout": 64.2
+  },
+  {
+    "year": 2004,
+    "state": "Maine",
+    "turnout": 73.1
+  },
+  {
+    "year": 2004,
+    "state": "Maryland",
+    "turnout": 65.6
+  },
+  {
+    "year": 2004,
+    "state": "Massachusetts",
+    "turnout": 68.6
+  },
+  {
+    "year": 2004,
+    "state": "Michigan",
+    "turnout": 67.1
+  },
+  {
+    "year": 2004,
     "state": "Minnesota",
     "turnout": 79.2
   },
   {
-    "year": 2020,
+    "year": 2004,
     "state": "Mississippi",
-    "turnout": 79.1
+    "turnout": 61.7
   },
   {
-    "year": 2020,
+    "year": 2004,
     "state": "Missouri",
-    "turnout": 73.1
+    "turnout": 68.5
   },
   {
-    "year": 2020,
+    "year": 2004,
     "state": "Montana",
+    "turnout": 70.2
+  },
+  {
+    "year": 2004,
+    "state": "Nebraska",
+    "turnout": 65.3
+  },
+  {
+    "year": 2004,
+    "state": "Nevada",
+    "turnout": 58.9
+  },
+  {
+    "year": 2004,
+    "state": "New Hampshire",
+    "turnout": 71.5
+  },
+  {
+    "year": 2004,
+    "state": "New Jersey",
+    "turnout": 66.0
+  },
+  {
+    "year": 2004,
+    "state": "New Mexico",
+    "turnout": 64.4
+  },
+  {
+    "year": 2004,
+    "state": "New York",
+    "turnout": 60.2
+  },
+  {
+    "year": 2004,
+    "state": "North Carolina",
+    "turnout": 61.4
+  },
+  {
+    "year": 2004,
+    "state": "North Dakota",
+    "turnout": 71.5
+  },
+  {
+    "year": 2004,
+    "state": "Ohio",
+    "turnout": 66.1
+  },
+  {
+    "year": 2004,
+    "state": "Oklahoma",
+    "turnout": 62.3
+  },
+  {
+    "year": 2004,
+    "state": "Oregon",
+    "turnout": 74.0
+  },
+  {
+    "year": 2004,
+    "state": "Pennsylvania",
+    "turnout": 64.5
+  },
+  {
+    "year": 2004,
+    "state": "Rhode Island",
+    "turnout": 63.7
+  },
+  {
+    "year": 2004,
+    "state": "South Carolina",
+    "turnout": 63.2
+  },
+  {
+    "year": 2004,
+    "state": "South Dakota",
+    "turnout": 68.3
+  },
+  {
+    "year": 2004,
+    "state": "Tennessee",
+    "turnout": 54.6
+  },
+  {
+    "year": 2004,
+    "state": "Texas",
+    "turnout": 57.1
+  },
+  {
+    "year": 2004,
+    "state": "Utah",
+    "turnout": 67.8
+  },
+  {
+    "year": 2004,
+    "state": "Vermont",
+    "turnout": 67.3
+  },
+  {
+    "year": 2004,
+    "state": "Virginia",
+    "turnout": 63.1
+  },
+  {
+    "year": 2004,
+    "state": "Washington",
+    "turnout": 67.6
+  },
+  {
+    "year": 2004,
+    "state": "West Virginia",
+    "turnout": 57.2
+  },
+  {
+    "year": 2004,
+    "state": "Wisconsin",
     "turnout": 76.6
   },
   {
-    "year": 2020,
+    "year": 2004,
+    "state": "Wyoming",
+    "turnout": 66.9
+  },
+  {
+    "year": 2008,
+    "state": "Alabama",
+    "turnout": 62.4
+  },
+  {
+    "year": 2008,
+    "state": "Alaska",
+    "turnout": 65.0
+  },
+  {
+    "year": 2008,
+    "state": "Arizona",
+    "turnout": 59.9
+  },
+  {
+    "year": 2008,
+    "state": "Arkansas",
+    "turnout": 53.8
+  },
+  {
+    "year": 2008,
+    "state": "California",
+    "turnout": 63.4
+  },
+  {
+    "year": 2008,
+    "state": "Colorado",
+    "turnout": 68.4
+  },
+  {
+    "year": 2008,
+    "state": "Connecticut",
+    "turnout": 67.2
+  },
+  {
+    "year": 2008,
+    "state": "Delaware",
+    "turnout": 67.3
+  },
+  {
+    "year": 2008,
+    "state": "District of Columbia",
+    "turnout": 74.1
+  },
+  {
+    "year": 2008,
+    "state": "Florida",
+    "turnout": 63.8
+  },
+  {
+    "year": 2008,
+    "state": "Georgia",
+    "turnout": 64.2
+  },
+  {
+    "year": 2008,
+    "state": "Hawaii",
+    "turnout": 51.8
+  },
+  {
+    "year": 2008,
+    "state": "Idaho",
+    "turnout": 61.4
+  },
+  {
+    "year": 2008,
+    "state": "Illinois",
+    "turnout": 62.6
+  },
+  {
+    "year": 2008,
+    "state": "Indiana",
+    "turnout": 60.5
+  },
+  {
+    "year": 2008,
+    "state": "Iowa",
+    "turnout": 70.2
+  },
+  {
+    "year": 2008,
+    "state": "Kansas",
+    "turnout": 63.3
+  },
+  {
+    "year": 2008,
+    "state": "Kentucky",
+    "turnout": 63.1
+  },
+  {
+    "year": 2008,
+    "state": "Louisiana",
+    "turnout": 70.3
+  },
+  {
+    "year": 2008,
+    "state": "Maine",
+    "turnout": 71.2
+  },
+  {
+    "year": 2008,
+    "state": "Maryland",
+    "turnout": 68.3
+  },
+  {
+    "year": 2008,
+    "state": "Massachusetts",
+    "turnout": 67.1
+  },
+  {
+    "year": 2008,
+    "state": "Michigan",
+    "turnout": 67.8
+  },
+  {
+    "year": 2008,
+    "state": "Minnesota",
+    "turnout": 75.0
+  },
+  {
+    "year": 2008,
+    "state": "Mississippi",
+    "turnout": 69.7
+  },
+  {
+    "year": 2008,
+    "state": "Missouri",
+    "turnout": 65.8
+  },
+  {
+    "year": 2008,
+    "state": "Montana",
+    "turnout": 65.4
+  },
+  {
+    "year": 2008,
     "state": "Nebraska",
+    "turnout": 67.3
+  },
+  {
+    "year": 2008,
+    "state": "Nevada",
+    "turnout": 59.9
+  },
+  {
+    "year": 2008,
+    "state": "New Hampshire",
+    "turnout": 71.2
+  },
+  {
+    "year": 2008,
+    "state": "New Jersey",
+    "turnout": 64.1
+  },
+  {
+    "year": 2008,
+    "state": "New Mexico",
+    "turnout": 62.6
+  },
+  {
+    "year": 2008,
+    "state": "New York",
+    "turnout": 58.8
+  },
+  {
+    "year": 2008,
+    "state": "North Carolina",
+    "turnout": 67.5
+  },
+  {
+    "year": 2008,
+    "state": "North Dakota",
+    "turnout": 67.5
+  },
+  {
+    "year": 2008,
+    "state": "Ohio",
+    "turnout": 65.5
+  },
+  {
+    "year": 2008,
+    "state": "Oklahoma",
+    "turnout": 58.7
+  },
+  {
+    "year": 2008,
+    "state": "Oregon",
+    "turnout": 67.6
+  },
+  {
+    "year": 2008,
+    "state": "Pennsylvania",
+    "turnout": 62.4
+  },
+  {
+    "year": 2008,
+    "state": "Rhode Island",
+    "turnout": 67.4
+  },
+  {
+    "year": 2008,
+    "state": "South Carolina",
+    "turnout": 65.6
+  },
+  {
+    "year": 2008,
+    "state": "South Dakota",
+    "turnout": 67.8
+  },
+  {
+    "year": 2008,
+    "state": "Tennessee",
+    "turnout": 55.5
+  },
+  {
+    "year": 2008,
+    "state": "Texas",
+    "turnout": 56.1
+  },
+  {
+    "year": 2008,
+    "state": "Utah",
+    "turnout": 53.1
+  },
+  {
+    "year": 2008,
+    "state": "Vermont",
+    "turnout": 64.7
+  },
+  {
+    "year": 2008,
+    "state": "Virginia",
+    "turnout": 68.7
+  },
+  {
+    "year": 2008,
+    "state": "Washington",
+    "turnout": 66.8
+  },
+  {
+    "year": 2008,
+    "state": "West Virginia",
+    "turnout": 53.4
+  },
+  {
+    "year": 2008,
+    "state": "Wisconsin",
+    "turnout": 71.2
+  },
+  {
+    "year": 2008,
+    "state": "Wyoming",
+    "turnout": 64.3
+  },
+  {
+    "year": 2012,
+    "state": "Alabama",
+    "turnout": 61.9
+  },
+  {
+    "year": 2012,
+    "state": "Alaska",
+    "turnout": 58.4
+  },
+  {
+    "year": 2012,
+    "state": "Arizona",
+    "turnout": 55.9
+  },
+  {
+    "year": 2012,
+    "state": "Arkansas",
+    "turnout": 53.3
+  },
+  {
+    "year": 2012,
+    "state": "California",
+    "turnout": 57.5
+  },
+  {
+    "year": 2012,
+    "state": "Colorado",
+    "turnout": 70.4
+  },
+  {
+    "year": 2012,
+    "state": "Connecticut",
+    "turnout": 62.7
+  },
+  {
+    "year": 2012,
+    "state": "Delaware",
+    "turnout": 67.3
+  },
+  {
+    "year": 2012,
+    "state": "District of Columbia",
+    "turnout": 75.9
+  },
+  {
+    "year": 2012,
+    "state": "Florida",
+    "turnout": 60.8
+  },
+  {
+    "year": 2012,
+    "state": "Georgia",
+    "turnout": 61.9
+  },
+  {
+    "year": 2012,
+    "state": "Hawaii",
+    "turnout": 51.6
+  },
+  {
+    "year": 2012,
+    "state": "Idaho",
+    "turnout": 63.9
+  },
+  {
+    "year": 2012,
+    "state": "Illinois",
+    "turnout": 61.5
+  },
+  {
+    "year": 2012,
+    "state": "Indiana",
+    "turnout": 59.3
+  },
+  {
+    "year": 2012,
+    "state": "Iowa",
+    "turnout": 69.4
+  },
+  {
+    "year": 2012,
+    "state": "Kansas",
+    "turnout": 63.3
+  },
+  {
+    "year": 2012,
+    "state": "Kentucky",
+    "turnout": 59.3
+  },
+  {
+    "year": 2012,
+    "state": "Louisiana",
+    "turnout": 66.3
+  },
+  {
+    "year": 2012,
+    "state": "Maine",
+    "turnout": 68.6
+  },
+  {
+    "year": 2012,
+    "state": "Maryland",
+    "turnout": 65.1
+  },
+  {
+    "year": 2012,
+    "state": "Massachusetts",
+    "turnout": 70.8
+  },
+  {
+    "year": 2012,
+    "state": "Michigan",
+    "turnout": 66.8
+  },
+  {
+    "year": 2012,
+    "state": "Minnesota",
+    "turnout": 73.2
+  },
+  {
+    "year": 2012,
+    "state": "Mississippi",
+    "turnout": 74.5
+  },
+  {
+    "year": 2012,
+    "state": "Missouri",
+    "turnout": 63.9
+  },
+  {
+    "year": 2012,
+    "state": "Montana",
+    "turnout": 65.7
+  },
+  {
+    "year": 2012,
+    "state": "Nebraska",
+    "turnout": 61.6
+  },
+  {
+    "year": 2012,
+    "state": "Nevada",
+    "turnout": 57.9
+  },
+  {
+    "year": 2012,
+    "state": "New Hampshire",
+    "turnout": 69.4
+  },
+  {
+    "year": 2012,
+    "state": "New Jersey",
+    "turnout": 61.9
+  },
+  {
+    "year": 2012,
+    "state": "New Mexico",
+    "turnout": 61.6
+  },
+  {
+    "year": 2012,
+    "state": "New York",
+    "turnout": 58.7
+  },
+  {
+    "year": 2012,
+    "state": "North Carolina",
+    "turnout": 68.9
+  },
+  {
+    "year": 2012,
+    "state": "North Dakota",
+    "turnout": 63.9
+  },
+  {
+    "year": 2012,
+    "state": "Ohio",
+    "turnout": 63.1
+  },
+  {
+    "year": 2012,
+    "state": "Oklahoma",
+    "turnout": 52.4
+  },
+  {
+    "year": 2012,
+    "state": "Oregon",
+    "turnout": 67.6
+  },
+  {
+    "year": 2012,
+    "state": "Pennsylvania",
+    "turnout": 61.6
+  },
+  {
+    "year": 2012,
+    "state": "Rhode Island",
+    "turnout": 62.5
+  },
+  {
+    "year": 2012,
+    "state": "South Carolina",
+    "turnout": 64.7
+  },
+  {
+    "year": 2012,
+    "state": "South Dakota",
+    "turnout": 61.0
+  },
+  {
+    "year": 2012,
+    "state": "Tennessee",
+    "turnout": 55.7
+  },
+  {
+    "year": 2012,
+    "state": "Texas",
+    "turnout": 53.8
+  },
+  {
+    "year": 2012,
+    "state": "Utah",
+    "turnout": 57.0
+  },
+  {
+    "year": 2012,
+    "state": "Vermont",
+    "turnout": 63.3
+  },
+  {
+    "year": 2012,
+    "state": "Virginia",
+    "turnout": 66.9
+  },
+  {
+    "year": 2012,
+    "state": "Washington",
+    "turnout": 65.6
+  },
+  {
+    "year": 2012,
+    "state": "West Virginia",
+    "turnout": 47.8
+  },
+  {
+    "year": 2012,
+    "state": "Wisconsin",
+    "turnout": 73.6
+  },
+  {
+    "year": 2012,
+    "state": "Wyoming",
+    "turnout": 58.9
+  },
+  {
+    "year": 2016,
+    "state": "Alabama",
+    "turnout": 57.383
+  },
+  {
+    "year": 2016,
+    "state": "Alaska",
+    "turnout": 61.3313
+  },
+  {
+    "year": 2016,
+    "state": "Arizona",
+    "turnout": 60.3972
+  },
+  {
+    "year": 2016,
+    "state": "Arkansas",
+    "turnout": 58.6683
+  },
+  {
+    "year": 2016,
+    "state": "California",
+    "turnout": 57.9196
+  },
+  {
+    "year": 2016,
+    "state": "Colorado",
+    "turnout": 69.4888
+  },
+  {
+    "year": 2016,
+    "state": "Connecticut",
+    "turnout": 63.8701
+  },
+  {
+    "year": 2016,
+    "state": "Delaware",
+    "turnout": 62.2981
+  },
+  {
+    "year": 2016,
+    "state": "District of Columbia",
+    "turnout": 74.3363
+  },
+  {
+    "year": 2016,
+    "state": "Florida",
+    "turnout": 59.4531
+  },
+  {
+    "year": 2016,
+    "state": "Georgia",
+    "turnout": 60.2429
+  },
+  {
+    "year": 2016,
+    "state": "Hawaii",
+    "turnout": 47.2702
+  },
+  {
+    "year": 2016,
+    "state": "Idaho",
+    "turnout": 62.0696
+  },
+  {
+    "year": 2016,
+    "state": "Illinois",
+    "turnout": 63.7596
+  },
+  {
+    "year": 2016,
+    "state": "Indiana",
+    "turnout": 58.2821
+  },
+  {
+    "year": 2016,
+    "state": "Iowa",
+    "turnout": 63.4365
+  },
+  {
+    "year": 2016,
+    "state": "Kansas",
+    "turnout": 61.2643
+  },
+  {
+    "year": 2016,
+    "state": "Kentucky",
+    "turnout": 56.9827
+  },
+  {
+    "year": 2016,
+    "state": "Louisiana",
+    "turnout": 61.6425
+  },
+  {
+    "year": 2016,
+    "state": "Maine",
+    "turnout": 72.6767
+  },
+  {
+    "year": 2016,
+    "state": "Maryland",
+    "turnout": 65.8259
+  },
+  {
+    "year": 2016,
+    "state": "Massachusetts",
+    "turnout": 66.7337
+  },
+  {
+    "year": 2016,
+    "state": "Michigan",
+    "turnout": 64.2764
+  },
+  {
+    "year": 2016,
+    "state": "Minnesota",
+    "turnout": 68.7131
+  },
+  {
+    "year": 2016,
+    "state": "Mississippi",
+    "turnout": 67.728
+  },
+  {
+    "year": 2016,
+    "state": "Missouri",
+    "turnout": 64.768
+  },
+  {
+    "year": 2016,
+    "state": "Montana",
+    "turnout": 65.8795
+  },
+  {
+    "year": 2016,
+    "state": "Nebraska",
+    "turnout": 66.7868
+  },
+  {
+    "year": 2016,
+    "state": "Nevada",
+    "turnout": 60.5024
+  },
+  {
+    "year": 2016,
+    "state": "New Hampshire",
+    "turnout": 68.9642
+  },
+  {
+    "year": 2016,
+    "state": "New Jersey",
+    "turnout": 61.5196
+  },
+  {
+    "year": 2016,
+    "state": "New Mexico",
+    "turnout": 54.7938
+  },
+  {
+    "year": 2016,
+    "state": "New York",
+    "turnout": 57.2233
+  },
+  {
+    "year": 2016,
+    "state": "North Carolina",
+    "turnout": 67.5325
+  },
+  {
+    "year": 2016,
+    "state": "North Dakota",
+    "turnout": 64.1714
+  },
+  {
+    "year": 2016,
+    "state": "Ohio",
+    "turnout": 63.6359
+  },
+  {
+    "year": 2016,
+    "state": "Oklahoma",
+    "turnout": 56.6224
+  },
+  {
+    "year": 2016,
+    "state": "Oregon",
+    "turnout": 66.308
+  },
+  {
+    "year": 2016,
+    "state": "Pennsylvania",
+    "turnout": 62.6103
+  },
+  {
+    "year": 2016,
+    "state": "Rhode Island",
+    "turnout": 60.5989
+  },
+  {
+    "year": 2016,
+    "state": "South Carolina",
+    "turnout": 62.0624
+  },
+  {
+    "year": 2016,
+    "state": "South Dakota",
+    "turnout": 59.1152
+  },
+  {
+    "year": 2016,
+    "state": "Tennessee",
+    "turnout": 53.9935
+  },
+  {
+    "year": 2016,
+    "state": "Texas",
+    "turnout": 55.3945
+  },
+  {
+    "year": 2016,
+    "state": "Utah",
+    "turnout": 62.6826
+  },
+  {
+    "year": 2016,
+    "state": "Vermont",
+    "turnout": 62.476
+  },
+  {
+    "year": 2016,
+    "state": "Virginia",
+    "turnout": 68.1603
+  },
+  {
+    "year": 2016,
+    "state": "Washington",
+    "turnout": 66.2658
+  },
+  {
+    "year": 2016,
+    "state": "West Virginia",
+    "turnout": 50.7664
+  },
+  {
+    "year": 2016,
+    "state": "Wisconsin",
+    "turnout": 70.4572
+  },
+  {
+    "year": 2016,
+    "state": "Wyoming",
+    "turnout": 64.8033
+  },
+  {
+    "year": 2020,
+    "state": "Alabama",
+    "turnout": 60.5
+  },
+  {
+    "year": 2020,
+    "state": "Alaska",
+    "turnout": 63.8
+  },
+  {
+    "year": 2020,
+    "state": "Arizona",
+    "turnout": 71.9
+  },
+  {
+    "year": 2020,
+    "state": "Arkansas",
+    "turnout": 54.0
+  },
+  {
+    "year": 2020,
+    "state": "California",
+    "turnout": 65.1
+  },
+  {
+    "year": 2020,
+    "state": "Colorado",
+    "turnout": 67.6
+  },
+  {
+    "year": 2020,
+    "state": "Connecticut",
+    "turnout": 66.6
+  },
+  {
+    "year": 2020,
+    "state": "Delaware",
     "turnout": 67.7
   },
   {
     "year": 2020,
-    "state": "Nevada",
-    "turnout": 60.6
+    "state": "District of Columbia",
+    "turnout": 84.0
   },
   {
     "year": 2020,
-    "state": "New Hampshire",
-    "turnout": 76.6
+    "state": "Florida",
+    "turnout": 62.1
   },
   {
     "year": 2020,
-    "state": "New Jersey",
+    "state": "Georgia",
+    "turnout": 66.1
+  },
+  {
+    "year": 2020,
+    "state": "Hawaii",
+    "turnout": 64.3
+  },
+  {
+    "year": 2020,
+    "state": "Idaho",
+    "turnout": 64.9
+  },
+  {
+    "year": 2020,
+    "state": "Illinois",
+    "turnout": 68.4
+  },
+  {
+    "year": 2020,
+    "state": "Indiana",
+    "turnout": 61.0
+  },
+  {
+    "year": 2020,
+    "state": "Iowa",
+    "turnout": 70.5
+  },
+  {
+    "year": 2020,
+    "state": "Kansas",
+    "turnout": 65.7
+  },
+  {
+    "year": 2020,
+    "state": "Kentucky",
+    "turnout": 68.5
+  },
+  {
+    "year": 2020,
+    "state": "Louisiana",
+    "turnout": 61.9
+  },
+  {
+    "year": 2020,
+    "state": "Maine",
+    "turnout": 71.3
+  },
+  {
+    "year": 2020,
+    "state": "Maryland",
     "turnout": 73.6
   },
   {
     "year": 2020,
-    "state": "New Mexico",
-    "turnout": 63.9
-  },
-  {
-    "year": 2020,
-    "state": "New York",
-    "turnout": 62.0
-  },
-  {
-    "year": 2020,
-    "state": "North Carolina",
-    "turnout": 63.6
-  },
-  {
-    "year": 2020,
-    "state": "North Dakota",
-    "turnout": 75.2
-  },
-  {
-    "year": 2020,
-    "state": "Ohio",
-    "turnout": 75.2
-  },
-  {
-    "year": 2020,
-    "state": "Oklahoma",
-    "turnout": 64.0
-  },
-  {
-    "year": 2020,
-    "state": "Oregon",
-    "turnout": 76.9
-  },
-  {
-    "year": 2020,
-    "state": "Pennsylvania",
-    "turnout": 74.1
-  },
-  {
-    "year": 2020,
-    "state": "Rhode Island",
-    "turnout": 68.5
-  },
-  {
-    "year": 2020,
-    "state": "South Carolina",
-    "turnout": 67.7
-  },
-  {
-    "year": 2020,
-    "state": "South Dakota",
-    "turnout": 66.3
-  },
-  {
-    "year": 2020,
-    "state": "Tennessee",
-    "turnout": 70.8
-  },
-  {
-    "year": 2020,
-    "state": "Texas",
-    "turnout": 62.1
-  },
-  {
-    "year": 2020,
-    "state": "Utah",
-    "turnout": 63.3
-  },
-  {
-    "year": 2020,
-    "state": "Vermont",
-    "turnout": 72.0
-  },
-  {
-    "year": 2020,
-    "state": "Virginia",
-    "turnout": 70.1
-  },
-  {
-    "year": 2020,
-    "state": "Washington",
-    "turnout": 67.2
-  },
-  {
-    "year": 2020,
-    "state": "West Virginia",
-    "turnout": 66.4
-  },
-  {
-    "year": 2020,
-    "state": "Wisconsin",
-    "turnout": 74.7
-  },
-  {
-    "year": 2020,
-    "state": "Wyoming",
-    "turnout": 67.9
-  },
-  {
-    "year": 2024,
-    "state": "Alabama",
-    "turnout": 66.3
-  },
-  {
-    "year": 2024,
-    "state": "Alaska",
-    "turnout": 76.1
-  },
-  {
-    "year": 2024,
-    "state": "Arizona",
-    "turnout": 61.3
-  },
-  {
-    "year": 2024,
-    "state": "Arkansas",
-    "turnout": 62.1
-  },
-  {
-    "year": 2024,
-    "state": "California",
-    "turnout": 61.4
-  },
-  {
-    "year": 2024,
-    "state": "Colorado",
-    "turnout": 68.2
-  },
-  {
-    "year": 2024,
-    "state": "Connecticut",
-    "turnout": 66.0
-  },
-  {
-    "year": 2024,
-    "state": "Delaware",
-    "turnout": 70.4
-  },
-  {
-    "year": 2024,
-    "state": "District of Columbia",
-    "turnout": 77.5
-  },
-  {
-    "year": 2024,
-    "state": "Florida",
-    "turnout": 58.8
-  },
-  {
-    "year": 2024,
-    "state": "Georgia",
-    "turnout": 64.1
-  },
-  {
-    "year": 2024,
-    "state": "Hawaii",
-    "turnout": 63.1
-  },
-  {
-    "year": 2024,
-    "state": "Idaho",
-    "turnout": 67.0
-  },
-  {
-    "year": 2024,
-    "state": "Illinois",
-    "turnout": 69.2
-  },
-  {
-    "year": 2024,
-    "state": "Indiana",
-    "turnout": 68.1
-  },
-  {
-    "year": 2024,
-    "state": "Iowa",
-    "turnout": 75.6
-  },
-  {
-    "year": 2024,
-    "state": "Kansas",
-    "turnout": 73.9
-  },
-  {
-    "year": 2024,
-    "state": "Kentucky",
-    "turnout": 75.1
-  },
-  {
-    "year": 2024,
-    "state": "Louisiana",
-    "turnout": 63.5
-  },
-  {
-    "year": 2024,
-    "state": "Maine",
-    "turnout": 72.8
-  },
-  {
-    "year": 2024,
-    "state": "Maryland",
-    "turnout": 73.1
-  },
-  {
-    "year": 2024,
     "state": "Massachusetts",
     "turnout": 66.3
   },
   {
-    "year": 2024,
+    "year": 2020,
     "state": "Michigan",
-    "turnout": 77.6
+    "turnout": 66.9
   },
   {
-    "year": 2024,
+    "year": 2020,
     "state": "Minnesota",
-    "turnout": 78.4
+    "turnout": 77.9
   },
   {
-    "year": 2024,
+    "year": 2020,
     "state": "Mississippi",
-    "turnout": 79.5
+    "turnout": 70.3
   },
   {
-    "year": 2024,
+    "year": 2020,
     "state": "Missouri",
-    "turnout": 77.4
+    "turnout": 66.8
   },
   {
-    "year": 2024,
+    "year": 2020,
     "state": "Montana",
-    "turnout": 72.6
+    "turnout": 73.5
   },
   {
-    "year": 2024,
+    "year": 2020,
     "state": "Nebraska",
-    "turnout": 68.2
+    "turnout": 65.2
   },
   {
-    "year": 2024,
+    "year": 2020,
     "state": "Nevada",
-    "turnout": 65.4
+    "turnout": 61.5
   },
   {
-    "year": 2024,
+    "year": 2020,
     "state": "New Hampshire",
-    "turnout": 74.9
+    "turnout": 74.0
   },
   {
-    "year": 2024,
+    "year": 2020,
     "state": "New Jersey",
-    "turnout": 71.1
+    "turnout": 78.3
   },
   {
-    "year": 2024,
+    "year": 2020,
     "state": "New Mexico",
-    "turnout": 69.0
+    "turnout": 62.6
   },
   {
-    "year": 2024,
+    "year": 2020,
     "state": "New York",
-    "turnout": 58.8
+    "turnout": 64.7
   },
   {
-    "year": 2024,
+    "year": 2020,
     "state": "North Carolina",
-    "turnout": 63.3
+    "turnout": 64.7
   },
   {
-    "year": 2024,
+    "year": 2020,
     "state": "North Dakota",
-    "turnout": 76.0
+    "turnout": 67.1
   },
   {
-    "year": 2024,
+    "year": 2020,
     "state": "Ohio",
-    "turnout": 72.4
+    "turnout": 70.1
   },
   {
-    "year": 2024,
+    "year": 2020,
     "state": "Oklahoma",
-    "turnout": 67.6
+    "turnout": 58.3
   },
   {
-    "year": 2024,
+    "year": 2020,
     "state": "Oregon",
-    "turnout": 77.4
-  },
-  {
-    "year": 2024,
-    "state": "Pennsylvania",
-    "turnout": 72.8
-  },
-  {
-    "year": 2024,
-    "state": "Rhode Island",
-    "turnout": 72.6
-  },
-  {
-    "year": 2024,
-    "state": "South Carolina",
-    "turnout": 69.5
-  },
-  {
-    "year": 2024,
-    "state": "South Dakota",
-    "turnout": 68.5
-  },
-  {
-    "year": 2024,
-    "state": "Tennessee",
-    "turnout": 71.3
-  },
-  {
-    "year": 2024,
-    "state": "Texas",
-    "turnout": 59.0
-  },
-  {
-    "year": 2024,
-    "state": "Utah",
-    "turnout": 69.3
-  },
-  {
-    "year": 2024,
-    "state": "Vermont",
-    "turnout": 75.7
-  },
-  {
-    "year": 2024,
-    "state": "Virginia",
     "turnout": 74.1
   },
   {
-    "year": 2024,
+    "year": 2020,
+    "state": "Pennsylvania",
+    "turnout": 70.2
+  },
+  {
+    "year": 2020,
+    "state": "Rhode Island",
+    "turnout": 66.3
+  },
+  {
+    "year": 2020,
+    "state": "South Carolina",
+    "turnout": 63.4
+  },
+  {
+    "year": 2020,
+    "state": "South Dakota",
+    "turnout": 58.5
+  },
+  {
+    "year": 2020,
+    "state": "Tennessee",
+    "turnout": 66.4
+  },
+  {
+    "year": 2020,
+    "state": "Texas",
+    "turnout": 63.9
+  },
+  {
+    "year": 2020,
+    "state": "Utah",
+    "turnout": 63.6
+  },
+  {
+    "year": 2020,
+    "state": "Vermont",
+    "turnout": 68.4
+  },
+  {
+    "year": 2020,
+    "state": "Virginia",
+    "turnout": 71.5
+  },
+  {
+    "year": 2020,
     "state": "Washington",
-    "turnout": 69.1
+    "turnout": 71.5
   },
   {
-    "year": 2024,
+    "year": 2020,
     "state": "West Virginia",
-    "turnout": 72.6
+    "turnout": 56.1
   },
   {
-    "year": 2024,
+    "year": 2020,
     "state": "Wisconsin",
-    "turnout": 73.0
+    "turnout": 73.6
   },
   {
-    "year": 2024,
+    "year": 2020,
     "state": "Wyoming",
-    "turnout": 67.8
+    "turnout": 65.5
   }
 ]

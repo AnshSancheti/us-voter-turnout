@@ -3,12 +3,14 @@
 // ===================================
 
 // Configuration
-const PRESIDENTIAL_YEARS = [1980, 1984, 1988, 1992, 1996, 2000, 2004, 2008, 2012, 2016, 2020, 2024];
+const PRESIDENTIAL_YEARS = [1972, 1976, 1980, 1984, 1988, 1992, 1996, 2000, 2004, 2008, 2012, 2016, 2020, 2024];
 const PRESIDENTIAL_YEAR_SET = new Set(PRESIDENTIAL_YEARS);
 const TRANSITION_DURATION = 600;
 
 // Candidate data by year (D = Democrat, R = Republican)
 const CANDIDATES = {
+    1972: { dem: 'McGovern', rep: 'Nixon', winner: 'R' },
+    1976: { dem: 'Carter', rep: 'Ford', winner: 'D' },
     1980: { dem: 'Carter', rep: 'Reagan', winner: 'R' },
     1984: { dem: 'Mondale', rep: 'Reagan', winner: 'R' },
     1988: { dem: 'Dukakis', rep: 'Bush', winner: 'R' },
@@ -80,6 +82,8 @@ const colorScale = d3.scaleQuantize()
 const yearColorScale = d3.scaleOrdinal()
     .domain(PRESIDENTIAL_YEARS)
     .range([
+        '#70523C',  // 1972 - Deep brown
+        '#9E744E',  // 1976 - Warm tan
         '#8B5A3C',  // 1980 - Brown
         '#A67C52',  // 1984 - Tan
         '#C19A6B',  // 1988 - Camel
