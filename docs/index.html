@@ -27,6 +27,19 @@
 
         <!-- Main visualization area -->
         <main class="main-content">
+            <!-- Global Data Source Toggle (applies to all maps) -->
+            <div class="dataset-toggle" role="group" aria-label="Data Source">
+                <span class="toggle-label">Data Source:</span>
+                <label class="radio-label">
+                    <input type="radio" name="dataSource" value="electionproject" checked>
+                    <span>Election Project</span>
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="dataSource" value="census">
+                    <span>Census</span>
+                </label>
+            </div>
+
             <!-- Map container -->
             <div class="map-container">
                 <svg id="map" viewBox="0 0 960 600" preserveAspectRatio="xMidYMid meet"></svg>

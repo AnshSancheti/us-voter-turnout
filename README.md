@@ -24,9 +24,9 @@ voter-turnout/
 
 ## Workflow
 
-1. **Data Collection**: Download raw turnout CSVs into `data/` directory
-2. **ETL Processing**: Run Python scripts in `etl/` to clean and normalize data into JSON format
-3. **Visualization**: Serve static files from `web/` to display interactive D3.js map
+1. **Data Collection**: Download raw turnout CSVs into `data/electionproject/` and Census sheets into `data/census/`
+2. **ETL Processing**: Run Python scripts in `etl/` to clean and normalize data into JSON format (written to `docs/data/`)
+3. **Visualization**: Serve static files from `docs/` to display the interactive D3.js map
 
 ## Setup
 
@@ -34,14 +34,14 @@ voter-turnout/
 # Install Python dependencies
 pip install -r requirements.txt
 
-# Run ETL pipeline (writes web/data/election_turnout_normalized.json)
+# Run Election Project ETL (reads data/electionproject, writes docs/data/election_turnout_normalized.json)
 python etl/normalize_turnout.py
 
-# Serve visualization locally
-# Serve from /docs (mirrors GitHub Pages)
-python -m http.server 8000 --directory docs
+# Alternatively, normalize the Census a5b.xlsx (writes docs/data/election_turnout_normalized.json and overwrites if present)
+python etl/normalize_census_a5b.py --input data/census/a5b.xlsx
 
-```
+# Serve visualization locally (from /docs, mirrors GitHub Pages)
+python -m http.server 8000 --directory docs
 
 ## Deploy (GitHub Pages)
 

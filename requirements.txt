@@ -1,1 +1,3 @@
 # Python dependencies for voter turnout ETL pipeline
+pandas
+openpyxl

@@ -183,10 +183,11 @@ def main():
     # Set up paths
     script_dir = Path(__file__).parent
     project_dir = script_dir.parent
-    data_dir = project_dir / 'data'
+    # Source files now live under data/electionproject/
+    data_dir = project_dir / 'data' / 'electionproject'
     output_dir = project_dir / 'docs' / 'data'
     output_dir.mkdir(parents=True, exist_ok=True)
-    output_file = output_dir / 'election_turnout_normalized.json'
+    output_file = output_dir / 'election_turnout_electionproject.json'
 
     all_records = []
 

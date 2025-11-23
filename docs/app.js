@@ -97,7 +97,10 @@ const yearColorScale = d3.scaleOrdinal()
 // State
 let currentYearIndex = PRESIDENTIAL_YEARS.length - 1;  // Start with 2020
 let turnoutData = [];
+let turnoutDataElectionProject = [];
+let turnoutDataCensus = [];
 let turnoutIndex = null;
+let currentDataSource = 'electionproject';
 let usStates = null;
 let primaryMapView = null;
 let highestTurnoutMapView = null;
@@ -404,12 +407,18 @@ function buildExtremaDatasets() {
 // ===================================
 
 Promise.all([
-    d3.json('data/election_turnout_normalized.json'),
+    d3.json('data/election_turnout_electionproject.json'),
+    d3.json('data/election_turnout_census.json'),
     d3.json('https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json')
 ])
-.then(([turnoutJson, usTopoJson]) => {
-    // Store turnout data
-    turnoutData = turnoutJson;
+.then(([turnoutJsonElectionProject, turnoutJsonCensus, usTopoJson]) => {
+    // Store turnout datasets
+    turnoutDataElectionProject = turnoutJsonElectionProject;
+    turnoutDataCensus = turnoutJsonCensus;
+
+    // Default to Election Project
+    currentDataSource = 'electionproject';
+    turnoutData = turnoutDataElectionProject;
     turnoutIndex = buildTurnoutIndex(turnoutData);
 
     // Convert TopoJSON to GeoJSON
@@ -429,6 +438,7 @@ Promise.all([
     setupTimeline();
     setupSettingsMenus();
     setupShowAllControls();
+    setupDataSourceToggle();
     setupHideLegendToggle();
 })
 .catch(error => {
@@ -509,6 +519,30 @@ function initializeSummaryMaps() {
                 }
                 return `${entry.year} · ${entry.value.toFixed(0)}%`;
             },
+            numericLabelFormatter: (value, d) => d.displayValue,
+            getFillColor: (stateName, entry) => entry ? yearColorScale(entry.year) : '#E0E0E0'
+        });
+    }
+}
+
+function updateSummaryMaps() {
+    const { highest, lowest } = buildExtremaDatasets();
+    highestTurnoutDataset = highest;
+    lowestTurnoutDataset = lowest;
+
+    if (highestTurnoutMapView) {
+        highestTurnoutMapView.update({
+            dataByState: highestTurnoutDataset,
+            labelFormatter: (entry) => entry ? `${entry.year} · ${entry.value.toFixed(0)}%` : '',
+            numericLabelFormatter: (value, d) => d.displayValue,
+            getFillColor: (stateName, entry) => entry ? yearColorScale(entry.year) : '#E0E0E0'
+        });
+    }
+
+    if (lowestTurnoutMapView) {
+        lowestTurnoutMapView.update({
+            dataByState: lowestTurnoutDataset,
+            labelFormatter: (entry) => entry ? `${entry.year} · ${entry.value.toFixed(0)}%` : '',
             numericLabelFormatter: (value, d) => d.displayValue,
             getFillColor: (stateName, entry) => entry ? yearColorScale(entry.year) : '#E0E0E0'
         });
@@ -696,6 +730,31 @@ function setupShowAllControls() {
             mapView.setShowAllLabels(e.target.checked);
         });
     });
+}
+
+function setupDataSourceToggle() {
+    const radios = document.querySelectorAll('input[name="dataSource"]');
+    radios.forEach(r => {
+        r.addEventListener('change', (e) => {
+            const val = e.target.value;
+            setDataSource(val);
+        });
+    });
+}
+
+function setDataSource(sourceKey) {
+    if (sourceKey !== 'electionproject' && sourceKey !== 'census') {
+        return;
+    }
+    currentDataSource = sourceKey;
+    if (currentDataSource === 'electionproject') {
+        turnoutData = turnoutDataElectionProject;
+    } else {
+        turnoutData = turnoutDataCensus;
+    }
+    turnoutIndex = buildTurnoutIndex(turnoutData);
+    updatePrimaryMap();
+    updateSummaryMaps();
 }
 
 // ===================================
