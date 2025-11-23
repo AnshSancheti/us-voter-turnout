@@ -6,9 +6,10 @@ A data visualization project tracking voter turnout percentages across all U.S. 
 
 This project analyzes and visualizes historical voter turnout data from presidential elections, providing an interactive map-based interface to explore participation trends across states and election cycles.
 
-## Data Source
+## Data Sources
 
-Raw turnout data is sourced from the [United States Elections Project](http://www.electproject.org/), which provides comprehensive voter turnout statistics by state for presidential elections.
+- [United States Elections Project](http://www.electproject.org/): state-level Voting-Eligible Population (VEP) turnout for presidential elections.
+- [U.S. Census Bureau tables](https://www.census.gov/data/tables/time-series/demo/voting-and-registration/voting-historical-time-series.html): reported voting/registration percentages for total and citizen voting-age population.
 
 ## Project Structure
 
@@ -16,7 +17,7 @@ Raw turnout data is sourced from the [United States Elections Project](http://ww
 voter-turnout/
 ├── data/           # Raw CSV files (not served)
 ├── etl/            # Python scripts for data cleaning and normalization
-├── docs/           # Site root (used locally and for GitHub Pages)
+├── docs/           # Site root (static frontend used locally or for any static host)
 │   └── data/       # Processed JSON for production
 ├── README.md       # Project documentation
 └── requirements.txt # Python dependencies
@@ -34,25 +35,14 @@ voter-turnout/
 # Install Python dependencies
 pip install -r requirements.txt
 
-# Run Election Project ETL (reads data/electionproject, writes docs/data/election_turnout_normalized.json)
+# Election Project ETL (reads data/electionproject, writes docs/data/election_turnout_electionproject.json)
 python etl/normalize_turnout.py
 
-# Alternatively, normalize the Census a5b.xlsx (writes docs/data/election_turnout_normalized.json and overwrites if present)
-python etl/normalize_census_a5b.py --input data/census/a5b.xlsx
+# Census ETL (reads data/census/a5a.xlsx, writes docs/data/election_turnout_census.json)
+python etl/normalize_census_a5a.py
 
-# Serve visualization locally (from /docs, mirrors GitHub Pages)
+# Serve visualization locally (from /docs)
 python -m http.server 8000 --directory docs
-
-## Deploy (GitHub Pages)
-
-1. In GitHub: Settings → Pages
-2. Source: “Deploy from a branch”
-3. Branch: `main`, Folder: `/docs`
-4. Site URL: `https://<username>.github.io/voter-turnout/`
-
-Notes
-- The app uses relative paths (e.g., `data/election_turnout_normalized.json`) so it works under the `/voter-turnout/` subpath.
-- ETL writes the processed JSON to `docs/data/` so it is immediately available to the served site.
 ```
 
 ## Technologies
