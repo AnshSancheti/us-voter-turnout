@@ -5098,5 +5098,260 @@
     "year": 2020,
     "state": "Wyoming",
     "turnout": 64.9
+  },
+  {
+    "year": 2024,
+    "state": "Alabama",
+    "turnout": 58.93
+  },
+  {
+    "year": 2024,
+    "state": "Alaska",
+    "turnout": 63.78
+  },
+  {
+    "year": 2024,
+    "state": "Arizona",
+    "turnout": 63.6
+  },
+  {
+    "year": 2024,
+    "state": "Arkansas",
+    "turnout": 53.48
+  },
+  {
+    "year": 2024,
+    "state": "California",
+    "turnout": 62.06
+  },
+  {
+    "year": 2024,
+    "state": "Colorado",
+    "turnout": 73.14
+  },
+  {
+    "year": 2024,
+    "state": "Connecticut",
+    "turnout": 67.08
+  },
+  {
+    "year": 2024,
+    "state": "Delaware",
+    "turnout": 67.02
+  },
+  {
+    "year": 2024,
+    "state": "District of Columbia",
+    "turnout": 63.57
+  },
+  {
+    "year": 2024,
+    "state": "Florida",
+    "turnout": 66.71
+  },
+  {
+    "year": 2024,
+    "state": "Georgia",
+    "turnout": 68.26
+  },
+  {
+    "year": 2024,
+    "state": "Hawaii",
+    "turnout": 50.27
+  },
+  {
+    "year": 2024,
+    "state": "Idaho",
+    "turnout": 63.44
+  },
+  {
+    "year": 2024,
+    "state": "Illinois",
+    "turnout": 63.25
+  },
+  {
+    "year": 2024,
+    "state": "Indiana",
+    "turnout": 58.69
+  },
+  {
+    "year": 2024,
+    "state": "Iowa",
+    "turnout": 70.78
+  },
+  {
+    "year": 2024,
+    "state": "Kansas",
+    "turnout": 63.18
+  },
+  {
+    "year": 2024,
+    "state": "Kentucky",
+    "turnout": 62.19
+  },
+  {
+    "year": 2024,
+    "state": "Louisiana",
+    "turnout": 60.77
+  },
+  {
+    "year": 2024,
+    "state": "Maine",
+    "turnout": 74.24
+  },
+  {
+    "year": 2024,
+    "state": "Maryland",
+    "turnout": 69.3
+  },
+  {
+    "year": 2024,
+    "state": "Massachusetts",
+    "turnout": 68.03
+  },
+  {
+    "year": 2024,
+    "state": "Michigan",
+    "turnout": 74.64
+  },
+  {
+    "year": 2024,
+    "state": "Minnesota",
+    "turnout": 76.35
+  },
+  {
+    "year": 2024,
+    "state": "Mississippi",
+    "turnout": 57.45
+  },
+  {
+    "year": 2024,
+    "state": "Missouri",
+    "turnout": 64.34
+  },
+  {
+    "year": 2024,
+    "state": "Montana",
+    "turnout": 68.2
+  },
+  {
+    "year": 2024,
+    "state": "Nebraska",
+    "turnout": 67.96
+  },
+  {
+    "year": 2024,
+    "state": "Nevada",
+    "turnout": 65.8
+  },
+  {
+    "year": 2024,
+    "state": "New Hampshire",
+    "turnout": 74.05
+  },
+  {
+    "year": 2024,
+    "state": "New Jersey",
+    "turnout": 67.24
+  },
+  {
+    "year": 2024,
+    "state": "New Mexico",
+    "turnout": 59.57
+  },
+  {
+    "year": 2024,
+    "state": "New York",
+    "turnout": 60.44
+  },
+  {
+    "year": 2024,
+    "state": "North Carolina",
+    "turnout": 70.32
+  },
+  {
+    "year": 2024,
+    "state": "North Dakota",
+    "turnout": 63.1
+  },
+  {
+    "year": 2024,
+    "state": "Ohio",
+    "turnout": 65.39
+  },
+  {
+    "year": 2024,
+    "state": "Oklahoma",
+    "turnout": 53.28
+  },
+  {
+    "year": 2024,
+    "state": "Oregon",
+    "turnout": 71.94
+  },
+  {
+    "year": 2024,
+    "state": "Pennsylvania",
+    "turnout": 71.43
+  },
+  {
+    "year": 2024,
+    "state": "Rhode Island",
+    "turnout": 63.28
+  },
+  {
+    "year": 2024,
+    "state": "South Carolina",
+    "turnout": 62.14
+  },
+  {
+    "year": 2024,
+    "state": "South Dakota",
+    "turnout": 64.0
+  },
+  {
+    "year": 2024,
+    "state": "Tennessee",
+    "turnout": 57.61
+  },
+  {
+    "year": 2024,
+    "state": "Texas",
+    "turnout": 56.57
+  },
+  {
+    "year": 2024,
+    "state": "Utah",
+    "turnout": 64.15
+  },
+  {
+    "year": 2024,
+    "state": "Vermont",
+    "turnout": 70.89
+  },
+  {
+    "year": 2024,
+    "state": "Virginia",
+    "turnout": 71.19
+  },
+  {
+    "year": 2024,
+    "state": "Washington",
+    "turnout": 70.17
+  },
+  {
+    "year": 2024,
+    "state": "West Virginia",
+    "turnout": 55.46
+  },
+  {
+    "year": 2024,
+    "state": "Wisconsin",
+    "turnout": 76.64
+  },
+  {
+    "year": 2024,
+    "state": "Wyoming",
+    "turnout": 61.28
   }
 ]

@@ -37,7 +37,12 @@ def process_2016_2020(file_path, year):
         turnout_idx = None
 
         # Find VEP turnout column (different names in different years)
-        possible_turnout_columns = ['VEP Highest Office', 'VEP Turnout Rate (Highest Office)']
+        possible_turnout_columns = [
+            'VEP Highest Office',
+            'VEP Turnout Rate (Highest Office)',
+            'VEP Turnout Rate (highest office)',
+            'VEP turnout rate (Highest Office)'
+        ]
         for idx, header in enumerate(headers):
             if header in possible_turnout_columns:
                 turnout_idx = idx
@@ -119,6 +124,61 @@ def process_1980_2014(file_path):
     return records
 
 
+def process_2024(file_path):
+    """Process 2024 election file in the new U.S. Elections Project format.
+
+    Expected columns include:
+    - STATE: full state name
+    - VEP_TURNOUT_RATE: percentage string like '63.60%'
+    The file may contain a national aggregate row ('United States') which we skip.
+    """
+    records = []
+
+    with open(file_path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+
+        # Normalize column keys for robust access
+        fieldnames = [name.strip() if name else '' for name in reader.fieldnames]
+        # Build a mapping of lowercase -> original to avoid exact-case dependency
+        key_map = { (name or '').strip().lower(): (name or '').strip() for name in fieldnames }
+
+        state_key = key_map.get('state')
+        # Prefer explicit VEP_TURNOUT_RATE, but allow a few variants
+        vep_keys = [
+            'vep_turnout_rate',
+            'vep turnout rate',
+            'vep turnout rate (highest office)'
+        ]
+        turnout_key = None
+        for k in vep_keys:
+            cand = key_map.get(k)
+            if cand:
+                turnout_key = cand
+                break
+
+        if not state_key or not turnout_key:
+            raise ValueError(
+                f"Could not find required columns in 2024 file. State: {state_key}, Turnout: {turnout_key}."
+            )
+
+        for row in reader:
+            state = (row.get(state_key) or '').strip()
+            if not state or state == 'United States':
+                continue
+
+            turnout_raw = (row.get(turnout_key) or '').strip()
+            turnout = clean_percentage(turnout_raw)
+            if turnout is None:
+                continue
+
+            records.append({
+                'year': 2024,
+                'state': state,
+                'turnout': turnout
+            })
+
+    return records
+
 def main():
     # Set up paths
     script_dir = Path(__file__).parent
@@ -150,6 +210,28 @@ def main():
     records_2020 = process_2016_2020(file_2020, 2020)
     all_records.extend(records_2020)
     print(f"  Found {len(records_2020)} records")
+
+    # Process 2024 file(s) (supporting multiple naming schemes)
+    file_2024_legacy = data_dir / '2024 November General Election - Turnout Rates.csv'
+    file_2024_alt = None
+    # Find any 2024-specific turnout CSVs (e.g., Turnout_2024G_v0.3.csv)
+    for cand in sorted(data_dir.glob('*2024*.csv')):
+        if 'Turnout' in cand.name or 'turnout' in cand.name:
+            file_2024_alt = cand
+            break
+
+    if file_2024_alt and file_2024_alt.exists():
+        print(f"Processing {file_2024_alt.name} (2024 alt format)...")
+        records_2024 = process_2024(file_2024_alt)
+        all_records.extend(records_2024)
+        print(f"  Found {len(records_2024)} records")
+    elif file_2024_legacy.exists():
+        print(f"Processing {file_2024_legacy.name} (legacy format)...")
+        records_2024 = process_2016_2020(file_2024_legacy, 2024)
+        all_records.extend(records_2024)
+        print(f"  Found {len(records_2024)} records")
+    else:
+        print("2024 file not found; skipping 2024.")
 
     # Sort by year, then state
     all_records.sort(key=lambda x: (x['year'], x['state']))

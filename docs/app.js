@@ -3,7 +3,7 @@
 // ===================================
 
 // Configuration
-const PRESIDENTIAL_YEARS = [1980, 1984, 1988, 1992, 1996, 2000, 2004, 2008, 2012, 2016, 2020];
+const PRESIDENTIAL_YEARS = [1980, 1984, 1988, 1992, 1996, 2000, 2004, 2008, 2012, 2016, 2020, 2024];
 const PRESIDENTIAL_YEAR_SET = new Set(PRESIDENTIAL_YEARS);
 const TRANSITION_DURATION = 600;
 
@@ -19,7 +19,8 @@ const CANDIDATES = {
     2008: { dem: 'Obama', rep: 'McCain', winner: 'D' },
     2012: { dem: 'Obama', rep: 'Romney', winner: 'D' },
     2016: { dem: 'Clinton', rep: 'Trump', winner: 'R' },
-    2020: { dem: 'Biden', rep: 'Trump', winner: 'D' }
+    2020: { dem: 'Biden', rep: 'Trump', winner: 'D' },
+    2024: { dem: 'Harris', rep: 'Trump', winner: 'R' }
 };
 
 // Manual label offset adjustments for better readability
@@ -89,7 +90,8 @@ const yearColorScale = d3.scaleOrdinal()
         '#5A7B9B',  // 2008 - Slate blue
         '#4A6B8B',  // 2012 - Ocean blue
         '#6B5A7B',  // 2016 - Muted purple
-        '#8B6B7A'   // 2020 - Dusty rose
+        '#8B6B7A',  // 2020 - Dusty rose
+        '#7A5A6B'   // 2024 - Deep mauve
     ]);
 
 // State
@@ -522,6 +524,11 @@ function setupTimeline() {
     const labelsContainer = document.getElementById('timelineLabels');
     const datalist = document.getElementById('yearMarkers');
 
+    // Programmatically set slider bounds based on available years
+    slider.min = 0;
+    slider.max = PRESIDENTIAL_YEARS.length - 1;
+    slider.value = currentYearIndex;
+
     // Create datalist options for slider tick marks
     PRESIDENTIAL_YEARS.forEach((year, index) => {
         const option = document.createElement('option');
@@ -538,7 +545,8 @@ function setupTimeline() {
 
         // Position to match slider thumb travel (thumb center goes from 14px to calc(100% - 14px))
         // 14px = half of thumb width (24px + 4px border = 28px total)
-        labelWrapper.style.left = `calc(14px + ((100% - 28px) * ${index} / 10))`;
+        const maxIndex = Math.max(1, PRESIDENTIAL_YEARS.length - 1);
+        labelWrapper.style.left = `calc(14px + ((100% - 28px) * ${index} / ${maxIndex}))`;
 
         // Year
         const yearDiv = document.createElement('div');
@@ -552,20 +560,34 @@ function setupTimeline() {
 
         const candidates = CANDIDATES[year];
 
-        // Determine winner and loser
-        const winnerName = candidates.winner === 'D' ? candidates.dem : candidates.rep;
-        const loserName = candidates.winner === 'D' ? candidates.rep : candidates.dem;
+        if (candidates && candidates.winner) {
+            // Determine winner and loser when winner is known
+            const winnerName = candidates.winner === 'D' ? candidates.dem : candidates.rep;
+            const loserName = candidates.winner === 'D' ? candidates.rep : candidates.dem;
 
-        const winnerSpan = document.createElement('div');
-        winnerSpan.className = 'candidate winner';
-        winnerSpan.textContent = winnerName;
+            const winnerSpan = document.createElement('div');
+            winnerSpan.className = 'candidate winner';
+            winnerSpan.textContent = winnerName;
 
-        const loserSpan = document.createElement('div');
-        loserSpan.className = 'candidate';
-        loserSpan.textContent = loserName;
+            const loserSpan = document.createElement('div');
+            loserSpan.className = 'candidate';
+            loserSpan.textContent = loserName;
 
-        candidatesDiv.appendChild(winnerSpan);
-        candidatesDiv.appendChild(loserSpan);
+            candidatesDiv.appendChild(winnerSpan);
+            candidatesDiv.appendChild(loserSpan);
+        } else if (candidates) {
+            // No winner specified; show both names without emphasis
+            const demSpan = document.createElement('div');
+            demSpan.className = 'candidate';
+            demSpan.textContent = candidates.dem;
+
+            const repSpan = document.createElement('div');
+            repSpan.className = 'candidate';
+            repSpan.textContent = candidates.rep;
+
+            candidatesDiv.appendChild(demSpan);
+            candidatesDiv.appendChild(repSpan);
+        }
         labelWrapper.appendChild(candidatesDiv);
 
         if (index === currentYearIndex) {
