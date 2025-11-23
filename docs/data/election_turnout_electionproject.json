@@ -4926,7 +4926,7 @@
   },
   {
     "year": 2020,
-    "state": "Kansas",
+    "state": "Kansas*",
     "turnout": 65.6
   },
   {
@@ -4976,7 +4976,7 @@
   },
   {
     "year": 2020,
-    "state": "Montana",
+    "state": "Montana*",
     "turnout": 72.0
   },
   {
@@ -5036,7 +5036,7 @@
   },
   {
     "year": 2020,
-    "state": "Pennsylvania",
+    "state": "Pennsylvania*",
     "turnout": 69.7
   },
   {
