@@ -16,8 +16,8 @@ Raw turnout data is sourced from the [United States Elections Project](http://ww
 voter-turnout/
 ├── data/           # Raw CSV files (not served)
 ├── etl/            # Python scripts for data cleaning and normalization
-├── web/            # Static HTML/JavaScript/D3.js frontend (served)
-│   └── data/       # Processed JSON served to the app
+├── docs/           # Site root (used locally and for GitHub Pages)
+│   └── data/       # Processed JSON for production
 ├── README.md       # Project documentation
 └── requirements.txt # Python dependencies
 ```
@@ -37,8 +37,22 @@ pip install -r requirements.txt
 # Run ETL pipeline (writes web/data/election_turnout_normalized.json)
 python etl/normalize_turnout.py
 
-# Serve visualization locally (web is the site root)
-python -m http.server 8000 --directory web
+# Serve visualization locally
+# Serve from /docs (mirrors GitHub Pages)
+python -m http.server 8000 --directory docs
+
+```
+
+## Deploy (GitHub Pages)
+
+1. In GitHub: Settings → Pages
+2. Source: “Deploy from a branch”
+3. Branch: `main`, Folder: `/docs`
+4. Site URL: `https://<username>.github.io/voter-turnout/`
+
+Notes
+- The app uses relative paths (e.g., `data/election_turnout_normalized.json`) so it works under the `/voter-turnout/` subpath.
+- ETL writes the processed JSON to `docs/data/` so it is immediately available to the served site.
 ```
 
 ## Technologies
