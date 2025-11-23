@@ -14,9 +14,10 @@ Raw turnout data is sourced from the [United States Elections Project](http://ww
 
 ```
 voter-turnout/
-├── data/           # Raw CSV files from U.S. Elections Project
+├── data/           # Raw CSV files (not served)
 ├── etl/            # Python scripts for data cleaning and normalization
-├── web/            # Static HTML/JavaScript/D3.js visualization frontend
+├── web/            # Static HTML/JavaScript/D3.js frontend (served)
+│   └── data/       # Processed JSON served to the app
 ├── README.md       # Project documentation
 └── requirements.txt # Python dependencies
 ```
@@ -33,10 +34,10 @@ voter-turnout/
 # Install Python dependencies
 pip install -r requirements.txt
 
-# Run ETL pipeline
-python etl/process_turnout.py
+# Run ETL pipeline (writes web/data/election_turnout_normalized.json)
+python etl/normalize_turnout.py
 
-# Serve visualization locally
+# Serve visualization locally (web is the site root)
 python -m http.server 8000 --directory web
 ```
 

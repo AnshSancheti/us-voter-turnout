@@ -399,7 +399,7 @@ function buildExtremaDatasets() {
 // ===================================
 
 Promise.all([
-    d3.json('/data/election_turnout_normalized.json'),
+    d3.json('data/election_turnout_normalized.json'),
     d3.json('https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json')
 ])
 .then(([turnoutJson, usTopoJson]) => {

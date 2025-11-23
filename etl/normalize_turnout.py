@@ -124,7 +124,9 @@ def main():
     script_dir = Path(__file__).parent
     project_dir = script_dir.parent
     data_dir = project_dir / 'data'
-    output_file = data_dir / 'election_turnout_normalized.json'
+    output_dir = project_dir / 'web' / 'data'
+    output_dir.mkdir(parents=True, exist_ok=True)
+    output_file = output_dir / 'election_turnout_normalized.json'
 
     all_records = []
 
